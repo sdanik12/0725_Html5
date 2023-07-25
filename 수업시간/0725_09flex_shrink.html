@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_basis</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex{
+            display: flex;
+            background:#fcdada;
+            width: 500px;
+            height: 200px;
+            align-items: flex-start;
+            /* 기본값이 stretch므로 부모요소와 하위요소가 같이 늘어남. 방지하려면 스타트로 위치 지정. */
+        }
+        .flex div{
+            flex-basis: 200px;
+            /* 최소크기를 지정. 하위 요소의 값이 basis값을 초과할 경우 그대로 표시되지만 하위 요소의 값이 basis값보다 작을 경우 basis값으로 표시. */
+            background: #ddd;
+            border: 1px solid #000;
+            flex-shrink: 0;
+            /* 부모요소에서 하위요소가 삐져나가게 됨 */
+        }
+        .flex div:first-child{flex-shrink: 0;}
+        .flex div:nth-child(2){flex-shrink: 1;}
+        .flex div:nth-child(3){flex-shrink: 1;}
+        
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div>1111111</div>
+        <div>222</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        body{
+            font-family: arial, notosanskr, sans-serif;
+        }
+        header{
+            background: #636363;
+        }
+        .top{
+            height: 40px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .top ul{
+            margin: 0 auto;
+            width: 1000px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .top ul li{
+            margin: 5px;
+        }
+        .top ul li a{
+            color: #afafaf;
+            font-size: 14px;
+        }
+        .top ul li img{
+            vertical-align: middle;
+        }
+        .top input{
+            height: 30px;
+        }
+        :focus{
+            outline: none;
+        }
+        nav{
+            background: #131313;
+            height: 70px;
+        }
+        nav .tap{
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav .tap ul{
+            display: flex;
+        }
+        nav .tap ul li a{
+            color: #fff;
+            line-height: 70px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .slide{
+            height: 400px;
+            background: #bbb;
+            text-align: center;
+        }
+        .menu{
+            overflow: hidden;
+            background: #1d1d1d;
+        }
+        .menu ul{
+            width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bottom{
+            overflow: hidden;
+            background: #1d1d1d;
+        }
+        .binner{
+            width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .binner .notice{
+            color: #fff;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .binner .notice h3{
+            margin-bottom: 20px;
+        }
+        footer{
+            background: #1d1d1d;
+            border-top: 1px solid #ccc;
+        }
+        .foot{
+            width: 1000px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .foot p{
+            color: #afafaf;
+            margin: 5px 0;
+        }
+        .foot .service{
+            display: flex;
+            justify-content: space-between;
+        }
+        .foot .service p{
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="top">
+                <ul>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><input type="search" placeholder="검색어를 입력해주세요" name="search" id="search"></li>
+                    <li><img src="/images/madforgarlic/images/zoom.png" alt="zoom"></li>
+                </ul>
+            </div>
+            <nav>
+                <div class="tap">
+                    <div class="logo">
+                        <img src="/images/madforgarlic/images/mad_12.gif" alt="logo_mad_12">
+                    </div>
+                    <ul>
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="#">STORE</a></li>
+                        <li><a href="#">MEMBERSHIP</a></li>
+                        <li><a href="#">EVENT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="slide">
+            <img src="/images/madforgarlic/images/mad_17.jpg" alt="mad_17">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#"><img src="/images/madforgarlic/images/mad_25.jpg" alt="mad_25"></a></li>
+                <li><a href="#"><img src="/images/madforgarlic/images/mad_27.jpg" alt="mad_27"></a></li>
+                <li><a href="#"><img src="/images/madforgarlic/images/mad_29.jpg" alt="mad_29"></a></li>
+                <li><a href="#"><img src="/images/madforgarlic/images/mad_31.jpg" alt="mad_31"></a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="binner">
+                <img src="/images/madforgarlic/images/mad_39.jpg" alt="mad_39">
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <p>MAD SURPRISE   매월 지정일 매드서프라이즈!   2017-06-28</p>
+                    <p>MAD CELEBRATION   생일, 결혼기념일 스페셜!   2017-06-28</p>
+                    <p>MAD DAY   매월 마지막 주 수요일 기억하세요!   2017-06-28</p>
+                    <p>MAD 10%   멤버십이라면 언제나 10% 할인제공!   2017-06-28</p>
+                    <p>MAD REWARDS   올수록 커지는 리워즈 혜택!   2017-06-28</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="service">
+                    <p>서비스이용약관</p>
+                    <p>개인정보처리방침</p>
+                    <p>기기운영관리방침</p>
+                    <p>고객서비스센터</p>
+                    <p>관리자문의</p>
+                </div>
+                <p>서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아</p>
+                <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
