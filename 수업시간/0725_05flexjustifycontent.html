@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex justify content</title>
+    <style>
+        .flex{
+            display: flex;
+            background:#ccc;
+            margin: 10px;
+            height: 500px;
+            flex-direction: column;
+        }
+        .flex div{
+            border: 1px solid #000;
+            width: 100px;
+            background: #fdfdbb;
+            margin: 10px;
+        }
+        .start{
+            justify-content: flex-start;
+            /* flex-direction: column;으로 바꾸면 수직정렬이 됨 */
+            /* 수직정렬 */
+            align-items: flex-start;
+            /* 수평정렬 */
+        }
+        .end{
+            justify-content: flex-end;
+            /* 수직끝에서부터 정렬 */
+            align-items: flex-end;
+        }
+        .center{
+            justify-content: center;
+            /* 가운데정렬 */
+            align-items: center;
+        }
+        .between{
+            justify-content: space-between;
+            /* 같은 간격으로 정렬 */
+            align-items: stretch;
+        }
+        .around{
+            justify-content: space-around;
+            /* 같은 마진으로 정렬 */
+            align-items: baseline;
+
+        }
+        .evenly{
+            justify-content: space-evenly;
+            /* 양쪽 끝의 간격까지 동일하게 같은 간격 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="flex end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="flex center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="flex between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="flex around">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>
+        <div><h4>4</h4></div>
+        <div><h2>5</h2></div>
+    </div>
+    <div class="flex evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

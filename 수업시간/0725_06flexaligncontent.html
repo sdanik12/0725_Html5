@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex align content</title>
+    <style>
+        .flex{
+            display: flex;
+            background:#ccc;
+            margin: 10px;
+            height: 500px;
+            flex-wrap: wrap;
+            /* 기본적으로 shrink와 nowrap설정이 되어있기 때문에 두 행 이상 생기지 않으므로 줄바꿈을 위해선 wrap을 줘야함*/
+        }
+        .flex div{
+            border: 1px solid #000;
+            width: 100px;
+            background: #fdfdbb;
+            margin: 10px;
+        }
+        .start{
+            align-content: flex-start;
+        }
+        .end{
+            align-content: flex-end;
+        }
+        .center{
+            align-content: center;
+        }
+        .between{
+            align-content: space-between;
+        }
+        .around{
+            align-content: space-around;
+        }
+        .evenly{
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex around">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>
+        <div><h4>4</h4></div>
+        <div><h2>5</h2></div>
+        <div><h1>6</h1></div>
+        <div><h6>7</h6></div>
+        <div><h3>8</h3></div>
+        <div><h4>9</h4></div>
+        <div><h2>10</h2></div>
+    </div>
+    <div class="flex evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <div class="flex default">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>
