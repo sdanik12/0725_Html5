@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>짱뚱어</title>
+    <style>
+      .fish {
+        border: 1px solid #000;
+        width: 1000px;
+        margin: 0 auto;
+      }
+      span {
+        color: blue;
+      }
+      /* span태그를 통해 글자별로 색상 변경 가능. inline요소들을 그룹으로 묶을 때 사용. 크기를 갖지 않는 태그. */
+      p,
+      ul {
+        position: relative;
+      }
+      ul {
+        left: 350px;
+        top: -227px;
+        /* position으로 위치값을 줄 경우 디바이스의 화면 가로 크기가 작아져도 개행되지 않음.
+        위치를 유지하면서 스크롤바가 생김. 부모요소의 width값이 작을 경우 보더라인을 넘어섬.*/
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fish">
+      <h1>짱<span>뚱</span>어</h1>
+      <p><img src="/images/fish.jpg" alt="물고기" /></p>
+      <ul>
+        <li>농어목 망둑어과의 바닷물고기</li>
+        <li><b>학 명 :</b> Boleophthalmus pectinirostris</li>
+        <li><strong>분류 :</strong> 농어목 망둑어과</li>
+        <li>
+          <b>생활방식 :</b> 공기호흡, 뻘을 살금살금 기어다니면서 먹이를 먹음
+        </li>
+        <li><b>크기 :</b> 몸길이 약 18cm</li>
+        <li>
+          <strong>체색 :</strong> 푸른색, 배쪽 연한 색, 몸쪽 흰색의 작은 점이
+          흩어져 있음
+        </li>
+        <li><strong>분포지역 :</strong> 서부태평양의 열대 해역</li>
+        <!-- strong과 b는 화면상 출력은 같지만 strong은 작업자에게 해당 내용의 중요성을 알리는 역할을 함 -->
+      </ul>
+    </div>
+  </body>
+</html>

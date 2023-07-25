@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy bath</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            font-family: arial,"나눔스퀘어라운드",sans-serif;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        .left{
+            width: 495px;
+        }
+        .left h2{
+            text-align: center;
+        }
+        .left ul{
+            width: 465px;
+            margin: 0 auto;
+        }
+        .left ul li{
+            float: left;
+            width: 33.333%;
+            height: 306px;
+            cursor: pointer;
+            transition: .5s;
+            position: relative;
+        }
+        .left ul li.first{
+            background: url(/images/sample01.jpg);
+        }
+        .left ul li.second{
+            background: url(/images/sample02.jpg);
+        }
+        .left ul li.third{
+            background: url(/images/sample03.jpg);
+        }
+        .left .title{
+            color: #fff;
+            text-align: center;
+            line-height: 306px;
+            font-size: 20px;
+        }
+        .left .box{
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            /* line-height: 306px; 두 줄의 콘텐츠는 라인헤이트 불가능 */
+            /* left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); */
+            position: absolute;
+            /*수직정렬 기억해두기*/
+            opacity: 0;
+            width: 300px;
+            left: 0;
+            top: 0;
+            padding-top: 120px;
+        }
+        .left ul:hover .title{
+            display: none;
+        }
+        .left ul li:hover{
+            width: 60%;
+        }
+        .left ul:hover li:not(:hover){
+            /* 호버가 되어있지 않은 상태의 개체들을 지명 */
+            width: 20%;
+        }
+        .left ul li:hover .box{
+            opacity: 1;
+        }
+        button{
+            position: absolute;
+            width: 70px;
+            height: 25px;
+            display: none;
+            background: rgba(0,0,0,0);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        .left ul li:hover button{
+            display: block;
+            top: 70%;
+            left: 40%;
+        }
+        .left ul li button:hover{
+            background: rgba(255,255,255,0.6); 
+            color: #000;
+            border: none;
+        }
+        .right{
+            width: 495px;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+        }
+        .right .box2{
+            overflow: hidden;
+            height: 306px;
+            width: 495px;
+            cursor: pointer;
+            position: relative;
+        }
+        .right .box2 img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+        }
+        .tip{
+            color: #fff;
+            font-size: 20px;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            padding-top: 140px;
+            z-index: 10;
+        }
+        body div{
+            float: left;
+        }
+        .right .box2 button{
+            position: absolute;
+            width: 70px;
+            height: 25px;
+            background: rgba(0,0,0,0);
+            border: 1px solid #fff;
+            color: #fff;
+            display: block;
+            top: 65%;
+            left: 40%;
+            z-index: 20;
+        }
+        .right .box2 button:hover{
+            background: rgba(255,255,255,0.6); 
+            color: #000;
+            border: none;
+        }
+        .right .box2:hover img{
+            scale: 1.1;
+        }
+        .right .box2:hover{
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h2>해피바스 선물</h2>
+        <ul>
+            <li class="first">
+                <p class="title">내추럴 성분</p>
+                <div class="box"><p>해피바스가 담고 있는 <br>'내추럴 성분'이 궁금하다면?</p></div>
+                <button>more</button>
+            </li>
+            <li class="second">
+                <p class="title">풍부한 향</p>
+                <div class="box"><p>해피바스에서 펼쳐지는 <br>'풍성한 향'이 궁금하다면?</p></div>
+                <button>more</button>
+            </li>
+            <li class="third">
+                <p class="title">즐거운 경험</p>
+                <div class="box"><p>해피바스가 이끄는 <br>'즐거운 경험'이 궁금하다면?</p></div>
+                <button>more</button>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <h2>해피바스 뷰티톡</h2>
+                <div class="box2">
+                    <p class="tip">피부고민에 따른 뷰티팁을 드려요.</p>
+                    <img src="Happybath_beautytalk-banner.jpg" alt="Happybath_beautytalk-banner">
+                    <button>more</button>
+                </div>
+    </div>
+</body>
+</html>

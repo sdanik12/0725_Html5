@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 어떤 문서든 따로 수치를 주는 게 낫기 때문에 마진, 패딩 설정할 것 */
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+        position: relative;
+        /* relative 요소는 absolute 요소의 부모 요소, 즉 위치상의 기준점이 되기도 함*/
+      }
+      ul:nth-child(2) {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        list-style: none;
+        opacity: 0.5;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div>
+      <ul>
+        <li><a href="#">링크태그1</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">링크태그2</a></li>
+      </ul>
+      <p>
+        새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운 콘텐츠새로운
+        콘텐츠
+      </p>
+    </div>
+  </body>
+</html>

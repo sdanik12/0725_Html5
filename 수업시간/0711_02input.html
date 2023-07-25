@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            display: none;
+        }
+        #one:checked ~ p img{
+            display: block;
+            /* 선택이 중요함. 체크박스가 클릭되었을 때, 인접한 p의 img가 나타남. 틸드기호와 하위선택 주의. */
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="one">
+    <label for="one">photo1</label>
+    <p><img src="/images/photo1.jpg" alt="photo1"></p>
+    <!-- id명과 for명이 같아야 토글이 작동됨(재클릭시 선택해제) -->
+</body>
+</html>

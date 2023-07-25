@@ -1,0 +1,240 @@
+@charset "uft-8";
+@font-face {
+    font-family: applesd;
+    src: url(/webfonts/AppleSDGothicNeoR.woff) format("woff");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+body{
+    font-family: applesd, arial, sans-serif;
+}
+header{
+    height: 60px;
+    padding: 0 20px;
+}
+header ul li{
+    float: left;
+}
+header .first{
+    float: left;
+}
+header .second{
+    float: right;
+}
+header ul li a{
+    font-size: 14px;
+    line-height: 60px;
+    padding: 0 10px;
+    text-align: center;
+}
+header ul li a:hover{
+    text-decoration: underline;
+}
+header ul.second li:nth-child(3) a:hover{
+    text-decoration: none;
+}
+header ul.second li:nth-child(3) a{
+    position: relative;
+    display: block;
+}
+header ul.second li:nth-child(3) a span{
+    display: block;
+    line-height: 60px;
+}
+header ul.second li:nth-child(3) a::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+header ul.second li:nth-child(3) a::after{
+    content: "Google 앱";
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    background: #404040;
+    font-size: 13px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    left: -10px;
+    display: none;
+}
+header ul.second li:nth-child(3) a:hover::before{
+    opacity: .5;
+    z-index: -1;
+}
+header ul.second li:nth-child(3) a:hover::after{
+    display: block;
+    transition-delay: 0.5s;
+}
+header ul.second li:last-child a{
+    background: #1a73e8;
+    padding: 10px 30px;
+    border-radius: 4px;
+    color: #fff;
+}
+header ul.second li:last-child a:hover{
+    background: #1b66c9;
+    box-shadow: 0 0 5px 3px #e4e4e4;
+    text-decoration: none;
+}
+#wrapper{
+    position: relative;
+    height: 100vh;
+    min-height: 400px;
+}
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+section .box span img{
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+section h2{
+    margin-bottom: 20px;
+}
+section h2 img{
+    width: 280px;
+}
+section .box{
+    margin: 0 auto;
+    border: 1px solid #e4e4e4;
+    border-radius: 20px;
+    height: 40px;
+    width: 550px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+div.box:hover{
+    box-shadow: 0 0 5px 3px #e4e4e4;
+}
+section .box input{
+    border: none;
+    width: 65%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+:focus{
+    outline: none;
+}
+section .box span:last-child img{
+    margin-right: 0;
+}
+section .over{
+    position: relative;
+    cursor: pointer;
+}
+section .over:hover::before{
+    position: absolute;
+    left: 8px;
+    top: 29px;
+    bottom: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid #000;
+    border-top: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+section .over:hover::after{
+    position: absolute;
+    left: 0;
+    bottom: -44px;
+    background: #000;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 30px;
+    padding: 0 10px;
+    /* border: 2px solid #fff; */
+}
+section .over:nth-of-type(2):hover::after{
+    content: "입력도구";
+}
+section .over:nth-of-type(3):hover::after{
+    content: "음성검색";
+}
+section .over:nth-of-type(4):hover::after{
+    content: "이미지로 검색";
+}
+section .btn{
+    border: 1px solid transparent;
+    border-radius: 5px; 
+    padding: 0 15px;
+    height: 35px;
+    margin-top: 20px;
+    margin-right: 10px;
+    line-height: 35px;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+section > input:first-of-type:hover,
+section > input:nth-of-type(2):hover{
+    box-shadow: 0px 1px 0px 0.5px #e4e4e4;
+    border: 1px solid #e4e4e4;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+}
+hr{
+    background: #e3e3e3;
+    height: 1px;
+    border: none;
+}
+footer p{
+    padding: 15px;
+    margin: 0 15px;
+    color: #747474;
+}
+footer ul li{
+    float: left;
+    padding:15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+footer ul li a{
+    color: #747474;
+}
+footer ul li:hover{
+    text-decoration: underline;
+}
+footer ul li:first-child a,
+footer ul li:last-child a
+{
+    margin: 0 20px;
+}
+footer .left{
+    float: left;
+}
+footer .right{
+    float: right;
+}

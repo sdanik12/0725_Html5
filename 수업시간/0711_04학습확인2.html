@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input[type=radio]{
+            display: none;
+        }
+        div.content label{
+            display: block;
+            float: left;
+            width: calc(100% / 4);
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        #one:checked ~ div.tabcon,
+        div.content label:first-of-type{
+            background: #f00;
+        }
+        #two:checked ~ div.tabcon,
+        div.content label:nth-of-type(2){
+            background: rgb(0, 255, 21);
+        }
+        #three:checked ~ div.tabcon,
+        div.content label:nth-of-type(3){
+            background: rgb(4, 0, 255);
+        }
+        #four:checked ~ div.tabcon,
+        div.content label:nth-of-type(4){
+            background: rgb(251, 255, 0);
+        }
+        div.tabcon{
+            display: none;
+            width: 100%;
+        }
+        div.tabcon h1{
+            padding: 100px;
+            text-align: center;
+        }
+        #one:checked ~ .tabcon>h1:first-child
+        /* #two:checked ~ div.tabcon h1:nth-of-type(2),
+        #three:checked ~ div.tabcon h1:nth-of-type(3),
+        #four:checked ~ div.tabcon h1:nth-of-type(4)*/
+            {display: block;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="con" id="one" checked>
+    <input type="radio" name="con" id="two">
+    <input type="radio" name="con" id="three">
+    <input type="radio" name="con" id="four">
+    <div class="tabcon">
+        <h1>content1</h1>
+        <h1>content2</h1>
+        <h1>content3</h1>
+        <h1>content4</h1>
+    </div>
+    <div class="content">
+        <label for="one">content1</label>
+        <label for="two">content2</label>
+        <label for="three">content3</label>
+        <label for="four">content4</label>
+    </div>
+</body>
+</html>

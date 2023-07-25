@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+         body {
+        font-family: Arial, "나눔돋움", Dotum, sans-serif;
+      }
+      p{
+        width: 500px;
+        border: 1px solid #000;
+      }
+      p.normal{
+        white-space: normal;
+        opacity: 0.5;
+      }
+      /* 연속공백 처리x 자동개행o 엔터 적용x default */
+      p.nowrap{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        visibility: hidden;
+      }
+      /* 엔터, 연속공백x 길어도 줄바꿈x */
+      p.pre{
+        white-space: pre;
+      }
+      /* 연속공백o 엔터o 소스 그대로*/
+      p.pre-wrap{
+        white-space: pre-wrap;
+      }
+      /* 연속공백o 엔터o 길면 줄바꿈o */
+      p.pre-line{
+        white-space: pre-line;
+      }
+      /* 연속공백x 엔터o 길면 줄바꿈o */
+      span img{
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="normal">
+      normal                제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
+      국회재적의원 과반수의 찬성이 있어야 한다.
+      교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.
+    </p>
+    <p class="nowrap">
+        nowrap              제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
+        국회재적의원 과반수의 찬성이 있어야 한다.
+        교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.
+      </p>
+      <p class="pre">
+        pre                 제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
+        국회재적의원 과반수의 찬성이 있어야 한다.
+        교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.
+      </p>
+      <p class="pre-wrap">
+        pre-wrap            제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
+        국회재적의원 과반수의 찬성이 있어야 한다.
+        교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.
+      </p>
+      <p class="pre-line">
+        pre-line            제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
+        국회재적의원 과반수의 찬성이 있어야 한다.
+        교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.
+      </p>
+      <span>이미지<img src="/images/menu1.jpg" alt="menu1"></span>
+  </body>
+</html>

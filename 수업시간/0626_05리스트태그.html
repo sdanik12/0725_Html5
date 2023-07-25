@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+      * {
+        margin: 0;
+        padding: 0;
+      } */
+      body > ul {
+        list-style: upper-roman;
+      }
+      body > ul > li > ul {
+        list-style: disc;
+      }
+      /* 부등호의 방향은 자식요소를 의미함 */
+      ul li {
+        border: 1px solid #000;
+      }
+      /* ul.second .list + li {
+        color: #4aacfc;
+      }
+      +는 바로 아래의 항목 */
+      ul.second .list ~ li {
+        color: #fc4a71;
+      }
+      /* ~는 아래 이하의 항목들 */
+      ul,
+      p {
+        background-color: beige;
+      }
+      /* 바깥여백은margin 안쪽여백은padding */
+      p {
+        /* margin: 10px 20px 30px 40px; */
+        /* margin-top: 20px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        margin-right: 10px; */
+        /* margin: 10px 20px 30px; */
+        margin: 10px 20px;
+        /* 상하좌우 다 기재하지 않을 경우 마주보는 방향의 값이 설정됨 */
+        padding: 50px;
+      }
+      dd {
+        margin: 0px 0px 0px 50px;
+        /* 위 오른쪽 아래 왼쪽 순, 0의 경우 단위 기재 안해도 됨*/
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <ul>
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+      <li>
+        <ul class="second">
+          <li class="list">리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+    </ul>
+    <p>문단태그</p>
+    <dl>
+      <!-- 정의된 리스트 -->
+      <dt>Coffee</dt>
+      <!-- 용어 정의 -->
+      <dd>- black hot drink</dd>
+      <dd>- black iced drink</dd>
+      <!-- 용어 설명 -->
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+  </body>
+</html>

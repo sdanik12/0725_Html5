@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birkenstock</title>
+    <style>
+        .clearfix::before, .clearfix::before{
+            content: "";
+            display: block;
+        }
+        .clearfix::after{
+            clear: both;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        body{
+            font-family: Arial, "notosanskr", sans-serif;
+        }
+        #wrap{
+            width: 1182px;
+            margin: 0 auto;
+        }
+        #icon{
+            width: 837px;
+            margin: 0 auto;
+        }
+        #icon ul li{
+            position: relative;
+            cursor: pointer;
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin: 50px 0;
+        }
+        #icon ul li p{
+            float: left;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 109px;
+            height: 109px;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            border-radius: 50%;
+            background: #fff;
+            text-align: center;
+            line-height: 109px;
+            display: none;
+        }
+        #icon ul li:hover p{
+            display: block;
+        }
+        #slide{
+            margin: 20px auto 50px;
+            width: 837px;
+            height: 150px;
+        }
+        #slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+        #top{
+            background: #012363;
+            min-width: 1182px;
+        }
+        .inner{
+            width: 837px;
+            margin: 0 auto;
+            padding: 5px 0;
+            overflow: hidden;
+        }
+        .inner ul{
+            float: right;
+        }
+        .inner ul li{
+            float: left;
+        }
+        .inner ul li a{
+            color: #fff;
+            font-size: 12px;
+        }
+        .inner ul li a::after{
+            content: "/";
+            padding: 0 10px;
+        }
+        .inner ul li:last-child a::after{
+            content: "";
+            padding: 0;
+        }
+        .inner ul li a:hover{
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .nav{
+            width: 837px;
+            margin: 0 auto;
+        }
+        .clearfix li{
+            float: left;
+            width: calc(100% / 7);
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .logo{
+            margin: 0 auto;
+            text-align: center;
+            margin: 50px 0;
+        }
+        #product{
+            width: 1182px; 
+            margin: 0 auto;
+        }
+        #product ul{
+            float: left;
+        }
+        #product ul li{
+            width: calc(1182px / 3);
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="inner">
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <header>
+            <div class="logo"><img src="/수업시간/birkenstock/images/logo1.png" alt=""></div>
+            <div class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">WOMEN</a></li>
+                    <li><a href="#">BOYS</a></li>
+                    <li><a href="#">GIRLS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="slide"><img src="/수업시간/birkenstock/images/visual.png" alt=""></div>
+        <div id="icon">
+            <ul>
+                    <li>
+                        <img src="/수업시간/birkenstock/images/icon1.png" alt="icon1">
+                        <p>ABOUT</p>
+                    </li>
+                    <li>
+                        <img src="/수업시간/birkenstock/images/icon2.png" alt="icon2">
+                        <p>COLLECTION</p>
+                    </li>
+                    <li>
+                        <img src="/수업시간/birkenstock/images/icon3.png" alt="icon3">
+                        <p>SHOP</p>
+                    </li>
+                    <li>
+                        <img src="/수업시간/birkenstock/images/icon4.png" alt="icon4">
+                        <p>SERVICES</p>
+                    </li>
+            </ul>
+        </div>
+        <div id="product">
+            <ul class="clearfix">
+                <li>
+                    <img src="/수업시간/birkenstock/images/sub1.png" alt="">
+                    <div class="box">
+                        <p>2018년 여름신상<br>
+                            지금 바로 만나보세요!<br>
+                            +
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/수업시간/birkenstock/images/sub2.png" alt="">
+                    <div class="box">
+                        <p>2018년 여름신상<br>
+                            지금 바로 만나보세요!<br>
+                            +
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/수업시간/birkenstock/images/sub3.png" alt="">
+                    <div class="box">
+                        <p>2018년 여름신상<br>
+                            지금 바로 만나보세요!<br>
+                            +
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>    
+        <div id="birken">
+
+        </div>
+        <footer>
+        </footer>
+</div>
+</body>
+</html>

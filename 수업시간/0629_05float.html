@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap1 > div {
+        width: 33.333%;
+        /* 40%로 설정하면 컨텐츠 3개로 120%, 사이즈가 맞지 않아 right는 밑으로 내려가게 됨 */
+        float: left;
+        background: #aaa;
+      }
+      .wrap2 {
+        font-size: 0;
+      }
+      .wrap2 > div {
+        display: inline-block;
+        background: #aaa;
+        width: 33.333%;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+    <div class="wrap2">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

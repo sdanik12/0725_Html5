@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap1 div,
+      .wrap2 div {
+        width: 200px;
+        height: 200px;
+      }
+      .wrap1 div:first-child {
+        background: #aaa;
+      }
+      .wrap1 div:nth-child(2) {
+        background: #aab;
+        position: relative;
+        left: 100px;
+        top: -100px;
+      }
+      .wrap1 div:nth-child(3) {
+        background: #aac;
+        position: relative;
+        left: 200px;
+        top: -200px;
+      }
+      .wrap2 div:first-child {
+        background: #aaa;
+      }
+      .wrap2 div:nth-child(2) {
+        background: #aab;
+      }
+      .wrap2 div:nth-child(3) {
+        background: #aac;
+      }
+
+      .wrap2 > div {
+        float: left;
+      }
+      .wrap2 {
+        border: 1px solid #000;
+      }
+      /* float의 속성 값은 left, right밖에 없음. 일일이 호명하지 말고, 자식요소 선택자를 이용해서 한 번에 설정값을 주는 것이 편리 */
+    </style>
+  </head>
+  <body>
+    <div class="wrap1">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="wrap2">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

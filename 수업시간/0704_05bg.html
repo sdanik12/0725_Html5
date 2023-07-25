@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            height:100px;
+            /* background: url(photo1.jpg) left top/50px no-repeat, url(/images/photo2.jpg) right bottom/50px no-repeat, url(/images/photo3.jpg) center/50px no-repeat; */
+            /* 콤마(,)로 구분하여 반복 삽입 가능 */
+            background-image: url(/images/photo1.jpg), url(/images/photo2.jpg), url(/images/photo3.jpg);
+            background-position: left top, right bottom, center;
+            background-repeat: no-repeat;
+            background-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

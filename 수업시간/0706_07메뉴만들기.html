@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: arial, "나눔스퀘어라운드", sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        .menu>ul>li{
+            float: left;
+            width: 100px;
+            text-align: center;
+            position: relative;
+        }
+        .menu>ul>li>a{
+            display: block;
+            line-height: 50px;
+        }
+        /* .menu>ul>li>a:hover{
+            background: #ccc;
+        }
+            이렇게 했을 때 선택되는 요소는 <li><a href="#">메뉴1</a> */
+        .menu li ul li a{
+            display: block;
+            line-height: 40px;
+            white-space: nowrap;
+            /* 메뉴명이 길 때 줄바꿈이 일어나지 않도록 nowrap으로 설정 */
+        }
+        .menu>ul>li a:hover,
+        .menu>ul>li:hover>a{
+            background: #5a5a5a;
+            color: #fff;
+        }
+        .menu>ul ul{
+            /* display: none; */
+            position: absolute;
+            height: 0;
+            overflow: hidden;
+            transition-property: height;
+            transition-duration: 0.5s;
+            width: 100%;
+        }
+        .menu>ul>li:hover > ul{
+            display: block;
+            height: 160px;
+        } 
+            /* 서브메뉴 한줄씩 나오게 하기 */
+        /* .menu>ul:hover ul{
+            display: block;
+            height: 160px;
+            hover 했을 때 메뉴 다같이 나오게 하기
+        } */
+        .slide{
+            height: 170px;
+            background: #b0dbfd;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#">메뉴1의이름이엄청길다면?</a>
+                <ul>
+                    <li><a href="#">서브메뉴1-1</a></li>
+                    <li><a href="#">서브메뉴1-2</a></li>
+                    <li><a href="#">서브메뉴1-3</a></li>
+                    <li><a href="#">서브메뉴1-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴2</a>
+                <ul>
+                    <li><a href="#">서브메뉴2-1</a></li>
+                    <li><a href="#">서브메뉴2-2</a></li>
+                    <li><a href="#">서브메뉴2-3</a></li>
+                    <li><a href="#">서브메뉴2-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴3</a>
+                 <ul>
+                    <li><a href="#">서브메뉴3-1</a></li>
+                    <li><a href="#">서브메뉴3-2</a></li>
+                    <li><a href="#">서브메뉴3-3</a></li>                        
+                    <li><a href="#">서브메뉴3-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴4</a>
+                <ul>
+                    <li><a href="#">서브메뉴4-1</a></li>
+                    <li><a href="#">서브메뉴4-2</a></li>
+                    <li><a href="#">서브메뉴4-3</a></li>
+                    <li><a href="#">서브메뉴4-4</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="slide"></div>
+    </div>
+</body>
+</html>

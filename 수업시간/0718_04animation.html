@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-timing-function</title>
+    <style>
+        .circle{
+            position: relative;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ff00ff;
+            animation-name: bg;
+            animation-duration:4s;
+            /* animation-delay:1s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .one .circle{
+            animation-timing-function:linear;
+        }
+        .two .circle{
+            animation-timing-function:ease;
+        }
+        .three .circle{
+            animation-timing-function: ease-in;
+        }
+        .four .circle{
+            animation-timing-function: ease-out;
+        }
+        .five .circle{
+            animation-timing-function: ease-in-out;
+        }
+        .six .circle{
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes bg{
+            0%{
+                left:100px;
+                background: #e5b6e9;
+            }
+            50%{
+                left: 300px;
+                background: #f7f768;
+            }
+            100%{
+                left:200px;
+                background: #917dfd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>animation-timing-function : linear</p>
+        <div class="circle"></div>
+    </div>
+    <div class="two">
+        <p>animation-timing-function : ease</p>
+        <div class="circle"></div>
+    </div>
+    <div class="three">
+        <p>animation-timing-function : ease-in</p>
+        <div class="circle"></div>
+    </div>
+    <div class="four">
+        <p>animation-timing-function : ease-out</p>
+        <div class="circle"></div>
+    </div>
+    <div class="five">
+        <p>animation-timing-function : ease-in-out</p>
+        <div class="circle"></div>
+    </div>
+    <div class="six">
+        <p>animation-timing-function : cubic-bezier</p>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자모양</title>
+    <style>
+        mark {
+            background-color: aquamarine;
+        }
+        #first{
+            background-color: #bdf5d6;
+        }
+        .txt{
+            background-color: #f5a5a9!important;
+        }
+    </style>
+    <!-- 인라인 스타일을 해제하면 id 지명 스타일이 다음으로 적용됨 -->
+    <!-- !important 적용시 모든 스타일 중 가장 우선됨 -->
+  </head>
+  <body>
+    <p><b>굵은글자</b></p>
+    <p><strong>굵은글자</strong></p>
+    <!-- 둘 다 굵은 글자지만 strong은 중요성의 의미를 담고 있다-->
+    <p><i>기울어진글자</i></p>
+    <p><em>기울어진글자</em></p>
+    <p><small>작은글자</small></p>
+    <!-- 내용을 블록 설정 후 alt+w 누르면 wraping되는데 글자서식태그 입력 후 enter -->
+    <p>x<sup>2</sup></p>
+    <p>h<sub>2</sub>0</p>
+    <!-- 아래 첨자, 윗첨자 -->
+    <p><ins>밑줄문자</ins></p>
+    <p><del>취소선글자</del></p>
+    <p><mark id="first" class="txt">하이라이트글자</mark></p>
+    <!-- class명은 중복 지정 가능, id는 중복 지정 불가 -->
+    <p><mark id="second" class="txt" style="background-color: #e7c5f7">하이라이트글자</mark></p>
+    <!-- style 인라인 방식 -->
+    <blockquote cite="http://www.naver.com">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </blockquote>
+    <!-- 블록쿼트는 자동으로 들여쓰기 되고, 출처를 표기할 때 사용, 사이트 속성 존재 -->
+    <p>
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they live.
+    </p>
+    <p><q cite="http://www.naver.com">WWF's goal is to: <q>Build a future where people live in harmony with 
+        nature.</q></p>
+    <!-- 짧은 구문 인용시 q태그 사용, 마찬가지로 사이트 속성 존재, 자동으로 큰따옴표 표기 -->
+    <p>
+        The <abbr title="World Health Organization">WHO</abbr> was founded in 
+        1948.
+    </p>
+    <!-- 약어로 표기하고 본래명칭을 박스로 알려줌 -->
+    <address>
+        Written by juhyeon <br>
+        contact me :) <br>
+        sdanik12@naver.com <br>
+    </address>
+    <!-- address는 기본적으로 이탤릭체로 작성됨 -->
+  </body>
+</html>

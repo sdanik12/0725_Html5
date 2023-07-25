@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input[type=radio]{
+            display: none;
+        }
+        /* 라디오 버튼이 보이지 않게 하려면 []를 이용해서 타입을 지정해야함 */
+        /* img{
+            width: 500px;
+            height: 340px;
+            display: none;
+            clear: both;
+            position: relative;
+        } */
+        /* #one:checked ~ p img:first-child,
+        #two:checked ~ p img:nth-child(2),
+        #three:checked ~ p img:nth-child(3),
+        #four:checked ~ p img:nth-child(4),
+        #five:checked ~ p img:nth-child(5),
+        #six:checked ~ p img:nth-child(6){
+            display: block; 
+            선택이 중요함. 체크박스가 클릭되었을 때, 인접한 p의 img가 나타남. 틸드기호와 하위선택 주의.
+        }*/
+        p.photo{
+            width: 500px;
+            height: 340px;
+            display: none;
+            clear: both;
+            position: relative;
+        }
+        #one:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo1.jpg);
+            background-size: cover;
+            /* background-size를 cover로 설정하면 이미지가 잘리지 않음 */
+        }
+        #two:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo2.jpg);
+            background-size: cover;
+        }
+        #three:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo3.jpg);
+            background-size: cover;
+        }
+        #four:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo4.jpg);
+            background-size: cover;
+        }
+        #five:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo5.jpg);
+            background-size: cover;
+        }
+        #six:checked ~ p.photo{
+            display: block;
+            background-image: url(/images/photo6.jpg);
+            background-size: cover;
+        }
+        label{
+            float: left;
+            display: block;
+            width: calc(500px / 6);
+            background: #8ee2d7;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        div{
+            position: absolute;
+            top: 340px;
+        }
+        label:hover{
+            background: #77fdeb;
+        }
+        #one:checked ~ div label:first-child,
+        #two:checked ~ div label:nth-child(2),
+        #three:checked ~ div label:nth-child(3),
+        #four:checked ~ div label:nth-child(4),
+        #five:checked ~ div label:nth-child(5),
+        #six:checked ~ div label:nth-child(6)
+        {
+            background: #087260;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="photo" id="one" checked>
+    <input type="radio" name="photo" id="two">
+    <input type="radio" name="photo" id="three">
+    <input type="radio" name="photo" id="four">
+    <input type="radio" name="photo" id="five">
+    <input type="radio" name="photo" id="six">
+    <p class="photo"></p>
+    <div>
+        <label for="one">photo1</label>
+        <label for="two">photo2</label>
+        <label for="three">photo3</label>
+        <label for="four">photo4</label>
+        <label for="five">photo5</label>
+        <label for="six">photo6</label>
+    </div>
+    <!-- <p>
+        <img src="/images/photo1.jpg" alt="photo1">
+        <img src="/images/photo2.jpg" alt="photo2">
+        <img src="/images/photo3.jpg" alt="photo3">
+        <img src="/images/photo4.jpg" alt="photo4">
+        <img src="/images/photo5.jpg" alt="photo5">
+        <img src="/images/photo6.jpg" alt="photo6">
+    </p> -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p:first-of-type {
+        color: #f86161;
+      }
+      /* p요소 중에서 첫번째. p:first-child는 부모인 body를 기준으로 보기 때문에 첫번째 자리에 있는 h1 때문에 효과가 적용되지 않음 */
+      p:last-of-type {
+        color: #819df8;
+      }
+      p:last-child {
+        color: #f7e059;
+      }
+      p:nth-child(3) {
+        color: #b1eb7c;
+      }
+      p::first-letter {
+        font-size: 30px;
+      }
+      /* p태그들의 첫번째 글자 모두가 커짐 */
+      p::first-line {
+        text-decoration: underline;
+      }
+      h1::before {
+        content: 가상요소 앞;
+      }
+      h1:after {
+        content: "가상요소 뒤";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목태그</h1>
+    <p>첫째</p>
+    <p>둘째</p>
+    <p>셋째</p>
+    <p>넷째</p>
+    <p>
+      What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type
+      and scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting, remaining
+      essentially unchanged. It was popularised in the 1960s with the release of
+      Letraset sheets containing Lorem Ipsum passages, and more recently with
+      desktop publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum.
+    </p>
+    <ul>
+      <li>
+        <p>문단태그</p>
+        <p>문단태그</p>
+        <p>문단태그</p>
+        <p>문단태그</p>
+        <p>문단태그</p>
+      </li>
+    </ul>
+  </body>
+</html>

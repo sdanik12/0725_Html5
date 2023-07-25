@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scaleX</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        body{
+            font-family:arial,"나눔스퀘어라운드",sans-serif;
+            background: #b9dceb;
+            position: relative;
+        }
+        header{
+            background: #fff;
+            height: 50px;
+            width: 100%;
+        }
+        nav ul{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        nav>ul>li{
+            width: 20%;
+            float: left;
+            text-align: center;
+            position: relative;
+        }
+        nav ul li a{
+            line-height: 50px;
+            position: relative;
+        }
+        nav > ul > li > a::after{
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: #b9dceb;
+            transform: scaleX(0);
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            transition: 0.4s;
+        }
+        nav > ul > li:hover > a::after{
+            transform: scaleX(1);
+        }
+        .subs{
+            background: linear-gradient(#fff,#b9dceb,#fff);
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s;
+            position: absolute;
+            z-index: 1;
+        }
+        .subs a{
+            line-height: 40px;
+            color: #333;
+        }
+        nav:hover .subs,
+        nav:hover ~.bg{
+            height: 160px;
+        }
+        .bg{
+            background: linear-gradient(#fff,#b9dceb,#fff);
+            width: 100%;
+            height: 0px;
+            transition: height 0.5s;
+            position: absolute;
+            top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">해피바스 이야기</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스 이야기</a></li>
+                        <li><a href="#">해피바스 이야기</a></li>
+                        <li><a href="#">해피바스 이야기</a></li>
+                        <li><a href="#">해피바스 이야기</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">해피바스 선물</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스 선물</a></li>
+                        <li><a href="#">해피바스 선물</a></li>
+                        <li><a href="#">해피바스 선물</a></li>
+                        <li><a href="#">해피바스 선물</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">해피바스 뷰티톡</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스 뷰티톡</a></li>
+                        <li><a href="#">해피바스 뷰티톡</a></li>
+                        <li><a href="#">해피바스 뷰티톡</a></li>
+                        <li><a href="#">해피바스 뷰티톡</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">해피바스 제품</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스 제품</a></li>
+                        <li><a href="#">해피바스 제품</a></li>
+                        <li><a href="#">해피바스 제품</a></li>
+                        <li><a href="#">해피바스 제품</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">해피바스 함께하기</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스 함께하기</a></li>
+                        <li><a href="#">해피바스 함께하기</a></li>
+                        <li><a href="#">해피바스 함께하기</a></li>
+                        <li><a href="#">해피바스 함께하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bg"></div>
+    <div class="visual"><img src="/images/photo4.jpg" alt="photo4"></div>
+</body>
+</html>

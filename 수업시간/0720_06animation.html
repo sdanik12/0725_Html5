@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle animation</title>
+    <style>
+        .square{
+            margin: 100px auto;
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .square > div:not(:last-child){
+            border: 1px solid #000;
+            border-radius: 50% 40% 40% 50%;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            animation-iteration-count: infinite;
+            animation-name: rotate;
+        }
+        .one{
+            animation-duration: 6s;
+        }
+        .two{
+            animation-duration: 4s;
+            animation-direction: reverse;
+            /* reverse를 주면 애니메이션을 하나 더 만들 필요가 없음 */
+        }
+        .three{
+            animation-duration: 10s;
+        }
+        @keyframes rotate{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .square:hover .one,
+        .square:hover .two,
+        .square:hover .three{
+            border: none;
+            background: rgb(255, 196, 196);
+        }
+        .square:hover .one{
+            opacity: 0.3;
+        }
+        .square:hover .two{
+            opacity: 0.5;
+        }
+        .square:hover .three{
+            opacity:0.7;
+        }
+        a{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 콤마 찍는 거 잊지 말기 */
+            text-decoration: none;
+            color: #000
+        }
+        .square:hover a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="square">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="text"><a href="#">Html</a></div>
+    </div>
+</body>
+</html>

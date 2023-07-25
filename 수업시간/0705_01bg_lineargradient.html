@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        p.bg{
+            height: 100px;
+        }
+        .bg1{
+            background-image: linear-gradient(#f3a2a2, #9d9df3);
+            /* 그라디언트 앞의 접두사는 웹브라우저별 특성을 반영한 것(현재는 실질적 의미 없음) */
+        }
+        .bg2{
+            background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            /* deg는 각도를 의미하고 45deg는 45도를 의미함 */
+        }
+        .bg3{
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            /* to top은 그라디언트의 방향을 의미함(아래(#fbc2eb)에서 위(#a6c1ee)로) */
+        }
+        .bg4{
+            background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        .bg5{
+            background-image: linear-gradient(-45deg, #fa709a 0%, #fee140 100%);
+        }
+        .bg6{
+            background-image: linear-gradient(#fa709a 10%, #fee140 50%);
+            /* 10%까지는 첫색이 혼합, 50%까지는 두번째 색이 혼합, 나머지 50%는 마지막 색상이 차지 */
+        }
+        .bg7{
+            background-image: repeating-linear-gradient(#fbc2eb, #a6c1ee 20%);
+            /* 나머지 80%를 반복함 */
+        }
+        .bg8{
+            background-image: radial-gradient(#ff00b7 0%, #00fff2 100%);
+        }
+        .bg9{
+            background-image: radial-gradient(circle, #ff00b7 0%, #00fff2 100%);
+            /* 앞에 circle을 붙이면 정원모양 */
+        }
+        .bg10{
+            background-image: repeating-radial-gradient(#ff00b7 0%, #00fff2 20%);
+        }
+        /* 원형 그라디언트의 원의 중심 위치를 설정할 수 있음 */
+    </style>
+</head>
+<body>
+    <p class="bg bg1"></p>
+    <p class="bg bg2"></p>
+    <p class="bg bg3"></p>
+    <p class="bg bg4"></p>
+    <p class="bg bg5"></p>
+    <p class="bg bg6"></p>
+    <p class="bg bg7"></p>
+    <p class="bg bg8"></p>
+    <p class="bg bg9"></p>
+    <p class="bg bg10"></p>
+</body>
+</html>

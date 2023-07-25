@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p,span{
+        background-color: #ccc;
+       }
+       div{
+        border: 1px solid #000;
+        width: 500px;
+        height: 500px;
+        /* background-color: #74e9d5; */
+        /* 블록태그는 width가 디바이스의 가로사이즈만큼으로 기본적으로 지정되어 있기 때문에 세로값만 주어도 백그라운드컬러가 들어감*/
+        /* opacity: 0.5; */
+        /* background-color: rgba(20, 200, 200, .5); */
+        background-image: url(photo1.jpg);
+        background-repeat: no-repeat;
+        /* no-repeat이어야 위치 지정 가능 */
+        background-position: center bottom;
+        /* 0%는 좌측상단 100%는 우측상단. 100% 100%으로 지정시 우측하단 */
+        background-size: contain;
+        /* %로 지정시 위에서 지정된 width와 height값을 기준으로 함
+        px로 지정시 가로사이즈, 세로사이즈 순으로 기재
+        cover로 지정시 position을 기준으로 사이즈에 맞게 크롭됨
+        contain지정시 사이즈가 큰 폭을 기준으로 비율에 맞게 사이즈가 조절됨(빈공간이 생김)
+        웹화면상 화질이 손상되지 않으면서 표현하려면 cover와 contain을 주로 사용*/
+       }
+    </style>
+</head>
+<body>
+   <p>
+    문단태그
+   </p>
+   <span>인라인태그</span>
+   <div></div>
+</body>
+</html>

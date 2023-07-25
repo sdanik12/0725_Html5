@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form태그</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action="" method="">
+    <fieldset>
+        <legend>회원가입</legend>
+        <p>I&nbsp;D :
+            <input type="text"
+            placeholder="아이디를 입력해주세요"
+            size="20"
+            maxlength="25"
+            minlength="10"
+            onfocus="this.placeholder='pingpong@naver.com'"
+            required>
+        </p>
+        <!-- p태그를 걸면 블록태그이기 때문에 줄바꿈이 일어나고, 앞에 글자를 추가할 수 있음. placeholder는 힌트를 주는 역할. required는 필수입력란. -->
+        <p>비밀번호 :
+            <input type="password">
+        </p>
+        <!-- input태그는 인라인태그 -->
+        <p>검색 : 
+            <input type="search">
+        </p>
+        <p>이메일 : 
+            <input type="email">
+        </p>
+        <p>전화번호 : 
+            <input type="tel"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="000-0000-0000">
+        </p>
+        <p>color : 
+            <input type="color">
+        </p>
+        <p>number : 
+            <input type="number"
+            min="1"
+            max="20"
+            value="1">
+        </p>
+        <p>range : 
+            <input type="range"
+            min="-20"
+            max="20"
+            value="1">
+        </p>
+        <p>
+            <label for="man">남</label>
+            <input type="radio" 
+            name="gender" 
+            value="남자"
+            id="man"
+            checked>
+            <label for="woman">여</label>
+            <input type="radio" 
+            name="gender" 
+            value="여자"
+            id="woman">
+            <!-- name이 같아야 중복 선택이 안됨
+                value값은 데이터관리자가 전달받는 결과값
+                checked를 지정하면 기본선택값이 됨 -->
+        </p>
+        <p>관심분야 : 
+            <input type="checkbox" name="ck" value="html5" checked>Html5
+            <input type="checkbox" name="ck" value="CSS">CSS
+            <input type="checkbox" name="ck" value="CSS3">CSS3
+            <input type="checkbox" name="ck" value="Javascript">Javascript
+            <input type="checkbox" name="ck" value="JQuery">JQuery
+        </p>
+        <p>거주지역 : 
+            <select name="city" id="city">
+                <option value="">선택</option>
+                <option value="대전시 대덕구">대덕구</option>
+                <option value="대전시 동구">동구</option>
+                <option value="대전시 서구">서구</option>
+                <option value="대전시 유성구">유성구</option>
+                <option value="대전시 중구">중구</option>
+            </select>
+        </p>
+        <p>남기고 싶은 말
+            <textarea name="tell" id="tell" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="file">
+        </p>
+        <p>
+            <input type="reset">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+        <p>
+            <input type="button" value="보내기">
+            <!-- 버튼에 들어갈 글자를 value로 지정 -->
+        </p>
+        <p>
+            <input type="image" src="/images/coffee.jpg" alt="coffee" hidden>
+        </p>
+        <p>날짜와 시간 : 
+            <input type="datetime-local">
+        </p>
+        <p>월 : 
+            <input type="month">
+        </p>
+        <p>주 : 
+            <input type="week">
+        </p>
+        <p>시간 : 
+            <input type="time">
+        </p>
+    </fieldset>
+    <!-- fieldset은 그룹으로 묶어주는 역할, 블록태그 -->
+    </form>
+</body>
+</html>

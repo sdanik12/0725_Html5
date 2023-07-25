@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        h1{
+            margin-bottom: 50px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+        .menu>li{
+            background: #3b3b3b;
+            float: left;
+            position: relative;
+        }
+        .menu>li>a{
+            line-height: 40px;
+            text-align: center;
+            display: block;
+            padding: 0 30px;
+        }
+        .menu>li>a:hover{
+            background: #ddd;
+            color: #000;
+        }
+        .html, .css, .java, .jquery, .tutorial{
+            position: absolute;
+            top: 40px;
+            display: none;
+            background: #686868;
+            z-index: 999;
+            text-align: center;
+            padding: 0 30px 0 30px;
+        }
+        .menu>li:hover ul{
+            display: block;
+        }
+        .menu>li>ul>li>a{
+            line-height: 40px;
+            text-align: center;
+            display: block;
+            white-space: nowrap;
+            
+        }
+        .menu>li>ul>li:hover a{
+            color:#000
+        }
+    </style>
+</head>
+<body>
+    <h1>Pure CSS 2Depth Menu</h1>
+    <nav>
+    <ul class="menu">
+        <li><a href="#html">HTML</a>
+            <ul class="html">
+            <li><a href="#">HTML Forms</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">HTML Graphics</a></li>
+            <li><a href="#">HTML Media</a></li>
+            <li><a href="#">HTML APIs</a></li>
+            <li><a href="#">HTML Examples</a></li>
+            <li><a href="#">HTML References</a></li>
+            </ul>
+        </li>
+        <li><a href="#css">CSS</a>
+            <ul class="css">
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">CSS Resonsive</a></li>
+                <li><a href="#">CSS Examples</a></li>
+                <li><a href="#">CSS References</a></li>
+            </ul>
+        </li>
+        <li><a href="#javascript">JAVASCRIPT</a>
+            <ul class="java">
+                <li><a href="#">JS Forms</a></li>
+                <li><a href="#">JS Objects</a></li>
+                <li><a href="#">JS Functions</a></li>
+                <li><a href="#">JS HTML DOM</a></li>
+                <li><a href="#">JS Examples</a></li>
+                <li><a href="#">JS References</a></li>
+            </ul>
+        </li>
+        <li><a href="#jquery">JQUERY</a>
+            <ul class="jquery">
+                <li><a href="#">jQuery Effects</a></li>
+                <li><a href="#">jQuery HTML</a></li>
+                <li><a href="#">jQuery Traversing</a></li>
+                <li><a href="#">jQuery AJAX</a></li>
+                <li><a href="#">jQuery Examples</a></li>
+                <li><a href="#">jQuery References</a></li>
+            </ul>
+        </li>
+        <li><a href="#tutorial">TUTORIAL</a>
+            <ul class="tutorial">
+                <li><a href="#">HTML/CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Graphics</a></li>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">XML</a></li>
+            </ul>
+        </li>
+    </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        p.bg{
+            width: 500px;
+            height: 500px;
+        }
+        .bg1{
+            background-image: radial-gradient(at 30% 20%, red, blue);
+            /* 가로 선분의 30% 지점과 세로 선분의 20% 지점이 만나는 부분이 시작점이 됨 */
+        }
+        .bg2{
+            background-image: radial-gradient(closest-side at 30% 20%, #d299c2 0%, #fef9d7 100%);
+        }
+        .bg3{
+            background-image: radial-gradient(farthest-side at 30% 20%, #d299c2 0%, #fef9d7 100%);
+        }
+        .bg4{
+            background-image: radial-gradient(closest-corner at 30% 20%, #d299c2 0%, #fef9d7 100%);
+        }
+        .bg5{
+            background-image: radial-gradient(farthest-corner at 30% 20%, #d299c2 0%, #fef9d7 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>at 30% 20%</h1>
+    <p class="bg bg1"></p>
+    <h1>closest-side at 30% 20%</h1>
+    <p class="bg bg2"></p>
+    <h1>farthest-side at 30% 20%</h1>
+    <p class="bg bg3"></p>
+    <h1>closest-corner at 30% 20%</h1>
+    <p class="bg bg4"></p>
+    <h1>farthest-corner at 30% 20%</h1>
+    <p class="bg bg5"></p>
+</body>
+</html>

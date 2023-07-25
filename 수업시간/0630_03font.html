@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font</title>
+    <link rel="stylesheet" href="/css/all.css" />
+    <!-- 이렇게 출력된 아이콘은 글자 취급되며, css 폴더 경로를 만드는 것이 중요. -->
+    <style>
+      /* 폰트 지정시 폴더명은 꼭 webfonts여야 함. */
+      div > h1 {
+        float: left;
+        width: 50px;
+      }
+      h1:first-child {
+        color: #ff9999;
+      }
+      h1:nth-child(2) {
+        color: #a1edfa;
+      }
+      h1:nth-child(3) {
+        color: #eff788;
+      }
+      h1:nth-child(4) {
+        color: #c7fdae;
+      }
+      h1:nth-child(5) {
+        color: #eba6fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1><i class="fa-solid fa-house"></i></h1>
+      <h1><i class="fa-solid fa-umbrella"></i></h1>
+      <h1><i class="fa-solid fa-mug-hot"></i></h1>
+      <h1><i class="fa-regular fa-thumbs-up"></i></h1>
+      <h1><i class="fa-regular fa-paper-plane"></i></h1>
+    </div>
+  </body>
+</html>

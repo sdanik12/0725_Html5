@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+      /* 웹사이트 제작시 주로 고딕체 계열로, 폰트는 한두 가지, weight만 다르게. */
+      @font-face {
+        font-family: 나눔스퀘어라운드, sans-serif;
+        src: url(/webfonts/NanumSquareRoundOTFR.otf) format("otf"),
+          url(/webfonts/NanumSquareRoundR.ttf) format("ttf");
+        /* format을 꼭 지정해주어야 함. woff가 표준, otf도 가능. ttf는 굳이 필요하지 않음.*/
+        /* 폰트를 지정하는 세 가지 방법
+        1. 링크
+        2. @import
+        3. @font-face */
+      }
+      @font-face {
+        font-family: noto;
+        src: url(/webfonts/NotoSansKR-Medium.woff) format("woff");
+      }
+
+      body {
+        font-family: 나눔스퀘어라운드, sans-serif;
+      }
+      h1:first-of-type {
+        font-weight: 100;
+      }
+      h1:nth-of-type(2) {
+        font-family: noto, sans-serif;
+        font-weight: 200;
+        /* 대부분의 브라우저 최소 글자 크기가 10px로 설정되어 있기 때문에 더 작을 경우 적용이 안되는 상황이 발생*/
+      }
+      h1:nth-of-type(3) {
+        font-weight: 300;
+      }
+      h1:nth-of-type(4) {
+        font-weight: 400;
+      }
+      h1:nth-of-type(5) {
+        font-weight: 500;
+      }
+      h1:nth-of-type(6) {
+        font-weight: 600;
+      }
+      h1:nth-of-type(7) {
+        font-weight: 700;
+      }
+      h1:nth-of-type(8) {
+        font-weight: 800;
+      }
+      h1:nth-of-type(9) {
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <p>green 그린</p>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+    <h1>그린</h1>
+  </body>
+</html>

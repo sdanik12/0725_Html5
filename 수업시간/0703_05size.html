@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            font-size: 200%;
+            /* 16px=12pt=100% */
+        }
+        .wrap>div{
+            border: 1px solid #000;
+        }
+        .a{
+            width: 2em;
+            /* 16(부모의 사이즈)*2=32px */
+            font-size: 1.5em;
+        }
+        .b{
+            font-size: 2em;
+            width: 2em;
+            /* width의 em은 font-size가 정해져있을 경우 그에 따르고, 그렇지 않을 경우 부모를 따라감 */
+        }
+        .c{
+            width: 2rem;
+            /* rem은 html의 사이즈를 따라감 */
+        }
+        .d{
+            width: 160px;
+            /* px로 지정할 경우 부모사이즈에 관계없이 지정됨 */
+        }
+        .e{
+            width: 10em;
+            /* 16*2(위에 지정된 .wrap이 200%이기 때문)*10 = 320px */
+        }
+        .h{
+            font-size: 16px;
+            /* %나 em은 상위요소의 영향을 받으므로 고정된 사이즈를 지정하고 싶다면 px을 사용 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+        <div class="h">h</div>
+    </div>
+</body>
+</html>

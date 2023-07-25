@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list태그</title>
+    <style>
+      ol#top {
+        list-style: upper-alpha;
+      }
+      /* #앞에 스페이스를 두면 ol의 자식요소이면서 이름이 top인 것을 찾음. 공백주면 안됨 */
+      ol.tp {
+        list-style: upper-roman;
+      }
+      ul {
+        list-style: decimal;
+        /* ul의 리스트스타일을 10진수로 바꾸면 ol처럼 순서있는 목록이 됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <ol id="top" class="tp">
+      <!-- id가 class보다 강력, id스타일이 지정됨 -->
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+    </ol>
+    <!-- ol태그는 li태그만 자식요소로 사용. 순서가 있는 리스트. 기본적으로 1,2,3으로 나오지만 스타일로 변경 가능-->
+    <ol class="tp">
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+    </ol>
+    <!-- ol도 li도 블록태그. 줄바꿈 생김. -->
+    <ul>
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+    </ul>
+    <!-- ul도 블록태그. li태그 안에 이미지 등 전부 삽입 가능. -->
+  </body>
+</html>

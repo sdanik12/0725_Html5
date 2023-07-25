@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladybug</title>
+    <style>
+        .ladybug{
+            position: relative;
+            margin: 200px auto 0 auto;
+            /* margin 순서는 상우하좌 */
+            width: 288px;
+            height: 320px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            background:
+            radial-gradient(rgba(0,0,0,1) 30%, transparent 33%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 40%, transparent 43%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 40%, transparent 43%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%),
+            radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%);
+            /* 45%까지 검은색, 50%까지, 100%까지 투명. */
+            background-color: #e11;
+            background-repeat: no-repeat;
+            background-position:
+            105px 32px,
+            48px 96px, 160px 96px,
+            64px 176px, 144px 176px,
+            32px 240px, 176px 240px;
+            /* x y */
+            background-size: 80px 80px;
+        }
+        /*----머리 만들기 시작---------------------------*/
+        .ladybug::before{
+            content: "";
+            display: block;
+            background: #000;
+            position: absolute;
+            left: 48px;
+            top: -38px;
+            width: 192px;
+            height: 80px;
+            border-radius: 50% 50% 0 0/100% 100% 0 0;
+            /* 왼위 오위 좌아래 우아래. 아래만 각진 상단 아치으로 만든 뒤 반원형태로 한번 더.*/
+        }
+        .ladybug::after{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="ladybug"></div>
+</body>
+</html>

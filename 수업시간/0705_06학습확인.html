@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 200px;
+            height: 100px;
+            background: #ccc;
+        }
+        .menu{
+            height: 100px;
+            width: calc(100% - 200px);
+            background: rgb(160, 160, 160);
+        }
+        .header div{
+            float: left;
+        }
+        .img{
+            height: 300px;
+            width: 100%;
+            background: rgb(233, 233, 233);
+        }
+        .notice{
+            background: rgb(255, 203, 203);
+            width: calc(100% / 3);
+        }
+        .banner{
+            background: rgb(247, 165, 165);
+            width: calc(100% / 3);
+        }
+        .go{
+            background: rgb(253, 145, 145);
+            width: calc(100% / 3);
+        }
+        .section div{
+            float: left;
+            height: 200px;
+        }
+        .footer div{
+            height: 100px;
+            float: left;
+        } 
+        .logo2{
+            width: 200px;
+            background: rgb(135, 181, 252);
+        }
+        .copy{
+            width: calc(100% - 400px);
+            background: rgb(153, 135, 252);
+        }
+        .sns{
+            width: 200px;
+            background: rgb(167, 229, 248);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class = "header">
+            <div class="logo">로고</div>
+            <div class="menu">메뉴</div>
+        </div>
+        <div class="img">이미지슬라이드</div>
+        <div class = "section">
+            <div class="notice">공지사항/갤러리</div>
+            <div class="banner">배너</div>
+            <div class="go">바로가기</div>
+        </div>
+        <div class="footer">
+            <div class="logo2">로고</div>
+            <div class="copy"><address>대전시 서구 둔산동</address></div>
+            <!-- address적용하면 글자가 기울임꼴로 나타남 -->
+            <div class="sns">sns</div>
+        </div>
+    </div>
+</body>
+</html>

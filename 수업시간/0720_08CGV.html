@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+    <style>
+        .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .wrap{
+            margin: 0 auto;
+            position: relative;
+        }
+        header{
+            background: #e12215;
+            height: 20px;
+            width: 100%;
+        }
+        .login{
+            width: 1025px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .login ul{
+            float: right;
+        }
+        .login li{
+            float: left;
+            margin: 0 15px;
+        }
+        .login li a{
+            color: #fff;
+            font-size: 13px;
+        }
+        .tab{
+            width: 1025px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .tab .logo{
+            padding: 15px;
+            display: inline-block;
+            float: left;
+        }
+        .tab ul{
+            float: right;
+            margin-top: 20px;
+            display: block;
+        }
+        .tab li{
+            float: left;
+            padding: 25px;
+            display: inline-block;
+        }
+        .tab li:last-child{
+            padding: 25px 0;
+        }
+        .tab li a{
+            color: #e12215;
+            font-weight: bold;
+        }
+        .banner img{
+            width: 1025px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        section ul li{
+            float: left;
+            text-align: center;
+            margin: 15px auto;
+            width: calc(100% / 4);
+            box-sizing: border-box;
+        }
+        .row{
+            padding-top: 50px;
+            width: 100%;
+            height: 189px;
+        }
+        .row div{
+            float: left;
+        }
+        .event{
+            width: calc(50%-20px);
+            margin-right: 20px;
+        }
+        .notice{
+            margin-right: 0;
+        }
+        .event h3, img{ 
+            float: left;
+            display: block;
+        }
+        .event img{
+            float: right;
+        }
+        .event h3{
+            padding-right: 80px;
+            box-sizing: border-box;
+        }
+        .notice{
+            width: 50%
+        }
+        .notice ul{
+            float: left;
+        }
+        .notice .text{
+            float: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 70%;
+        }
+        .notice .date{
+            float: right;
+            width: 30%;
+        }
+        .notice h3{
+            margin-bottom: 15px;
+        }
+        footer{
+            clear: both;
+            bottom: 0;
+            width: 100%;
+            line-height: 60px;
+            background: #d4aa69;
+        }
+        footer .copy{
+            width: 1025px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="login" class="clearfix">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="tab" class="clearfix">
+                <div class="logo"><img src="/images/CGV/image/logo.gif" alt="logo"></div>
+                <ul>
+                    <li><a href="#">영화예매</a></li>
+                    <li><a href="#">신작개봉</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">CGV매점</a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="/images/CGV/image/visual.jpg" alt="visual1">
+            </div>
+        </header>
+        <section class="clearfix">
+            <ul>
+                <li><a href="#"><img src="/images/CGV/image/img01.png" alt="img01"></a></li>
+                <li><a href="#"><img src="/images/CGV/image/img02.png" alt="img02"></a></li>
+                <li><a href="#"><img src="/images/CGV/image/img03.png" alt="img03"></a></li>
+                <li><a href="#"><img src="/images/CGV/image/img04.png" alt="img04"></a></li>
+            </ul>
+        </section>
+        <div class="row" class="clearfix">
+            <div class="event">
+                <h3>이벤트</h3>
+                <a href="#"><img src="/images/CGV/image/banner.jpg" alt="banner"></a>
+            </div>
+            <div class="notice">
+                <h3>공지사항</h3>
+                <ul class="text">
+                    <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                    <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                    <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                    <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                    <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                    <li><a href="#">공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.</a></li>
+                </ul>
+                <ul class="date">
+                    <li><a href="#">2023-07-20</a></li>
+                    <li><a href="#">2023-07-20</a></li>
+                    <li><a href="#">2023-07-20</a></li>
+                    <li><a href="#">2023-07-20</a></li>
+                    <li><a href="#">2023-07-20</a></li>
+                    <li><a href="#">2023-07-20</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="copy">
+                <p>All Copyright Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

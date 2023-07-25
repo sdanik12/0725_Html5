@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>once</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: #333;
+            /* font-family: 'Nanum Pen Script', cursive; */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            position: relative;
+        }
+        a.banner{
+            width: 728px;
+            height: 176px;
+            display: block;
+            border: 1px solid #000;
+            margin: 50px auto;
+            background:
+                url(/images/banner_logo.png) 50% 50% no-repeat,
+                url(/images/banner_photo.png) -210px 10px no-repeat,
+                url(/images/banner_09.png) 20px -360px no-repeat,
+                url(/images/banner_bg.png);
+            font-family: 'Nanum Pen Script', cursive;
+            animation: bg 1s ease-in 1s forwards;
+        }
+        @keyframes bg{
+            to{
+                background-position:550px 50%, -40px 10px, 20px -30px, 0 0;
+                /* transition으로 줄 때는 백그라운드에서 좌표값만 변경해도 적용이 됐는데 animation은 백그라운드 포지션으로 좌표값을 줘야 작동함.*/
+            }
+        }
+       
+        a img{
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            opacity: 0;
+            transform: translate(-50%,-50%);
+            animation: arrow 1s ease-in 1s infinite;
+        }
+        @keyframes arrow{
+            to{
+                left: 50%;
+                opacity: 1;
+            }
+        }
+        a span{
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: 1s;
+            animation: text 1s ease-in 1s forwards;
+        }
+        @keyframes text{
+            to{
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="banner">
+        <img src="/images/banner_arrow.png" alt="banner_arrow">
+        <span>Animation Banner Design<br>
+            웹폰트를 활용한 디자인</span>
+    </a>
+</body>
+</html>

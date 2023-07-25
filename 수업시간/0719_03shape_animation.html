@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shape</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .shape{
+        width:100px;
+        height: 100px;
+        background: #f00;
+        /* 왼위 오위 오아래 왼아래 */
+        /* border-radius: 0 0 0 100px; */
+        /* border-radius:100px 0 0 0 ; */
+        /* border-radius:50px 20px 30px/100px 50px 100px; */
+        /* x와 y는 그것들끼리 같이 써야함 /로 구분 */
+        border-radius: 50% 30% 45% 60%/30% 40% 55% 35%;
+        display: none;
+    }
+    p{
+        width: 0;
+        height: 0;
+        /* border: 10px solid #000;
+        border-bottom: none; */
+        /* border-left: 10px solid transparent;
+        border-right: 10px solid transparent; */
+        /* border-left-color: transparent;
+        border-right-color: transparent; */
+        /*길쭉이 삼각형 만들기~~~----------------------------------*/
+        /* border-top: 30px solid #000;
+        border-bottom: none;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent; */
+        /*움직이는 삼각형 만들기-----------------------------------*/
+        border: 10px solid #000;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        animation: sign;
+        animation-duration: 0.7s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        margin: 50px auto;
+    }
+    .banner{
+        position: relative;
+        text-align: center;
+    }
+    input{
+        display: none;
+    }
+    @keyframes sign{
+        0%{
+            transform: translate(0);
+        }
+        100%{
+            transform: translate(5px);
+        }
+    }
+    label{
+        display: inline-block;
+        width: 80px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 50px;
+        text-align: center;
+    }
+    #start:checked ~ label:first-of-type,
+    #stop:checked ~ label:last-of-type{
+        background: #000;
+        color: #fff;
+    }
+    #stop:checked ~ p{
+        animation-play-state: paused;
+    }
+    </style>
+</head>
+<body>
+    <div class="shape"></div>
+    <div class="banner">
+        <input type="radio" name="move" id="start" checked>
+        <input type="radio" name="move" id="stop">
+        <!-- name은 radio를 한 선택영역으로 묶어주는 표식 -->
+        <p></p>
+        <label for="start">start</label>
+        <label for="stop">stop</label>
+    </div>
+</body>
+</html>

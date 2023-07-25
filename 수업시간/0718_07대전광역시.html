@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 720px;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+        body{
+            font-family: arial, 나눔스퀘어라운드, sans-serif;
+            background: #eaeaea;
+        }
+        .wrap ul li{
+            float: left;
+            text-align: center;
+            position: relative;
+            width: calc(100% / 4);
+        }
+        .wrap ul li a:first-of-type{
+            margin-bottom: 30px;
+        }
+        .young > a:last-child{
+            width: 142px;
+            height: 142px;
+            background-image: url(/수업시간/대전광역시/bg_info_m06.png);
+        }
+        li > a:last-child{
+            position: absolute;
+            left: 20px;
+            top:40px;
+        }
+        .young:hover > a:last-child{
+            background-position: 0 -240px;
+        }
+        .city > a:last-child{
+            width: 142px;
+            height: 142px;
+            background-image: url(/수업시간/대전광역시/bg_info_m02.png);
+        }
+        .city:hover > a:last-child{
+            background-position: 0 -240px;
+        }
+        .animal > a:last-child{
+            width: 142px;
+            height: 142px;
+            background-image: url(/수업시간/대전광역시/bg_info_m03.png);
+        }
+        .animal:hover > a:last-child{
+            background-position: 0 -240px;
+        }
+        .environment > a:last-child{
+            width: 142px;
+            height: 142px;
+            background-image: url(/수업시간/대전광역시/bg_info_m04.png);
+        }
+        .environment:hover > a:last-child{
+            background-position: 0 -240px;
+        }
+        .wrap ul li:hover a:last-child{
+            animation-name: moving;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            top: 40px;
+        }
+        @keyframes moving{
+            0%{
+                top:40px;
+            }
+            50%{
+                top:50px;
+            }
+            100%{
+                top:40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li class="young">
+                <a href="#">대전청년포털</a>
+                <a href="#"></a>
+            </li>
+            <li class="city">
+                <a href="#">도시주택정보</a>
+                <a href="#"></a>
+            </li>
+            <li class="animal">
+                <a href="#">동물보호센터</a>
+                <a href="#"></a>
+            </li>
+            <li class="environment">
+                <a href="#">보건환경연구원</a>
+                <a href="#"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

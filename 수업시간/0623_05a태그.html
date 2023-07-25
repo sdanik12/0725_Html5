@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a태그</title>
+    <style>
+      a {
+        color: green;
+        text-decoration: none;
+      }
+      a:visited {
+        color: pink;
+      }
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      a:active {
+        color: yellow;
+      }
+    </style>
+    <!--
+        ----------------a태그의 상태------------------
+        hover:커서를 올리고 있을 때
+        active:링크를 클릭하고 있을 때
+        visited:방문한 링크일 때
+        link:방문한 적 없는 링크일 때, a태그의 최초 상태
+        text decoration-none:링크의 밑줄 제거
+      -->
+  </head>
+  <body>
+    <a href="#">link1</a>
+    <a href="#">link2</a>
+    <a href="#">link3</a>
+    <a href="#">link4</a>
+    <p>
+      <a
+        href="mailto:sdanik12@naver.com"
+        title="manager email address"
+        style="color: #ffc4d8"
+        >send to e-mail
+      </a>
+    </p>
+    <img src="../images/menu0.jpg" alt="menu0" />
+    <!-- alt속성은 이미지가 정상적으로 로드되지 않을 시 파일명이나 이미지에 대한 설명 문구를 표시함
+        출처 표기용으로도 사용됨 -->
+    <img src="../images/menu1.jpg" alt="" />
+    <img src="../images/menu2.jpg" alt="" />
+    <img src="../images/menu3.jpg" alt="" />
+    <img src="../images/menu4.jpg" alt="" />
+    <p><img src="../images/menu1.jpg" alt="" /></p>
+    <p><img src="../images/menu2.jpg" alt="" /></p>
+    <p><img src="../images/menu3.jpg" alt="" /></p>
+    <p><img src="../images/menu4.jpg" alt="" /></p>
+  </body>
+</html>

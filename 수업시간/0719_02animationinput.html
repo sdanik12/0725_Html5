@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바람개비</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+        }
+        label{
+            width: 120px;
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+            border-radius: 20px;
+            margin: 20px;
+            display: inline-block;
+            /* float: left; */
+        }
+        ul{
+            list-style: none;
+            position: relative;
+        }
+        .box{
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .box .pipe{
+            width: 500px;
+            height: 500px;
+            background-image: url(/images/pipe.png);
+        }
+        .box .pro{
+            width: 500px;
+            height: 500px;
+            background-image: url(/images/propeller.png);
+            position: absolute;
+            top: 0;
+        }
+        @keyframes left{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(-1080deg);
+            }
+        }
+        @keyframes right{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(1080deg);
+            }
+        }
+        #left:checked ~ .box .pro{
+            animation: left;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        #right:checked ~ .box .pro{
+            animation: right;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        #left:checked ~ label:first-of-type,
+        #right:checked ~ label:nth-of-type(2),
+        #off:checked ~ label:last-of-type{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="btn" id="left" checked>
+    <input type="radio" name="btn" id="right">
+    <input type="radio" name="btn" id="off">
+    <ul class="box">
+        <li class="pipe"></li>
+        <li class="pro"></li>
+    </ul>
+    <label for="left">turn left</label>
+    <label for="right">turn right</label>
+    <label for="off">turn off</label>
+</body>
+</html>

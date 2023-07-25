@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box animation</title>
+    <style>
+        .box1{
+            width: 600px;
+            height: 600px;
+            /* border: 1px solid #000; */
+            position: relative;
+            margin-right: 200px;
+        }
+        .box2{
+            width: 70px;
+            height: 70px;
+            background: #4bff69;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: move;
+            animation-duration:8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        @keyframes move{
+            0%{
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+            }
+            25%{
+                top:100%;
+                left:0;
+                right:0;
+                bottom:0;
+                transform:rotate(-180deg);
+                background: #71cbff;
+            }
+            50%{
+                top:100%;
+                left:100%;
+                right:0;
+                bottom:0;
+                background: #ceff73;
+            }
+            75%{
+                top:0%;
+                left:100%;
+                right:-100%;
+                bottom:0;
+                background: #ff9d70;
+            }
+        }
+        .circle1{
+            position: relative;
+            height: 300px;
+        }
+        .circle2{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #f876df;
+            position: absolute;
+            animation-name: bound;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            
+        }
+        @keyframes bound{
+            0%,
+            100%{
+                bottom: 0;
+                animation-timing-function: ease-out;
+            }
+            50%{
+                bottom: 200px;
+                animation-timing-function: ease-in;
+            }
+        }
+        div{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="circle1">
+        <div class="circle2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            cursor: pointer;
+            z-index: 999;
+            position: relative;
+            left: 0;
+        }
+        #menu:checked ~ .menu01{
+            left: 500px;
+            transition: 0.5s;
+        }
+        label span{
+            display: block;
+            width: 35px;
+            height: 5px;
+            background: #000;
+            margin: 6px 0;
+            transition: transform 0.2s ease-in;
+            
+        }
+        #menu:checked ~ .menu01 .bar1{
+            transform: translate(0,11px) rotate(45deg);
+            /* 높이 5, 마진 6이기때문에 11px */
+        }
+        #menu:checked ~ .menu01 .bar2{
+            opacity: 0;
+        }
+        #menu:checked ~ .menu01 .bar3{
+            transform: translate(0,-11px) rotate(-45deg);
+        }
+        /* 하위 형제 선택자 틸드기호 까먹지 말기. */
+        input{
+            display: none;
+        }
+        .box{
+            position: fixed;
+            /* position을 absolute로 지정시 height값 100%로 설정하면 나오지 않음. fixed로 설정해야 100% 가능. 포지션을 absolute로 줄 거면 height를 100vh로 지정하면 됨.*/
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 100%;
+            background: rgb(147, 248, 255);
+            transition: left 0.2s ease-in;
+            /* left를 통한 움직임이기 때문에 transition도 left로 줘야함. 당연. */
+            left: -500px;
+        }
+        #menu:checked ~ .box{
+            display: block;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu">
+    <label for="menu" class="menu01">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+    </label>
+    <div class="box"></div>
+</body>
+</html>
