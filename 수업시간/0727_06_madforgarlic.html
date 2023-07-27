@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>madforgarlic</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        body{
+            font-family: arial, "나눔고딕", sans-serif;
+        }
+        .food{
+            width: 1504px;
+            margin: 0 auto;
+        }
+        .food .top{
+            width: 100%;
+            height: 492px;
+            display: flex;
+        }
+        .food .top .mini{
+            display: flex;
+        }
+        .food .top .col{
+            display: flex;
+            flex-direction: column;
+        }
+        .food .bottom{
+            width: 100%;
+            display: flex;
+        }
+        .food>div>div{
+            position: relative;
+            overflow: hidden;
+        }
+        .food>div>div:hover .box{
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .food>div>div .box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+        .food>div>div>img{
+            transform: scale(1);
+            transition:1s;
+        }
+        .food>div>div:hover>img{
+            transform: scale(1.2);
+        }
+        .food>div>div:hover .col>img{
+            transform: scale(1);
+        }
+        .food>div>div .box>.inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .food>div>div .box>.inner>img{
+            margin-bottom: 20px;
+        }
+        .food>div>div .box>.inner>a{
+            padding: 10px 20px;
+            background: #fff;
+            font-size: 9px;
+            margin-top: 20px;
+        }
+        .food>div>div .box>.inner>img{
+            opacity: 0;
+            transition: 1s;
+        }
+        .food>div>div .box>.inner>a{
+            opacity: 0;
+            transition: 1s 0.2s;
+        }
+        .food>div>div:hover .box>.inner>img,
+        .food>div>div:hover .box>.inner>a{
+            opacity: 1;
+        }
+        .food>div>div .box>.inner{
+            transform: translateY(0);
+            transition: 1s ease;
+        }
+        .food>div>div:hover .box>.inner{
+            transform: translateY(-20px);
+        }
+        .food>div>div .box a:hover{
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            transition: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="food">
+        <div class="top">
+            <div class="starter">
+                <img src="/images/Mad_for_Garlic/breadandstarter.png" alt="breadandstarter">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_brand.png" alt="m-icon_brand">
+                        <p>bread & starter</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mini">
+                <div class="col">
+                    <img src="/images/Mad_for_Garlic/mini1.png" alt="mini1">
+                    <img src="/images/Mad_for_Garlic/mini2.png" alt="mini2">
+                </div>
+            </div>
+            <div class="salad">
+                <img src="/images/Mad_for_Garlic/salad.jpg" alt="salad">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_starter.png" alt="m-icon_starter">
+                        <p>salad</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="pasta">
+                <img src="/images/Mad_for_Garlic/pasta.png">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_pasta.png" alt="m-icon_pasta">
+                        <p>pasta</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="pizza">
+                <img src="/images/Mad_for_Garlic/pizza.jpg" alt="pizza">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_pizza.png" alt="m-icon_pizza">
+                        <p>pizza</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="risotto">
+                <img src="/images/Mad_for_Garlic/riceandrisotto.jpg" alt="riceandrisotto">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_ricerisotto.png" alt="m-icon_ricerisotto">
+                        <p>rice & risotto</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="steak">
+                <img src="/images/Mad_for_Garlic/steak.jpg" alt="steak">
+                <div class="box">
+                    <div class="inner">
+                        <img src="/images/Mad_for_Garlic/m-icon_steak.png" alt="m-icon_steak">
+                        <p>steak</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
