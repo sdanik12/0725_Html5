@@ -78,6 +78,8 @@ body {
   padding-left: 10px;
 }
 .gnb {
+  width: 100%;
+  min-width: 1903px;
   background: #80d4c7;
 }
 .gnb ul {
