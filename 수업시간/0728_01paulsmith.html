@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paulsmith</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        body{
+            font-family: Arial, notosanskr, sans-serif;
+        }
+        header .sign{
+            background: #000;
+            width: 100%;
+        }
+        header .sign ul{
+            width: 1903px;
+            height: 30px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        header .sign ul li a{
+            color: #fff;
+            padding: 10px;
+            font-size: 12px;
+        }
+        header .top{
+            width: 1903px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+        header .top .tophalf{
+            width: calc(50% + (197px / 2));
+            display: flex;
+            justify-content: space-between;
+        }
+        header .top .tophalf ul.search{
+            display: flex;
+        }
+        header .top .tophalf ul.search li{
+            margin-left: 10px;
+        }
+        header nav ul{
+            display: flex;
+            justify-content: space-around;
+            width: 1000px;
+            margin: 40px auto;
+        }
+        header nav ul li a{
+            font-size: 13px;
+            position: relative;
+        }
+        header nav ul li a::after{
+            /* content: url(/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
+            콘텐츠에 이미지 자체를 삽입하면 크기 조절이 불가능 */
+            content: "";
+            background-image: url(/images/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            display: inline-block;/* 디스플레이 설정을 하지 않으면 크기가 생기지 않음 */
+            position: absolute;
+        }
+        .visual .tab{
+            width: 100%;
+            height: 60px;
+            background: #77cfc4;
+        }
+        .visual{
+            text-align: center;
+        }
+        .visual .tab ul{
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .visual .tab ul li a{
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        section a{
+            display: flex;
+            width: 100%;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        section .sale,
+        section .shop{
+            display: flex;
+            width: 1903px;
+            margin: 0 auto;
+        }
+        footer .foot_info{
+            width: 100%;
+            height: 300px;
+            margin-top: 50px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #fafafa;
+        }
+        footer .foot_info .foot_sizing{
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer .foot_info .foot_sizing>div{
+            height: 40%;
+        }
+        footer h5{
+            margin-bottom: 15px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+        footer .foot_info .foot_sizing>div ul li a{
+            font-size: 14px;
+            color: #5e5e5e;
+        }
+        footer .foot_info .foot_sizing .box{
+            width: 265px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        footer .foot_info .foot_sizing .box .email input{
+            height: 40px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input::placeholder{
+            color: #b8b8b8;
+        }
+        footer .foot_info .foot_sizing .box .email input:nth-of-type(2){
+            padding: 10px 20px;
+            background: #000;
+            border: none;
+            color: #fff;
+        }
+        footer .foot_info .foot_sizing .box .sns ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        footer .foot{
+            width: 1000px;
+            height: 200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer .foot .policy{
+            display: flex;
+        }
+        footer .foot .policy a{
+            font-size: 11px;
+            color: #5e5e5e;
+        }
+        footer .foot .policy a::after{
+            content: "|";
+            padding: 30px;
+        }
+        footer .foot .policy a:last-child::after{
+            content: "";
+            padding: 0;
+        }
+        footer .foot .logo_bottom{
+            scale: 80%;
+        }
+        footer>img{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="sign">
+                <ul>
+                    <li><a href="#">Shop Locator</a></li>
+                    <li><a href="#">My Acoount</a></li>
+                    <li><a href="#">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="top">
+                <div class="tophalf">
+                    <div class="logo">
+                        <img src="/images/paulsmith/images/paul_03.png" alt="paul_03.png">
+                    </div>
+                    <ul class="search">
+                        <li><a href="#"><img src="/images/paulsmith/images/paul_05.png" alt="paul_05.png"></a></li>
+                        <li><a href="#"><img src="/images/paulsmith/images/paul_07.png" alt="paul_07.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">NEW ARRIVALS</a></li>
+                    <li><a href="#">MENS</a></li>
+                    <li><a href="#">WOMENS</a></li>
+                    <li><a href="#">JUNIOR</a></li>
+                    <li><a href="#">STORIES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="visual">
+            <div class="tab">
+                <ul>
+                    <li><a href="#">FREE CLICK & COLLECT</a></li>
+                    <li><a href="#">FREE SHOPPING ON ORDERS OVER L200</a></li>
+                    <li><a href="#">FREE RETURNS*</a></li>
+                </ul>
+            </div>
+            <img src="/images/paulsmith/images/paul_12.jpg" alt="paul_12.jpg">
+        </div>
+        <section>
+            <a href="#">Shop by Category</a>
+            <div class="sale">
+                <img src="/images/paulsmith/images/paul_14.jpg" alt="paul_14.jpg">
+                <img src="/images/paulsmith/images/paul_15.gif" alt="paul_15.gif">
+                <img src="/images/paulsmith/images/paul_16.jpg" alt="paul_16.jpg">
+            </div>
+            <a href="#">Shop by Collection</a>
+            <div class="shop">
+                <img src="/images/paulsmith/images/paul_18.jpg" alt="paul_18.jpg">
+                <img src="/images/paulsmith/images/paul_19.jpg" alt="paul_19.jpg">
+                <img src="/images/paulsmith/images/paul_20.jpg" alt="paul_20.jpg">
+                <img src="/images/paulsmith/images/paul_21.jpg" alt="paul_21.jpg">
+            </div>
+        </section>
+        <footer>
+            <div class="foot_info">
+                <div class="foot_sizing">
+                    <div class="cs">
+                        <h5>CUSTOMER SERVICES</h5>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Paul Smith Price Match</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Shopping</a></li>
+                        </ul>
+                    </div>
+                    <div class="you">
+                        <h5>YOUR PAUL SMITH</h5>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Check Your Gift Card Balance</a></li>
+                        </ul>
+                    </div>
+                    <div class="about">
+                        <h5>ABOUT PAUL SMITH</h5>
+                        <ul>
+                            <li><a href="#">Company History</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Shop Locator</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <div class="email">
+                            <h5>Email Updates</h5>
+                            <input type="email" name="email" id="email" placeholder="Enter your email address"><input type="button" value="Subscribe">
+                        </div>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_24.gif" alt="paul_24.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_26.gif" alt="paul_26.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_28.gif" alt="paul_28.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_30.gif" alt="paul_30.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_32.gif" alt="paul_32.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_34.gif" alt="paul_34.gif"></a></li>
+                                <li><a href="#"><img src="/images/paulsmith/images/paul_36.gif" alt="paul_36.gif"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                                </div>
+                </div>
+            <div class="foot">
+                <div class="logo_bottom">
+                    <img src="/images/paulsmith/images/paul_03.png" alt="paul_03.png">
+                </div>
+                <div class="policy">
+                    <a href="#">ⓒ Paul Smith</a>
+                    <a href="#">Terms&conditions</a>
+                    <a href="#">Privacy&Cookie Policy</a>
+                </div>
+            </div>
+            <img src="/images/paulsmith/images/paul_46.png" alt="paul_46.png">
+        </footer>
+    </div>
+</body>
+</html>
