@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .grid{
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        grid-template-areas: "logo menu menu menu menu"
+                            "slide slide slide slide slide"
+                            "col1 col1 col2 col3 col3"
+                            "ftlogo copyright copyright copyright sns";
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+      .grid>div:first-child{
+          grid-area: logo;
+          background: #f8b8b8;
+      }
+      .grid>div:nth-child(2){
+          grid-area: menu;
+          background: #b4eeb4;
+      }
+      .grid>div:nth-child(3){
+          grid-area: slide;
+          background: #f37575;
+      }
+      .grid>div:nth-child(4){
+          grid-area: col1;
+          background: #e7f3b0;
+      }
+      .grid>div:nth-child(5){
+          grid-area: col2;
+          background: #bddafc;
+      }
+      .grid>div:nth-child(6){
+          grid-area: col3;
+          background: #a9b1f8;
+      }
+      .grid>div:nth-child(7){
+          grid-area: ftlogo;
+          background: #fcd4a8;
+      }
+      .grid>div:nth-child(8){
+          grid-area: copyright;
+          background: #a3f1a3;
+      }
+      .grid>div:nth-child(9){
+          grid-area: sns;
+          background: #9595e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid container1">
+      <div class="grid-item">logo</div>
+      <div class="grid-item">menu</div>
+      <div class="grid-item">slide</div>
+      <div class="grid-item">공지사항/갤러리</div>
+      <div class="grid-item">배너</div>
+      <div class="grid-item">바로가기</div>
+      <div class="grid-item">로고</div>
+      <div class="grid-item">copyright</div>
+      <div class="grid-item">sns</div>
+    </div>
+  </body>
+</html>

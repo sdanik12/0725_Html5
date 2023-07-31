@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .wrap{
+            width:1200px;
+            margin: 0 auto;
+        }
+        .head{
+            display: flex;
+            height: 100px;
+        }
+        .head .logo{
+            width: 15%;
+            background: #fac7c7;
+        }
+        .head .menu{
+            width: 85%;
+            text-align: center;
+        }
+        .head .menu>ul{
+            display: flex;
+        }
+        .head .menu>ul>li{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+        .head .menu>ul>li>a{
+            border: 1px solid #000;
+            padding: 10px 20px
+            
+        }
+        .slide{
+            height: 300px;
+            background: #f5dd9c;
+        }
+        .section{
+            height: 200px;
+            display: flex;
+        }
+        .section .noti{
+            display: flex;
+            width: 33.333%;
+        }
+        .section .noti .notice{
+            width: 50%;
+            background: #c4f59c;
+        }
+        .section .noti .gallery{
+            width: 50%;
+            background: #b5fd7b;
+        }
+        .section .banner{
+            background: #b1e8f8;
+            width: 33.333%;
+        }
+        .section .go{
+            background: #20c2f3;
+            width: 33.333%;
+        }
+        .foot{
+            height: 100px;
+            display: flex;
+        }
+        .foot .ftlogo{
+            width: 15%;
+            background: #ddd6ff;
+        }
+        .foot .copy{
+            width: 70%;
+            background: #bfb3fc;
+        }
+        .foot .sns{
+            width: 15%;
+            background: #b0a0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="logo">logo</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">menu-1</a>
+                        <ul>
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu-2</a>
+                        <ul>
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu-3</a>
+                        <ul>
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu-4</a>
+                        <ul>
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">slide</div>
+        <div class="section">
+            <div class="noti">
+                <div class="notice">notice</div>
+                <div class="gallery">gallery</div>
+            </div>
+            <div class="banner">banner</div>
+            <div class="go">go</div>
+        </div>
+        <div class="foot">
+            <div class="ftlogo"></div>
+            <div class="copy"></div>
+            <div class="sns"></div>
+        </div>
+    </div>
+</body>
+</html>
