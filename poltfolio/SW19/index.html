@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        body{
+            font-family: helvetica,"notosanskr","applesdgothicneo";
+        }
+        .top{
+            background: #000;
+            width: 100%;
+            height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top a{
+            color: #fff;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 0px 5px;
+        }
+        header{
+            height: 100px;
+            width: 100%;
+            padding: 30px 0;
+            box-sizing: border-box;
+        }
+        header .top2{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        header .top2 .nav>ul{
+            display: flex;
+            height: 40px;
+            align-items: center;
+            margin: 0 1em;
+        }
+        header .top2 .nav>ul>li{
+            margin-right: 23px;
+        }
+        header .top2 .nav>ul>li:last-child{
+            margin-right: 0;
+        }
+        header .top2 .nav>ul>li a{
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        header .top2 .nav>ul>li>ul{
+            display: flex;
+            flex-direction: column;
+            display: none;
+        }
+        header .top2 .forcenter .logo img{
+            width: 61px;
+            height: 40px;
+        }
+        header .top2 .forcenter{
+            display: flex;
+            width: calc(50% + (61px / 2));
+            justify-content: space-between;
+        }
+        header .top2 .join>ul{
+            display: flex;
+            margin: 0 1em;
+            align-items: center;
+            height: 40px;
+        }
+        header .top2 .join>ul>li{
+            margin-right: 23px;
+        }
+        header .top2 .join>ul>li:last-child{
+            margin-right: 0;
+        }
+        header .top2 .join>ul>li a{
+            font-size: 14px;
+        }
+        .container{
+            width: 100%;
+        }
+        .container video{
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+        .container .bg{
+            width: 100%;
+            height: 546px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(/포폴/SW19_2/story_bg_pc.png) no-repeat center/cover;
+            position: relative;
+        }
+        .container .bg .blend{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #363636;
+            opacity: 0.3;
+        }
+        .container .bg h2{
+            text-align: center;
+            line-height: 60px;
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: lighter;
+            color: #ffffff;
+            padding: 20px;
+            z-index: 1;
+        }
+        .container .bg p{
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #fff;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <a href="#">당신의 프레시한 바스타임을 위한 SW19의 바디케어 프로모션 바로가기</a>
+        </div>
+        <header>
+            <div class="top2">
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">home(kr)</a>
+                            <ul>
+                                <li><a href="#">korean</a></li>
+                                <li><a href="#">english</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">shop</a>
+                            <ul>
+                                <li><a href="#">All Products</a></li>
+                                <li><a href="#">Perfume</a></li>
+                                <li><a href="#">Home Fragrance</a></li>
+                                <li><a href="#">Body Care</a></li>
+                                <li><a href="#">Hand Care</a></li>
+                                <li><a href="#">Gift Set</a></li>
+                                <li><a href="#">Accessory</a></li>
+                                <li><a href="#">Sample Kit</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">story</a></li>
+                        <li><a href="#">stores</a></li>
+                        <li><a href="#">membership</a></li>
+                    </ul>
+                </div>
+                <div class="forcenter">
+                    <div class="logo">
+                        <a href="#"><img src="/포폴/SW19/SW19official.png" alt="SW19official.png"></a>
+                    </div>
+                    <div class="join">
+                        <ul>
+                            <li><a href="#"><img src="/포폴/SW19/🦆 icon _search_.svg" alt="icon _search_.svg"></a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Join</a></li>
+                            <li><a href="#">Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <video src="https://player.vimeo.com/progressive_redirect/playback/843733386/rendition/720p/file.mp4?loc=external&amp;signature=29389f8734eb3f1b71dd350565063ec802169b09134b4fe436bc775d9c4c2406" autoplay="" loop="" muted="" playsinline=""></video>
+            <div class="bg">
+                <div class="blend"></div>
+                <h2>
+                    A transitional scent of the green forest<br>
+                    of Wimbledon, London SW19<br>
+                    that changes over time
+                </h2>
+                <p>시간에 따라 변화하는, 런던 윔블던 숲 속의 향</p>
+            </div>
+            <div class="product">
+                <div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

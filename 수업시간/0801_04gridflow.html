@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            width: 1200px;
+            height: 200px;
+            /* 높이값이 지정되어 있을 때 명시되지 않은 열이나 행은 자식이 가진 값만큼의 높이만 가짐. 아래에서 3열, 3행만 명시되어 있기 때문에 4번째 행, 열부터는 인라인 요소의 특성상 자식값만큼의 높이를 지님. */
+            margin: 10px auto;
+            display: grid;
+            background: #ccc;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .grid-container:first-child{
+            grid-auto-flow: row;
+            /* 가로순으로 채움. */
+        }
+        .grid-container:nth-child(2){
+            grid-auto-flow: column;
+            /* 세로로 끌어올려 채움. 2번 컨텐츠가 두번째 행이었지만 첫행으로 올라옴. */
+        }
+        .grid-container:nth-child(3){
+            grid-auto-flow: dense;
+            /* 세로를 끌어올리고 가로순을 채움. */
+        }
+        .grid-container:nth-child(4){
+            grid-auto-flow: ;
+            /* 기본 */
+        }
+        .grid-item{
+            background: #ddd;
+            border: 1px solid #000;
+        }
+        .grid-item:first-child{
+            grid-column: 3;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+</body>
+</html>
