@@ -133,23 +133,56 @@
             z-index: 1;
         }
         .container .bg p{
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 24px;
             color: #fff;
             z-index: 1;
             margin-top: 10px;
         }
-        .product{
+        .container .container_product{
+            width: 100%;
+            padding: 0 10%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .container_product .product{
             width: 582px;
             height: 582px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 10px;
         }
-        .product div img{
+        .container_product .product .product_main_image img{
             width: 100%;
             height: 341px;
             object-fit: cover;
+        }
+        .container_product .product > a{
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            font-size: 12px;
+        }
+        .container_product .product p{
+            font-size: 12px;
+        }
+        .container_product .product .product_name a{
+            font-family: 'Playfair Display', serif;
+        }
+        .container_product div.product:nth-of-type(2)>.product_name a:first-of-type{
+            color: #bc9c23;
+        }
+        .container_product div.product:nth-of-type(3)>.product_name a:first-of-type{
+            color: #ec6b27;
+        }
+        .container_product div.product:nth-of-type(4)>.product_name a:first-of-type{
+            color: #936052
+        }
+        .container_product div.product:nth-of-type(5)>.product_name a:first-of-type{
+            color: #8d8f90;
         }
     </style>
 </head>
@@ -213,13 +246,76 @@
                 </h2>
                 <p>시간에 따라 변화하는, 런던 윔블던 숲 속의 향</p>
             </div>
-            <div class="product">
-                <div>
-                    <img src="/poltfolio/made/am6.png" alt="am6.png">
+            <div class="container_product">
+                <div class="product">
+                    <div class="product_main_image">
+                        <a href="#"><img src="/poltfolio/made/am6.png" alt="am6.png"></a>
+                    </div>
+                    <div class="product_name">
+                        <a href="#">
+                            6am
+                        </a>
+                    </div>
+                    <p>WIMBLEDON FOREST AT DAWN IN THE MIST</p>
+                    <p>안개가 자욱한 윔블던 숲의 새벽</p>
+                    <a href="#">Discover More</a>
                 </div>
-                <a href="#"><img src="/poltfolio/SW19/6am_text.png" alt="6am_text.png"></a>
-                <p></p>
-                <a href="#">Discover More</a>
+                <div class="product">
+                    <div class="product_main_image">
+                        <a href="#"><img src="/poltfolio/made/noon.png" alt="noon.png"></a>
+                    </div>
+                    <div class="product_name">
+                        <a href="#">
+                            Noon
+                        </a>
+                    </div>
+                    <p>TOUCH OF SUNLIGHT
+                        ON WIMBLEDON LAKE AT NOON</p>
+                    <p>햇살에 반짝이는 윔블던 호수의 정오</p>
+                    <a href="#">Discover More</a>
+                </div>
+                <div class="product">
+                    <div class="product_main_image">
+                        <a href="#"><img src="/poltfolio/made/am6.png" alt="am6.png"></a>
+                    </div>
+                    <div class="product_name">
+                        <a href="#">
+                            3pm
+                        </a>
+                    </div>
+                    <p>GOLDEN SUN IN THE AFTERNOON
+                        AT WIMBLEDON PARK</p>
+                    <p>햇살이 내리쬐는 윔블던 공원의 오후</p>
+                    <a href="#">Discover More</a>
+                </div>
+                <div class="product">
+                    <div class="product_main_image">
+                        <a href="#"><img src="/poltfolio/made/am6.png" alt="am6.png"></a>
+                    </div>
+                    <div class="product_name">
+                        <a href="#">
+                            9pm
+                        </a>
+                    </div>
+                    <p>BONFIRE SPARKS THE EVENING OF THE WIMBLEDON</p>
+                    <p>모닥불이 피어 오르는 윔블던 숲의 저녁</p>
+                    <a href="#">Discover More</a>
+                </div>
+                <div class="product">
+                    <div class="product_main_image">
+                        <a href="#"><img src="/poltfolio/made/noon.png" alt="noon.png"></a>
+                    </div>
+                    <div class="product_name">
+                        <a href="#">
+                            Midnight
+                        </a>
+                    </div>
+                    <p>MIDNIGHT, A SMALL LAMP LIGHTS UP A
+                        COTTAGE IN WIMBLEDON PARK</p>
+                    <p>인적이 드문 윔블던 공원 옆, 작은 등불 하나
+                        켜진 어느 집의 자정</p>
+                    <a href="#">Discover More</a>
+                </div>
             </div>
         </div>
 
