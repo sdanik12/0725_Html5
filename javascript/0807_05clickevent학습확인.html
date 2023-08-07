@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>변경하기</p>
+    <script>
+        document.getElementsByTagName("p")[0].style.cursor="pointer";
+        let a = "변경완료";
+        document.getElementsByTagName("p")[0].onclick=function(){
+            document.getElementsByTagName("p")[0].innerHTML = a;
+            document.getElementsByTagName("p")[0].style.color="#f00";
+            // p에 a를 집어넣는 것이기 때문에 a를 호출하는 게 아닌 p를 호출하여 스타일 서식을 적용해야함.
+        }
+    </script>
+</body>
+</html>

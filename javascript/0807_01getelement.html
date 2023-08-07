@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            color: blue;
+        }
+    </style>
+    <script>
+        function myFunction(){
+            // 사용자지정함수.
+            document.getElementById("demo").innerHTML="변경하였습니다.";
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p class="example">변경 전</p>
+    <p class="example">변경 전</p>
+    <p class="example">변경 전</p>
+    <script>
+    document.title="자바스크립트";
+    document.getElementById("demo").innerHTML="Paragraph changed";
+    // 헤드 안에 스크립트를 넣을 경우 순차적으로 읽어나가는 프로그래밍 특성상 아이디 데모를 인식하기 전에 스크립트가 읽히므로 적용되지 않음. 바디의 html 구조 다음에 스크립트를 기재해야 적용됨.
+    document.getElementById("demo").style.color="red";
+    // 인라인방식이 가장 우선이기 때문에 헤드 안에 스타일 서식을 넣어도 바디 안의 스크립트가 적용됨.
+    document.getElementsByClassName("example")[0].innerHTML="변경 후"
+    // 1번이 아닌 0번부터 시작됨. 클래스 서식을 지정할 때는 인덱스 순서를 반드시 기재해주어야 함.
+    document.getElementsByTagName("p")[2].style.backgroundColor="yellow"
+    // 태그 이름으로 서식을 지정할 때도 인덱스 번호 필수. style로 지정할 때는 background-color였지만, 스크립트에선 하이픈을 빼기 산술연산자로만 인식하기 때문에 background'C'olor로 속성을 기재함. 중간 대문자 주의.
+
+    </script>
+</body>
+</html>
