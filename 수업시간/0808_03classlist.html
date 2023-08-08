@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            color: red;
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle">toggle</button>
+    <div id="my" class="list">class list 속성</div>
+    <p id="demo"></p>
+    <p id="p01" class="a1 b1 c1">1</p>
+    <p id="p02"></p>
+    <script>
+        // document.getElementById("add").onclick=function(){
+        //     let ele = document.getElementById("my").classList;
+        //     ele.add("list");
+        //     // 클래스명을 지정된 개체에 추가해줌.
+        // }
+        // document.getElementById("remove").onclick=function(){
+        //     let ele = document.getElementById("my").classList;
+        //     ele.remove("list");
+        // }
+        // document.getElementById("toggle").onclick=function(){
+        //     let ele = document.getElementById("my").classList;
+        //     ele.toggle("list");
+        // }
+
+        let ele = document.getElementById("my").classList;
+        // 공통된 변수를 밖에 적으면 한 번만 적어도 됨.
+        document.getElementById("add").onclick=function(){
+            ele.add("list");
+        }
+        document.getElementById("remove").onclick=function(){
+            ele.remove("list");
+        }
+        document.getElementById("toggle").onclick=function(){
+            ele.toggle("list");
+        }
+        let a = document.getElementById("my").classList.contains("list");
+        document.getElementById("demo").innerHTML = a;
+        let num = document.getElementById("p01").classList.length;
+        
+        let b = document.getElementById("p01").classList;
+        let c = "";
+        let d = "";
+        console.log(num + b);
+        b.forEach(function(keys,item){
+            //c=c+1; //c+=1;
+            //c = c + "keys" + item + "=" + keys + "<br>";
+            c += "keys" + item + "=" + keys + "\r";
+            c += "keys" + item + "=" + keys + "\r";
+            console.log(c);
+            document.getElementById("p02").innerHTML = d;
+            // 가장 최근 값이 차지하게 됨.
+        })
+        console.log("하나" + "둘" + "셋");
+        console.log(1 + 2 + 3);
+    </script>
+</body>
+</html>

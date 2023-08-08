@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" name="fname">링크1</a><br>
+    <a href="#" name="fname" target="_blank">링크2</a>
+    <p>First Name: <input name="fname" type="text" value="Michael"></p>
+    <p>First Name: <input name="fname" type="text" value="Doug"></p>
+    <p id="demo"></p>
+    <p class="example">첫번째</p>
+    <p class="example color">두번째</p>
+    <p class="example">세번째</p>
+    <p class="example color">네번째</p>
+    <h3>h3태그</h3>
+    <h4>h4태그</h4>
+    <script>
+        let a=document.getElementsByName("fname");
+        console.log(a[0].tagName);
+        document.getElementById("demo").innerHTML=a[1].tagName;
+        document.querySelector(".example").style.color="red";
+        document.querySelector(".color").style.color="blue";
+        // queryselector는 두 개의 클래스명을 인식하지 않음. example color라는 클래스명을 쓰고 싶다면 queryselector 대신 getelementbyclassname을 사용해야함.
+        document.querySelector("#demo").style.color="green";
+        document.querySelector("a[target]").style.color="black";
+        document.querySelector("h3,h4").style.backgroundColor="yellow";
+        // document.querySelector("h4,h3").style.backgroundColor="yellow";
+        // 순서를 변경해도 h3이 먼저 기재되어 있기 때문에 h3만 적용됨.
+    </script>
+</body>
+</html>

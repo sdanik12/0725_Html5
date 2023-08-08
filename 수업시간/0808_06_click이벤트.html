@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .menu01 {
+        left: 500px;
+        transition: 0.5s;
+      } 
+      이걸 쓰려면 p태그에 포지션과 위치를 줘야함.*/
+      p span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #000;
+        margin: 6px 0;
+        transition: transform 0.2s ease-in;
+      }
+      .bar1 {
+        transform: translate(0, 11px) rotate(45deg);
+      }
+      .bar2 {
+        opacity: 0;
+      }
+      .bar3 {
+        transform: translate(0, -11px) rotate(-45deg);
+      }
+      div {
+        position: fixed;
+        width: 500px;
+        height: 100%;
+        left: -500px;
+        top: 0;
+        background: rgba(220, 220, 220, 0.5);
+        transition: left 0.5s ease-in-out;
+      }
+      .box {
+        left: 0;
+      }
+      .move{
+        position: relative;
+        left: 500px;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="menu">
+      <span id="one"></span>
+      <span id="two"></span>
+      <span id="three"></span>
+    </p>
+    <div id="side"></div>
+    <script>
+      // document.getElementById("menu").onclick=function(){
+      //   document.getElementById("one").classList.toggle("bar1");
+      //   document.getElementById("two").classList.toggle("bar2");
+      //   document.getElementById("three").classList.toggle("bar3");
+      //   document.getElementById("side").classList.toggle("box");
+      //   document.getElementById("one").classList.toggle("move");
+      //   document.getElementById("three").classList.toggle("move");
+      // }
+      // document.getElementById("menu").onclick=function(){
+        document.getElementById("menu").addEventListener("click",function(){
+          this.classList.toggle("move");
+        document.getElementsByTagName("span")[0].classList.toggle("bar1");
+        document.getElementsByTagName("span")[1].classList.toggle("bar2");
+        document.getElementsByTagName("span")[2].classList.toggle("bar3");
+        document.getElementById("side").classList.toggle("box");
+        })
+      // }
+    </script>
+  </body>
+</html>
