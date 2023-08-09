@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kor = Number(prompt("국어점수는?","0"));//"0"은 기본값
+        let math = Number(prompt("수학점수는?","0"));
+        let en = Number(prompt("영어점수는?","0"));
+        let avg = (kor + math + en) / 3;
+        let total = kor + math + en;
+        document.write("당신의 국어 점수는 "+kor+"점이고 수학 점수는 "+math+"점이며 영어 점수는 "+en+"점입니다."+"<br>");
+        document.write("당신의 총점은 "+(kor+math+en)+"점입니다."+"<br>");//number를 여기서 적용하지 말고 위에 인수를 입력받을 때에 적용시켜야 함. 원칙적으론 문장을 이을 때 산술연산자와 구분하기 위해 반점으로 적어야함.
+        document.write("당신의 평균은 "+avg+"점입니다."+"<br>");
+        let result = kor >= 40 && math >= 40 && en >= 40 && avg >= 60;
+        let a = "당신은 합격입니다.";
+        let b = "당신은 불합격입니다.";
+        let test = result ? a:b;
+        //document.write(kor >= 40 && math >= 40 && en >= 40 && avg >= 60 ? a:b); 변수 선언으로 더 간결하게 만들 수도 있음.
+        document.write(test);
+    </script>
+</body>
+</html>

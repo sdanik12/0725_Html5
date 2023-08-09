@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 10;
+        let b = 20;
+        let c = "10";
+        document.write("a > b = ",a > b,"<br>");
+        document.write("a < b = ",a < b,"<br>");
+        document.write("a >= b = ",a >= b,"<br>");
+        document.write("a <= b = ",a <= b,"<br>");
+        document.write("a == b = ",a == b,"<br>");
+        document.write("a != b = ",a != b,"<br>");//not equal
+
+        document.write("a == c = ",a == c,"<br>");
+        document.write("a === c = ",a === c,"<br>");//동일한 값과 동일한 유형
+        document.write("a != c = ",a != c,"<br>");
+        document.write("a !== c = ",a !== c,"<br>");//동일하지 않은 값과 동일하지 않은 유형
+        let d = a>b ? "참" : "거짓";//a>b가 첫번째 항, ?가 두번째 항, 참 or 거짓이 세번째 항. 따라서 d는 true값인 참 또는 false값인 거짓이 들어가게 됨.
+        document.write(d + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

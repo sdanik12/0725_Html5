@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert("확인하세요");//경고창 안의 메시지를 설정가능. 경고창의 확인을 누르기 전까지 페이지는 로딩상태.
+        //prompt("당신의 성별은 무엇입니까?")//사용자로부터 데이터를 입력 받음.
+        let result = confirm("흡연자이십니까?");//확인은 true, 취소는 false값을 입력받음. 결과값을 출력할 수 있음.
+        let a = "당신은 흡연자입니다."
+        let b = "당신은 비흡연자입니다."
+        document.write(result ? a : b); //삼항연산으로 간단한 if문의 역할을 할 수 있음.
+    </script>
+</body>
+</html>

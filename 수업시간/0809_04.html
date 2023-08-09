@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="show">태그 보이기</button>
+    <button id="hide">태그 숨기기</button>
+    <div id="contents"></div>
+    <!-- 콘텐츠는 태그가 나타날 장소 -->
+    <script>
+        let str = "<ul>";
+        str += "<li><a href='#'>링크1</a></li>";
+        str += "<li><a href='#'>링크2</a></li>";
+        str += "<li><a href='#'>링크3</a></li>";
+        str += "<li><a href='#'>링크4</a></li>";
+        str += "</ul>";
+        //document.write(str);
+        document.getElementById("show").addEventListener("click",function(){
+            document.getElementById("contents").innerHTML = str;
+            //document.getElementById("contents").innerText = str;
+            //innertext는 태그를 통째로 text로 취급하여 출력함
+        });
+        document.getElementById("hide").onclick=function(){
+            document.getElementById("contents").innerHTML = "";
+        };
+    </script>
+</body>
+</html>
