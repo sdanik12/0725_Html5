@@ -14,6 +14,10 @@
     />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/sw19_index_style.css" />
+    <script
+      src="https://kit.fontawesome.com/648f6ca319.js"
+      crossorigin="anonymous"
+    ></script>
     <title>SW19</title>
   </head>
   <body>
@@ -52,6 +56,7 @@
               <li><a href="#">membership</a></li>
             </ul>
           </div>
+          <i id="nav_bars" class="fa-solid fa-bars" style="color: #000000"></i>
           <div class="forcenter">
             <div class="logo">
               <a href="#"
@@ -62,15 +67,21 @@
               <ul>
                 <li>
                   <a href="#"
-                    ><img
-                      src="images/🦆 icon _search_.svg"
-                      alt="icon _search_.svg"
+                    ><img src="images/icon_search_.svg" alt="icon_search_.svg"
                   /></a>
                 </li>
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Cart</a></li>
               </ul>
+              <a href="#"
+                ><img src="images/icon_search_.svg" alt="icon_search_.svg"
+              /></a>
+              <i
+                id="bag"
+                class="fa-solid fa-bag-shopping"
+                style="color: #000000"
+              ></i>
             </div>
           </div>
         </div>
@@ -78,7 +89,7 @@
       <div class="visual">
         <div class="main">
           <video
-            src="https://player.vimeo.com/progressive_redirect/playback/843733386/rendition/720p/file.mp4?loc=external&amp;signature=29389f8734eb3f1b71dd350565063ec802169b09134b4fe436bc775d9c4c2406"
+            src="images/main_video.mp4"
             autoplay=""
             loop=""
             muted=""
@@ -100,10 +111,12 @@
       <div class="container">
         <div class="container_product">
           <div class="product">
-            <div class="pd_image">
-              <a href="#">
-                <img src="images/6am.jpg" alt="6am.jpg" />
-              </a>
+            <div class="pd_left">
+              <div class="pd_image">
+                <a href="#">
+                  <img src="images/6am.jpg" alt="6am.jpg" />
+                </a>
+              </div>
               <div class="pd_desc">
                 <img
                   class="desc_logo"
@@ -130,9 +143,40 @@
                   아이리스 꽃 향이 어우러진 윔블던 공원의 정오를 느껴보세요.
                 </p>
               </div>
-              <a href="#">
-                <img src="images/3pm.jpg" alt="3pm.jpg" />
-              </a>
+              <div class="pd_image">
+                <a href="#">
+                  <img src="images/3pm.jpg" alt="3pm.jpg" />
+                </a>
+              </div>
+              <div class="pd_desc">
+                <img
+                  class="desc_logo"
+                  src="images/9pm_text.png"
+                  alt="9pm_text.png"
+                />
+                <p>
+                  BONFIRE SPARKS THE EVENING OF THE WIMBLEDON
+                  <br />
+                  <br />
+                  The night in Wimbledon forest after dark.<br />
+                  The whispers of love travel through the crackling bonfire.<br />
+                  Feel the Wimbledon’s 9PM scent of the smokey<br />
+                  bonfire smoothly blended with sweet vanilla.<br />
+                  <br />
+                  모닥불이 피어 오르는 윔블던 숲의 저녁
+                  <br />
+                  <br />
+                  어둠이 내린 윔블던 숲의 저녁.<br />
+                  모닥불 타는 소리 사이로 들려오는 연인들의 달콤한 속삭임.<br />
+                  바닐라의 달콤함과 숲 속 모닥불의 스모키함이<br />
+                  어우러진 윔블던의 저녁 9시를 느껴보세요.
+                </p>
+              </div>
+              <div class="pd_image">
+                <a href="#"
+                  ><img src="images/midnight.jpg" alt="midnight.jpg"
+                /></a>
+              </div>
             </div>
 
             <div class="pd_right">
@@ -163,108 +207,72 @@
                   윔블던의 새벽 6시를 느껴보세요.
                 </p>
               </div>
-              <a href="#"><img src="images/noon.jpg" alt="noon.jpg" /></a>
+              <div class="pd_image">
+                <a href="#"><img src="images/noon.jpg" alt="noon.jpg" /></a>
+              </div>
               <div class="pd_desc">
                 <img
                   class="desc_logo"
-                  src="images/6am_text.png"
-                  alt="6am_text.png"
+                  src="images/3pm_text.png"
+                  alt="3pm_text.png"
                 />
                 <p>
-                  WIMBLEDON FOREST AT DAWN IN THE MIST
+                  GOLDEN SUN IN THE AFTERNOON
+                  <br />
+                  AT WIMBLEDON PARK
                   <br />
                   <br />
-                  Just before the sunrise,<br />
-                  the mist of Wimbledon forest drifts along<br />
-                  and greets you as you take a stroll.<br />
-                  Feel the 6AM scent of the Wimbledon forest’s<br />
-                  glistening morning dew and moist soil.
+                  While the forest’s morning dew dries away<br />
+                  in the beaming afternoon sunlight,<br />
+                  feel the scent of the fully blossomed<br />
+                  flowers in the park come together with the freshness<br />
+                  of lemon floating on a cup of black tea at 3PM in Wimbledon.
                   <br />
                   <br />
-                  안개가 자욱한 윔블던 숲의 새벽
+                  햇살이 내리쬐는 윔블던 공원의 오후
                   <br />
                   <br />
-                  세상의 아침이 시작되기 전,<br />
-                  윔블던의 숲을 산책하는 당신에게<br />
-                  푸른 안개가 바람에 실려와 인사를 합니다.<br />
-                  이슬 머금은 잔디와 촉촉한 흙내음을 품은<br />
-                  윔블던의 새벽 6시를 느껴보세요.
+                  이슬 젖은 초록숲이<br />
+                  상큼한 햇살에 말라가는 윔블던의 오후.<br />
+                  공원에 만개한 꽃들의 향기와 홍차에 띄운<br />
+                  레몬 조각 향기가 어우러진<br />
+                  윔블던의 오후 3시를 느껴보세요.
+                </p>
+              </div>
+              <div class="pd_image">
+                <a href="#"><img src="images/9pm.jpg" alt="9pm.jpg" /></a>
+              </div>
+              <div class="pd_desc">
+                <img
+                  class="desc_logo"
+                  src="images/midnight_text.png"
+                  alt="midnight_textt.png"
+                />
+                <p>
+                  MIDNIGHT, A SMALL LAMP LIGHTS UP A
+                  <br />
+                  COTTAGE IN WIMBLEDON PARK
+                  <br />
+                  <br />
+                  In the still of the night,<br />
+                  the soft moonlight surrounds the Wimbledon forest.<br />
+                  Feel the sensual MIDNIGHT<br />
+                  through mesmerizing touch and scent.<br />
+                  <br />
+                  <br />
+                  인적이 드문 윔블던 공원 옆, 작은 등불 하나
+                  <br />
+                  켜진 어느 집의 자정
+                  <br />
+                  <br />
+                  은은한 달빛에 감싸인 윔블던 숲 속의 깊은 밤.<br />
+                  손 끝을 스치는 살결과 향기에 취한<br />
+                  센슈얼한 밤12시를 느껴보세요.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <!--<div class="container_product">
-                <div class="product">
-                    <div class="product_main_image">
-                        <a href="#"><img src="/poltfolio/made/am6.png" alt="am6.png"></a>
-                    </div>
-                    <div class="product_name">
-                        <a href="#">
-                            6am
-                        </a>
-                    </div>
-                    <p>WIMBLEDON FOREST AT DAWN IN THE MIST</p>
-                    <p>안개가 자욱한 윔블던 숲의 새벽</p>
-                    <a href="#">Discover More</a>
-                </div>
-                <div class="product">
-                    <div class="product_main_image">
-                        <a href="#"><img src="/poltfolio/made/noon.png" alt="noon.png"></a>
-                    </div>
-                    <div class="product_name">
-                        <a href="#">
-                            Noon
-                        </a>
-                    </div>
-                    <p>TOUCH OF SUNLIGHT
-                        ON WIMBLEDON LAKE AT NOON</p>
-                    <p>햇살에 반짝이는 윔블던 호수의 정오</p>
-                    <a href="#">Discover More</a>
-                </div>
-                <div class="product">
-                    <div class="product_main_image">
-                        <a href="#"><img src="/poltfolio/made/3pm.png" alt="3pm.png"></a>
-                    </div>
-                    <div class="product_name">
-                        <a href="#">
-                            3pm
-                        </a>
-                    </div>
-                    <p>GOLDEN SUN IN THE AFTERNOON
-                        AT WIMBLEDON PARK</p>
-                    <p>햇살이 내리쬐는 윔블던 공원의 오후</p>
-                    <a href="#">Discover More</a>
-                </div>
-                <div class="product">
-                    <div class="product_main_image">
-                        <a href="#"><img src="/poltfolio/made/am6.png" alt="am6.png"></a>
-                    </div>
-                    <div class="product_name">
-                        <a href="#">
-                            9pm
-                        </a>
-                    </div>
-                    <p>BONFIRE SPARKS THE EVENING OF THE WIMBLEDON</p>
-                    <p>모닥불이 피어 오르는 윔블던 숲의 저녁</p>
-                    <a href="#">Discover More</a>
-                </div>
-                <div class="product">
-                    <div class="product_main_image">
-                        <a href="#"><img src="/poltfolio/made/noon.png" alt="noon.png"></a>
-                    </div>
-                    <div class="product_name">
-                        <a href="#">
-                            Midnight
-                        </a>
-                    </div>
-                    <p>MIDNIGHT, A SMALL LAMP LIGHTS UP A
-                        COTTAGE IN WIMBLEDON PARK</p>
-                    <p>인적이 드문 윔블던 공원 옆, 작은 등불 하나
-                        켜진 어느 집의 자정</p>
-                    <a href="#">Discover More</a>
-                </div>
-            </div>-->
         <div class="maininstagram">
           <div class="insta one">
             <a href="#">
@@ -466,6 +474,76 @@
             </a>
           </div>
         </div>
+        <div class="mapbox">
+          <div class="bg_color"></div>
+          <div class="bg_index">
+            <h2><img src="images/arclogo.png" alt="" /></h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/@51.4390411,-0.2060724,3a,75y,177.6h,112.58t/data=!3m8!1e1!3m6!1sAF1QipNVOoAsKrqSsZsIzMvSN9i6Erg6gUBjSqRKqOCr!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNVOoAsKrqSsZsIzMvSN9i6Erg6gUBjSqRKqOCr%3Dw203-h100-k-no-pi-0-ya49.77087-ro-0-fo100!7i8704!8i4352"
+                  >Experience SW19</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://earth.google.com/static/9.3.118.1/app_min.html#search/Wimbledon+park/@51.4359333,-0.2101811,17.90890063a,628.90019534d,35y,287.91253015h,45t,0r/data=CnkaTxJJCiUweDQ4NzYwZjQ4ZmIyZTc2NTk6MHg4Yzc1NjBjODI2YTA5YzVhGWFekanMt0lAIQdgXts258q_Kg5XaW1ibGVkb24gcGFyaxgCIAEiJgokCX4y68BKLkpAEbFMe-6RLUpAGQqtfG7mlxNAIUJkXamOihNA"
+                  >SW19 in Google Earth</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <h2>
+          <a href="#"><img src="images/logo.png" alt="logo.png" /></a>
+        </h2>
+        <div class="footer_inner">
+          <div class="footer_flex_spacebetween">
+            <div class="info_address">
+              <span
+                >Company: (주)왁티 | Owner: 강정훈 / 06028 서울특별시 강남구
+                압구정로10길 7 (신사동) 3층 왁티</span
+              >
+              <span
+                >Company Registration No.: 240-88-00299 / Telecommunication
+                services registration No.: 제2016-서울강남-03076호</span
+              >
+              <span
+                >Email: support@sw19official.com / Tel: 1660-3252 (Mon-Fri :
+                9:00 - 11:30 / 13:00 - 17:30)</span
+              >
+            </div>
+            <div class="info_customer">
+              <p class="copyright">
+                Copyright ©
+                <span>SW19</span>
+                . All rights reserved.
+              </p>
+              <ul>
+                <li><a href="/member/mall_agreement.html">이용약관</a></li>
+                <li>
+                  <span>|</span>
+                  <a href="/member/privacy.html">개인정보처리방침</a>
+                </li>
+                <li>
+                  <span>|</span>
+                  <a href="/board/urgency/urgency.html">대량주문 / 제휴문의</a>
+                </li>
+              </ul>
+              <div class="sns">
+                <a target="_blank" href="http://instagram.com/sw19_official"
+                  ><i class="fa-brands fa-instagram" style="color: #000000"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="totop" class="show">
+        <img src="images/totop.png" alt="totop.png" />
       </div>
     </div>
   </body>
