@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      //   let firstName = "John";
+      //   let lastName = "Doe";
+      //   let age: 50;
+      //   let eyeColor: "blue";
+      let person = {
+        firstName: "David",
+        lastName: "Gandy",
+        age: 43,
+        hobby: "reading",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      let person1 = {};
+      person1.firstName = "David";
+      person1.lastName = "Gandy";
+      person1.age = 43;
+      person1.eyeColor = "blue";
+      //   document.getElementById("demo").innerHTML =
+      //     firstName + lastName + " is " + age + " years old.";
+      document.getElementById("demo").innerHTML =
+        person.fullName() +
+        " is " +
+        person1.age +
+        " years old. he's eyes are " +
+        person1.eyeColor +
+        ".";
+      // 객체.속성, 객체.메소드()라는 문법 주의
+      document.write(person1.firstName + " is " + person1.age + " years old.");
+
+      let student = new Object();
+      student.kor = 80;
+      student.eng = 90;
+      student.math = 100;
+      student.total = student.kor + student.eng + student.math;
+      student.avg = function () {
+        document.write(
+          "총점은 " +
+            student.total +
+            "점이고 평균 점수는 " +
+            student.total / 3 +
+            "점입니다."
+        );
+      };
+    </script>
+  </body>
+</html>

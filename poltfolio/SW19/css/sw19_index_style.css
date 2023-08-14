@@ -148,7 +148,7 @@ header .top2 .join > ul > li a {
   object-fit: cover;
 }
 .visual .bg_gray {
-  background: url(/poltfolio/SW19/images/bg_gray.jpg) right top/cover no-repeat;
+  background: url(../images/bg_gray.jpg) right top/cover no-repeat;
   width: 100%;
   height: 200px;
 }
@@ -159,7 +159,7 @@ header .top2 .join > ul > li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(/poltfolio/SW19/images/story_bg_pc.png) no-repeat center/cover;
+  background: url(../images/story_bg_pc.png) no-repeat center/cover;
   position: relative;
 }
 .visual .bg .blend {
@@ -190,7 +190,7 @@ header .top2 .join > ul > li a {
 }
 .container {
   width: 100%;
-  background: #ebebeb;
+  /* background: #ebebeb; */
 }
 .container .container_product {
   width: 100%;
@@ -199,27 +199,23 @@ header .top2 .join > ul > li a {
   display: flex;
   width: 100%;
 }
-.container .container_product .product a {
-  display: block;
-}
 .container .container_product .product > div {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   width: 50%;
 }
-.container .container_product .product .pd_image {
-  height: 1000px;
-}
+
 .container .container_product .product .pd_image img {
   width: 100%;
-  height: 100%;
+  height: 1000px;
   object-fit: cover;
+  object-position: center;
 }
 .container .container_product .product .pd_left .pd_image:last-child img {
-  height: 1000px;
+  height: 700px;
 }
 .container .container_product .product .pd_right .pd_desc:last-child {
-  height: 1000px;
+  /* height: 1000px; */
 }
 .container .container_product .product .pd_desc {
   width: 100%;
@@ -230,6 +226,7 @@ header .top2 .join > ul > li a {
   justify-content: center;
   text-align: center;
 }
+
 .container .container_product .product .pd_desc .desc_logo {
   width: 65px;
   object-fit: contain;
@@ -289,7 +286,7 @@ header .top2 .join > ul > li a {
   width: 100%;
   height: 500px;
   padding: 0 0 225px;
-  background: url(/poltfolio/SW19/images/bg_map.jpg) no-repeat 50% 50%;
+  background: url(../images/bg_map.jpg) no-repeat 50% 50%;
   background-attachment: fixed;
 }
 .container .mapbox .bg_color {
