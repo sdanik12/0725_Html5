@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      header {
+        position: relative;
+        width: 100%;
+      }
+      .menu {
+        width: 100%;
+        background: rgb(188, 18, 37);
+      }
+      .menu ul {
+        width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu ul li {
+        flex: 1 1 20%;
+        text-align: center;
+        line-height: 50px;
+        border-right: 1px solid #c94151;
+      }
+      .menu ul li:first-child {
+        border-left: 1px solid #c94151;
+      }
+      .menu ul li:last-child {
+        background: #8b0f1d;
+      }
+      .menu ul li a.on {
+        background: #8b0f1d;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-weight: 500;
+        font-size: 17px;
+      }
+      .menu ul li:last-child {
+        display: flex;
+        flex-direction: column;
+      }
+      .submenu {
+        background: url(../poltfolio/씨젠의료재단/images/주메뉴배경.png) right
+          bottom no-repeat;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 2px solid #bc1225;
+      }
+      .submenu .lnb {
+        width: 1240px;
+        margin: 0 auto;
+      }
+      .submenu .lnb > ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+      }
+      .submenu .lnb > ul > li {
+        position: relative;
+        flex: 1 1 20%;
+        line-height: 40px;
+        text-align: left;
+        border-left: 1px solid #e2e2e2;
+      }
+      .submenu .lnb > ul > li a {
+        color: #444;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 15px;
+      }
+      .submenu .lnb > ul > li a:hover {
+        color: #bc1225;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-position: under;
+      }
+      #login_box {
+        background: #8b0f1d;
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        width: 174px;
+        height: 155px;
+        border-radius: 0 0 10px 10px;
+        border-left: 1px solid #8b0f1d;
+        line-height: 30px;
+        text-align: center;
+      }
+      input,
+      textarea,
+      select,
+      button {
+        position: relative;
+        top: 10px;
+        border: none;
+        outline: none;
+        font-family: "Noto Sans KR", sans-serif;
+        width: 150px;
+        height: 30px;
+        margin-left: 10px;
+        padding-left: 5px;
+        box-sizing: border-box;
+      }
+      #login_box form #idsave[type="checkbox"] + label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        top: 8px;
+        left: -33px;
+        color: #fff;
+        font-size: 12px;
+      }
+      #login_box form #idsave[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: 9px;
+        left: -40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li><a href="#">주요사업부문</a></li>
+          <li><a href="#">검사부안내</a></li>
+          <li><a href="#">검사의뢰안내</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">재단홍보</a></li>
+          <li><a href="#">재단안내</a></li>
+          <li>
+            <a href="#">검사결과조회</a>
+            <div id="login_box">
+              <form method="post" action="" name="register" id="formLogin">
+                <input
+                  type="hidden"
+                  name="_csrf"
+                  value="85d09c2e-7136-4799-92bf-6dea7d596652"
+                />
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          type="text"
+                          name="userId"
+                          maxlength="18"
+                          placeholder="아이디"
+                          class="table_id"
+                          id="headerId"
+                        />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input
+                          type="password"
+                          name="pwd"
+                          maxlength="20"
+                          placeholder="비밀번호"
+                          id="pwd"
+                        />
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <button
+                          type="button"
+                          name="로그인"
+                          value="로그인"
+                          id="btnLogin"
+                        >
+                          로그인
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <input type="checkbox" id="idsave" name="idsave" />
+                <label for="idsave">ID 저장하기</label>
+                <br />
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="submenu">
+        <div class="lnb">
+          <ul>
+            <li>
+              <ul>
+                <div>
+                  <li><a href="#">임상검사사업부</a></li>
+                  <li><a href="#">R&D 사업부</a></li>
+                  <li><a href="#">임상시험</a></li>
+                  <li><a href="#">기관생명윤리위원회</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">의료진 현황</a></li>
+                <li><a href="#">본원</a></li>
+                <li><a href="#">지역 검사센터</a></li>
+                <li><a href="#">인증현황자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">검사업무 절차</a></li>
+                <li><a href="#">검사의뢰 방법</a></li>
+                <li><a href="#">검체채취 및 취급요령</a></li>
+                <li><a href="#">질환별 검사 안내</a></li>
+                <li><a href="#">검체용기일람</a></li>
+                <li><a href="#">검사항목조회</a></li>
+                <li><a href="#">검사의뢰서</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">공문</a></li>
+                <li><a href="#">씨젠 Talk</a></li>
+                <li><a href="#">ONE CLICK 건강정보</a></li>
+                <li><a href="#">ONE CLICK 신규검사</a></li>
+                <li><a href="#">학술제작물</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">새소식</a></li>
+                <li><a href="#">재단홍보자료</a></li>
+                <li><a href="#">채용정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">재단소개 & CI</a></li>
+                <li><a href="#">VISION</a></li>
+                <li><a href="#">안전보건 경영방침</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </li>
+            <li id="login"></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <script>
+      let subMenu = document.querySelector(".submenu");
+      let sub = document.querySelectorAll(".lnb>ul>li");
+      let gnb = document.querySelectorAll(".menu ul li a");
+      let ht = document.querySelector(".lnb").offsetHeight;
+      console.log("ht : " + ht);
+      gnb.forEach(function (item, keys) {
+        item.addEventListener("mouseenter", function () {
+          subMenu.style.height = ht + "px";
+          console.log(keys);
+        });
+      });
+      sub.forEach(function (item, keys) {
+        item.addEventListener("mouseenter", function () {
+          subMenu.style.height = ht + "px";
+          gnb[keys].classList.add("on", "active");
+        });
+        item.addEventListener("mouseleave", function () {
+          subMenu.style.height = 0 + "px";
+          gnb[keys].classList.remove("on", "active");
+        });
+      });
+    </script>
+  </body>
+</html>

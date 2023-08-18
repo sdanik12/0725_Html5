@@ -140,17 +140,66 @@ header .top2 .join > ul > li a {
   font-size: 14px;
 }
 .visual .main {
-  height: 700px;
+  height: 800px;
 }
 .visual video {
   width: 100%;
-  height: 700px;
+  height: 100%;
   object-fit: cover;
 }
-.visual .bg_gray {
-  background: url(/poltfolio/SW19/images/bg_gray.jpg) right top/cover no-repeat;
+.visual .bg_new {
   width: 100%;
-  height: 200px;
+  height: 1000px;
+  position: relative;
+}
+.visual .bg_new h2 span {
+  padding: 50px 0;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.visual .bg_new .new_pd ul {
+  width: 90%;
+  height: 900px;
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.visual .bg_new .new_pd ul li {
+  width: 400px;
+}
+.visual .bg_new .new_pd ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.visual .bg_new .new_pd ul li span {
+  padding: 10px 0;
+}
+.visual .bg_new .new_pd ul li img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  padding: 30px 0;
+}
+.visual .bg_new .new_pd ul.new_next {
+  visibility: hidden;
+}
+.visual .bg_new ul i {
+  position: absolute;
+  top: 480px;
+  left: 100%;
+  font-size: 25px;
+  cursor: pointer;
 }
 .visual .bg {
   width: 100%;
@@ -159,7 +208,8 @@ header .top2 .join > ul > li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(/poltfolio/SW19/images/story_bg_pc.png) no-repeat center/cover;
+  background: url(../images/story_bg_pc.png) no-repeat center/cover;
+  background-attachment: fixed;
   position: relative;
 }
 .visual .bg .blend {
@@ -169,7 +219,7 @@ header .top2 .join > ul > li a {
   top: 0;
   left: 0;
   background: #363636;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .visual .bg h2 {
   text-align: center;
@@ -190,7 +240,6 @@ header .top2 .join > ul > li a {
 }
 .container {
   width: 100%;
-  background: #ebebeb;
 }
 .container .container_product {
   width: 100%;
@@ -199,27 +248,19 @@ header .top2 .join > ul > li a {
   display: flex;
   width: 100%;
 }
-.container .container_product .product a {
-  display: block;
-}
 .container .container_product .product > div {
-  display: flex;
-  flex-direction: column;
   width: 50%;
 }
-.container .container_product .product .pd_image {
-  height: 1000px;
-}
+
 .container .container_product .product .pd_image img {
   width: 100%;
-  height: 100%;
+  height: 1000px;
   object-fit: cover;
+  object-position: center;
 }
-.container .container_product .product .pd_left .pd_image:last-child img {
-  height: 1000px;
-}
+.container .container_product .product .pd_left .pd_image:last-child img,
 .container .container_product .product .pd_right .pd_desc:last-child {
-  height: 1000px;
+  height: 700px;
 }
 .container .container_product .product .pd_desc {
   width: 100%;
@@ -289,7 +330,7 @@ header .top2 .join > ul > li a {
   width: 100%;
   height: 500px;
   padding: 0 0 225px;
-  background: url(/poltfolio/SW19/images/bg_map.jpg) no-repeat 50% 50%;
+  background: url(../images/bg_map.jpg) no-repeat 50% 50%;
   background-attachment: fixed;
 }
 .container .mapbox .bg_color {
@@ -340,7 +381,8 @@ header .top2 .join > ul > li a {
   box-sizing: border-box;
 }
 .wrap footer {
-  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
   padding: 0 15px 80px;
   box-sizing: border-box;
   text-align: center;
