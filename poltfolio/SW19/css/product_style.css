@@ -11,6 +11,10 @@ a {
   text-decoration: none;
   color: #000;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1225d68d7b407ae89e2b7f7dc70e26bfb1fd6ce
 body {
   font-family: helvetica, "notosanskr", "applesdgothicneo";
   font-size: 13px;
@@ -140,8 +144,11 @@ header .top2 .join > ul > li a {
 }
 .container #contents {
   margin: 0 auto;
+<<<<<<< HEAD
   max-width: 1250px;
   padding: 0 15px;
+=======
+>>>>>>> e1225d68d7b407ae89e2b7f7dc70e26bfb1fd6ce
 }
 .container #contents h2 {
   text-align: center;
@@ -155,6 +162,7 @@ header .top2 .join > ul > li a {
   font-size: 30px;
   display: inline-block;
   padding: 8px 0 9px;
+<<<<<<< HEAD
   margin-bottom: 10px;
 }
 .container #contents .product_area ul {
@@ -206,6 +214,11 @@ header .top2 .join > ul > li a {
 .wrap footer {
   max-width: 1250px;
   margin: 0 auto;
+=======
+}
+.wrap footer {
+  width: 100%;
+>>>>>>> e1225d68d7b407ae89e2b7f7dc70e26bfb1fd6ce
   padding: 0 15px 80px;
   box-sizing: border-box;
   text-align: center;
