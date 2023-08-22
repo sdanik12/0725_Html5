@@ -288,7 +288,7 @@ header .top2 .join > ul > li a {
   font-size: 14px;
 }
 .container .maininstagram {
-  width: 1280px;
+  max-width: 1280px;
   height: 1280px;
   margin: 0 auto;
   display: flex;
