@@ -13,7 +13,7 @@ a {
 }
 
 body {
-  font-family: helvetica, "notosanskr", "applesdgothicneo";
+  font-family: helvetica, "Noto Sans KR", "applesdgothicneo", sans-serif;
   font-size: 13px;
 }
 .wrap {
@@ -163,7 +163,7 @@ header .top2 .join > ul > li a {
   left: 50%;
   transform: translateX(-50%);
 }
-.visual .bg_new .new_pd ul {
+.visual .bg_new .new_arrival ul {
   width: 90%;
   height: 900px;
   padding: 50px 0;
@@ -173,28 +173,35 @@ header .top2 .join > ul > li a {
   align-items: center;
   position: relative;
 }
-.visual .bg_new .new_pd ul li {
+.visual .bg_new .new_arrival ul li {
   width: 400px;
 }
-.visual .bg_new .new_pd ul li a {
+.visual .bg_new .new_arrival ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
-.visual .bg_new .new_pd ul li span {
+.visual .bg_new .new_arrival ul li span {
   padding: 10px 0;
 }
-.visual .bg_new .new_pd ul li img {
+.visual .bg_new .new_arrival ul li img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   padding: 30px 0;
 }
-.visual .bg_new .new_pd ul.new_next {
+.visual .bg_new .new_arrival .pd2 {
   visibility: hidden;
 }
-.visual .bg_new ul i {
+.visual .bg_new ul i:first-of-type {
+  position: absolute;
+  top: 480px;
+  right: 100%;
+  font-size: 25px;
+  cursor: pointer;
+}
+.visual .bg_new ul i:nth-of-type(2) {
   position: absolute;
   top: 480px;
   left: 100%;

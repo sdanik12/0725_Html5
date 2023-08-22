@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @font-face {
+        font-family: "GmarketSansMedium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -17,28 +24,51 @@
         text-decoration: none;
         color: #333;
       }
+      .top_layout {
+        height: 90px;
+        border-bottom: 1px solid #e5e5e5;
+        box-sizing: border-box;
+      }
       header {
         position: relative;
+        width: 100%;
+        padding: 0 30px;
+        font-family: "GmarketSansMedium";
+        display: flex;
+        box-sizing: border-box;
+      }
+      header .logo {
+        justify-content: flex-start;
+        z-index: 999;
+        padding: 29px 0 0;
+      }
+      header .logo h1 a {
+        font-size: 0;
+        background: url(images/logo.png) no-repeat;
+        display: block;
+        width: 241px;
+        height: 41px;
+        background-size: 100% auto;
+        font-size: 0;
       }
       .menu {
-        width: 1280px;
+        max-width: 1300px;
         margin: 0 auto;
-        border: 1px solid #000;
       }
-      .menu ul {
-        display: flex;
-        height: 50px;
-        justify-content: space-between;
-        align-items: center;
+      .menu ul.depth1 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
       }
       .menu ul li {
-        flex: 1 1 20%;
-        text-align: center;
-        line-height: 50px;
+        display: inline-block;
+        margin: 0 40px;
+        line-height: 90px;
       }
       .menu ul li a:hover,
       .menu ul li a.on {
-        background: #ccc;
+        text-decoration: underline 6px;
+        text-decoration-color: rgba(22, 69, 137, 0.2);
       }
       .menu ul li a {
         position: relative;
@@ -54,333 +84,389 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: #000;
-        right: 30%;
+        background: #0f489a;
+        right: 45%;
+        top: 95%;
+        z-index: 999;
+      }
+      header #right {
+        display: flex;
+        justify-content: flex-end;
+        z-index: 999;
+      }
+      header #right .right {
+        display: flex;
+      }
+      header #right .inner {
+        position: absolute;
+        right: 100px;
+      }
+      header #right .inner .search::before {
+        display: block;
+        position: absolute;
+        left: -30px;
+        top: 32px;
+        content: "";
+        width: 1px;
+        height: 26px;
+        background: #ccc;
+      }
+      header #right .inner .search a {
+        display: block;
+        width: 25px;
+        height: 100%;
+        background: url(images/search.png) no-repeat center;
+        font-size: 0;
+        margin-right: 30px;
+      }
+      header #right .inner .allmenu {
+        padding: 20px 0;
+      }
+      header #right .inner .allmenu a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #0f489a;
+        font-size: 0;
+        position: relative;
+      }
+      header #right .inner .allmenu #nav-icon {
+        width: 24px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      header #right .inner .allmenu span {
+        display: block;
+        float: left;
+        width: 100%;
+        height: 2px;
+        margin: 2.5px 0;
+        background: #fff;
+      }
+      header #right .right li a {
+        line-height: 90px;
+        font-size: 15px;
+        color: #131313;
       }
       .submenu {
-        background: rgba(0, 0, 0, 0.4);
+        background: #fff;
+        display: block;
         position: absolute;
         width: 100%;
-        top: 50px;
+        top: 90px;
         left: 0;
         height: 0;
         overflow: hidden;
-        transition: height 0.5s;
+        text-align: left;
       }
-      /* .submenu.on {
-        height: 200px;
-      } */
       .submenu .lnb {
         width: 1280px;
         margin: 0 auto;
+        padding: 30px 0;
       }
       .submenu .lnb > ul {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 330px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .submenu .lnb > ul::after {
+        content: url(images/gnb_obj.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: auto;
       }
       .submenu .lnb > ul > li {
-        flex: 1 1 20%;
+        flex: 1 1 25%;
         line-height: 40px;
         text-align: center;
+        height: auto;
+        padding: 0 0 0 20px;
+        margin-bottom: 30px;
+      }
+      .submenu .lnb > ul > li a {
+        display: block;
+        position: relative;
+        margin: 0 0 14px;
+        height: 30px;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: "GmarketSansMedium";
+        color: #121212;
+        text-align: left;
+      }
+      .submenu .lnb > ul > li a::after {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        content: "";
+        width: 5px;
+        height: 5px;
+        border: solid #555;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
       }
       .submenu .lnb > ul > li a:hover {
-        color: blue;
+        border: 1px solid #0f489a;
+        color: #0f489a;
+        box-shadow: 0 0 15px rgba(22, 69, 137, 0.2);
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="menu">
-        <ul>
-          <li><a href="#">메뉴1</a></li>
-          <li><a href="#">메뉴2</a></li>
-          <li><a href="#">메뉴3</a></li>
-          <li><a href="#">메뉴4</a></li>
-          <li><a href="#">메뉴5</a></li>
-        </ul>
-      </div>
-      <div class="submenu">
-        <div class="lnb">
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1111</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴111</a></li>
-                <li><a href="#">서브메뉴11111</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴22</a></li>
-                <li><a href="#">서브메뉴22</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-              </ul>
+    <div class="top_layout">
+      <header>
+        <div class="logo">
+          <h1><a href="#">극지연구소</a></h1>
+        </div>
+        <div class="menu">
+          <ul class="depth1">
+            <li><a href="#">KOPRI</a></li>
+            <li><a href="#">연구</a></li>
+            <li><a href="#">인프라</a></li>
+            <li><a href="#">소통참여</a></li>
+            <li><a href="#">정보공개</a></li>
+          </ul>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#">인사말</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">비전 및 미션</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">연혁</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">CI</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">조직 및 연락처</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">관련단체 및 조직</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">찾아오시는 길</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">경영방침</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">연구분야</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">연구사업</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">시기별 극지연구</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">연구데이터</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">정책</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">남극세종과학기지</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">북극다산과학기지</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">쇄빙연구선 아라온호</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">남극장보고과학기지</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">극지로 가는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">인프라 공동활용 신청</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">환경관리</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">해외협력센터</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">언론보도</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">인재채용</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">견학교육</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">고객참여</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">극지연구소 메타버스</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">정보공개제도 안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">사전정보공표</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">연구시설 및 장비 공동 활용</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">사업실명제</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">입찰공고</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">경영공시</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="right">
+          <ul class="right inner">
+            <li class="search"><a href="#">검색</a></li>
+            <li class="allmenu">
+              <a href="#"
+                >모든메뉴
+                <div id="nav-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="submenu">
-        <div class="lnb">
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3333</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴33</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴444</a></li>
-                <li><a href="#">서브메뉴44</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="submenu">
-        <div class="lnb">
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴333</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴444</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴44</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5555</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="submenu">
-        <div class="lnb">
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="submenu">
-        <div class="lnb">
-          <ul>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-                <li><a href="#">서브메뉴1</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-                <li><a href="#">서브메뉴2</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-                <li><a href="#">서브메뉴3</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-                <li><a href="#">서브메뉴4</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-                <li><a href="#">서브메뉴5</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+      </header>
+    </div>
     <script>
       let subMenu = document.querySelectorAll(".submenu");
       let sub = document.querySelectorAll(".lnb");
-      //submenu는 높이가 없지만 lnb는 높이가 있으며, 그래서 submenu에 overflow:hidden을 준 것.
       let gnb = document.querySelectorAll(".menu ul li a");
       let Lnb = document.querySelectorAll(".lnb");
       let ht = Lnb[0].offsetHeight;
       console.log("ht : " + ht);
-      for (let i = 0; i < 4; i++) {
-        subMenu[i].style.opacity = "0";
-      }
+      // for (let i = 0; i < 4; i++) {
+      //   subMenu[i].style.opacity = "0";
+      // }
       gnb.forEach(function (item, keys) {
         item.addEventListener("mouseenter", function (e) {
           let j = Array.from(gnb).indexOf(e.target);
@@ -394,24 +480,33 @@
           });
           sub.forEach(function () {
             let subht = sub[j].offsetHeight;
-            console.log("j : " + j);
+            console.log("subht : " + subht);
             subMenu[j].style.height = subht + "px";
             subMenu[j].style.opacity = "1";
-            console.log(keys);
           });
+        });
+
+        item.addEventListener("mouseleave", function () {
+          for (let i = 0; i <= 4; i++) {
+            subMenu[i].style.height = 0 + "px";
+          }
         });
       });
       subMenu.forEach(function (item, keys) {
-        item.addEventListener("mouseenter", function () {
-          subMenu[j].style.height = ht + "px";
-          gnb[keys].classList.add("on", "active");
+        item.addEventListener("mouseenter", function (e) {
+          let j = Array.from(subMenu).indexOf(e.target);
+          sub.forEach(function () {
+            let subht = sub[j].offsetHeight;
+            console.log("subht : " + subht);
+            subMenu[j].style.height = subht + "px";
+            subMenu[j].style.opacity = "1";
+          });
+          gnb[j].classList.add("on", "active");
         });
         item.addEventListener("mouseleave", function (e) {
-          let j = Array.from(subMenu).indexOf(e.target);
-          subMenu[j].style.height = 0 + "px";
-          //   for (let i = 0; i <= 4; i++) {
-          //     subMenu[i].style.height = 0 + "px";
-          //   }
+          for (let i = 0; i <= 4; i++) {
+            subMenu[i].style.height = 0 + "px";
+          }
           gnb[keys].classList.remove("on", "active");
         });
       });

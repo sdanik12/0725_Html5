@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write(String(1234) + 1234 + "<br>");
+      document.write((1234 + 10).toString() + 1234 + "<br>");
+      //같은거임. 아래는 산술연산이 된 값을 문자로 반환함.
+      let num = 5.6789;
+      let num1 = 1000000;
+      document.write(num1.toExponential(3) + "<br>");
+      document.write(num.toFixed() + "<br>");
+      document.write(num.toPrecision(2) + "<br>");
+    </script>
+  </body>
+</html>

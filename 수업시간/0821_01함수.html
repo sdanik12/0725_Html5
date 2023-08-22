@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">click</p>
+    <script>
+      function myfnc() {
+        document.write("오늘은월요일ㅋㅋ<br>");
+      }
+      //함수를 지정했을 뿐 호출한 게 아니므로 화면상 변화가 없으며 실행문이 아니기 때문에 세미콜론이 붙지 않음.
+      //document.getElementById("demo").onclick = myfnc();
+      //myfnc();
+      function my(txt) {
+        document.write("오늘은 " + txt + "입니다." + "<br>");
+      }
+      //document.getElementById("demo").onclick = my();
+      my("월욜");
+      function myadd(a, b) {
+        return a + b;
+      }
+      document.write(myadd(5, 10) + "<br>");
+      document.write(myadd("헛", "둘") + "<br>");
+    </script>
+  </body>
+</html>

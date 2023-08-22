@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      document.write(Math.E + "<br>");
+      document.write(Math.PI + "<br>");
+      document.write(Math.SQRT2 + "<br>");
+      document.write(Math.SQRT1_2 + "<br>");
+      document.write(Math.LN2 + "<br>");
+      document.write(Math.LN10 + "<br>");
+      document.write(Math.LOG2E + "<br>");
+      document.write(Math.LOG10E + "<br>");
+      document.write("Math.round : " + Math.round(1.4) + "<br>");
+      document.write("Math.ceil : " + Math.ceil(1.4) + "<br>");
+      document.write("Math.ceil : " + Math.ceil(1.1) + "<br>");
+      //1.1 이상 값 중 가장 가까운(근사) 값 반환(2,3,4...)
+      document.write(Math.floor(1.1) + "<br>");
+      //1.1 이하 값 중 가장 가까운(근사) 값 반환(-1,0,1...)
+      document.write("Math.trunc : " + Math.trunc(1.5) + "<br>");
+      //소수점 이하를 탈락시키고 정수만 반환
+      document.write("Math.sign : " + Math.sign(-4) + "<br>"); //음수는 -1로 반환
+      document.write("Math.sign : " + Math.sign(null) + "<br>"); //0으로 반환
+      document.write("Math.sign : " + Math.sign(4) + "<br>"); //양수는 1로 반환
+      document.write("Math.pow : " + Math.pow(2, 8) + "<br>");
+      //x의 값을 y의 거듭제곱으로 반환
+      document.write("Math.sqrt : " + Math.sqrt(2) + "<br>");
+      //제곱근을 반환
+      document.write("Math.abs : " + Math.abs(-2) + "<br>");
+      document.write("Math.abs : " + Math.abs(2) + "<br>");
+      document.write("Math.abs : " + Math.abs(0) + "<br>");
+      //절대(양수) 값을 반환
+      document.write(
+        "Math.min : " + Math.min(0, 150, 30, 20, -8, -200) + "<br>"
+      );
+      document.write(
+        "Math.max : " + Math.max(0, 150, 30, 20, -8, -200) + "<br>"
+      );
+      document.write("Math.random : " + Math.random() + "<br>");
+      //0부터 0.9999...사이의 값을 반환
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(fruits.pop() + "<br>"); //배열의 마지막 요소를 제거함
+      fruits.push("Kiwi"); //배열의 마지막 요소를 추가
+      document.write(fruits + "<br>");
+      fruits.shift(); //배열의 첫번째 요소를 제거. 다음 요소들을 왼쪽으로 이동.
+      document.write(fruits + "<br>");
+      fruits.unshift("Lemon"); //배열의 첫번째 요소를 추가.
+      document.write(fruits + "<br>");
+
+      const drink = ["coffee", "milk", "tea", "soda"];
+      const cafe = fruits.concat(drink); //배열의 병합.
+      document.write(cafe + "<br>");
+      cafe.splice(1, 0, "new", "new1"); //추가할 인덱스 번호, 삭제 여부, 추가할 콘텐츠
+      document.write(cafe + "<br>");
+      cafe.splice(1, 2, "new", "new1");
+      document.write(cafe + "<br>");
+
+      document.write(cafe.slice(1, 3) + "<br>"); //첫번째 인덱스 번호에서 3번째 인덱스 번호 직전(2번)까지 추출.
+      document.write(cafe.slice(-2) + "<br>"); //음수 인수값은 뒤에서부터 추출. -1로 지정하면 soda, -2로 지정하면 tea,soda.
+      document.write(cafe.slice(-3, -2) + "<br>"); //-3은 milk. -2까지를 slice. 그러므로 추출값은 milk.
+
+      document.write(cafe.sort() + "<br>"); //알파벳순으로 정렬
+      document.write(cafe.reverse(cafe.sort()) + "<br>"); //내림차순 정렬
+
+      const numbers = [45, 4, 9, 16, 25];
+      let txt = "";
+      let txt1 = "";
+      /*numbers.forEach(myFunction);
+      document.write(txt);
+      function myFunction(value, index, array) {
+        txt += value + "<br>";
+      }*/
+      numbers.forEach(function (value, index, array) {
+        txt += value + "index : " + index + "<br>";
+        txt1 = array;
+      });
+      document.write(txt + "<br>");
+      document.write(txt1 + "<br>");
+
+      const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+      let position = fruits1.indexOf("Apple", 1); //0번에 애플이 있지만 1번부터 시작했기 때문에 2번이 추출됨.
+      document.write(position + "<br>");
+      let position1 = fruits1.indexOf("banana"); //찾는 값이 존재하지 않아 -1이 출력됨.
+      document.write(position1 + "<br>");
+      let position2 = fruits1.lastIndexOf("Apple"); //뒤에서부터 찾아줌.
+      document.write(position2 + "<br>");
+
+      document.write(typeof fruits1 + "<br>"); //배열의 타입은 object
+      document.write(Object.keys(fruits1) + "<br>"); //배열의 총 인덱스 번호를 반환함. 0,1,2,3
+
+      const person = { name: "홍길동", age: 30, gender: "남" };
+      document.write(typeof person + "<br>"); //object
+      document.write(Object.keys(person) + "<br>"); //스크립트 오브젝트의 키는 속성명으로 반환됨. name,age,gender
+
+      let a = fruits1 instanceof Array; //fruits1은 array로 생성됐기 때문에 트루값이 나오지만 person은 array로 생성되지 않은 오브젝트이기 때문에 false가 나옴.
+      document.write(a + "<br>");
+    </script>
+  </body>
+</html>
