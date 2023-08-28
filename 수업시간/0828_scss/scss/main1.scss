@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "notosanskr", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+$bg: #f00;
+$color: "8ac007";
+$width: 500px;
+$imgurl: "images/";
+nav {
+  width: $width;
+  margin: 0 auto;
+  ul {
+    display: flex;
+    li {
+      background: url($imgurl + "photo1.jpg");
+      a {
+        width: $width;
+        color: $color;
+      }
+    }
+  }
+}
+
+header {
+  width: 100px;
+  div.head {
+    ul.gnb {
+      li {
+        width: $width;
+      }
+    }
+  }
+}
+$wd1: 600px;
+$wd2: 300px;
+footer {
+  > div {
+    height: 100px;
+  }
+  div.top {
+    width: $wd1;
+    //background: if(조건,참,거짓);
+    //background: if($wd1 > 500, red, blue);
+    background: if($wd1>=500 and $wd1<=1000, red, blue);
+  }
+  div.bottom {
+    width: $wd2;
+    background: if($wd2 > 500, red, blue);
+  }
+}
+@for $i from 1 through 3 {
+  //1부터 3까지 반복
+  .menu:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}
+@for $i from 1 to 3 {
+  .menu:nth-child(#{$i}) {
+    //1부터 2까지 반복
+    width: 50px * $i;
+  }
+}

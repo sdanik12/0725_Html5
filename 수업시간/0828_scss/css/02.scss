@@ -1,0 +1,14 @@
+nav {
+  width: 1280px;
+  ul#gnb {
+    width: 80%;
+    margin: 0 auto;
+    li {
+      background: #ccc;
+      a {
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+}

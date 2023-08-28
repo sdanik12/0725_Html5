@@ -1,0 +1,11 @@
+@for $i from 1 through 3 {
+  //1부터 3까지 반복
+  .menu:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}
+div {
+  ul {
+    color: #f00;
+  }
+}

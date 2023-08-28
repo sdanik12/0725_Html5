@@ -138,6 +138,132 @@ header .top2 .join > ul > li:last-child {
 header .top2 .join > ul > li a {
   font-size: 14px;
 }
+.container {
+  width: 100%;
+}
+.container #story {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.container #story .story_top_wrap {
+  padding: 60px 0 90px;
+}
+.container #story .bg_box {
+  width: 100%;
+  background-image: url(../images/story_bg_pc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.container #story .bg_color_box {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#story h2 {
+  font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  position: relative;
+  padding: 10px 0 69px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+}
+#story h2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 2px;
+  margin: 0 0 0 -40px;
+  background: #fff;
+}
+.container #story .story_top_wrap .box .logo {
+  position: relative;
+  padding: 0 0 70px;
+}
+.container #story .story_top_wrap .box .logo img {
+  height: 300px;
+}
+.container #story .story_top_wrap .box p.story_title_eng span {
+  font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 36px;
+  line-height: 1.2;
+  color: #fff;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.container #story .story_top_wrap .box p.story_title_kr {
+  font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  color: #fff;
+  font-size: 24px;
+  padding: 25px 0 60px;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.container #story .story_top_wrap .box .title_small {
+  margin: 0 0 40px;
+  font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  color: #fff;
+  line-height: 1.4em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 30px;
+}
+.container #story .story_top_wrap .box .title_small::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto 40px;
+}
+#story .text_eng,
+#story .text_kr {
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  padding: 0 0 30px;
+  color: #fff;
+}
+#story .story_list_wrap {
+  padding: 90px 0 250px;
+  background-color: #fff;
+}
+#story .story_list {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+#story .story_list .title_wrap {
+  margin: 80px 0 100px;
+}
+#story .story_list .title_wrap h5 {
+  font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
+    "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+  font-size: 30px;
+  font-weight: 400;
+}
 .wrap footer {
   max-width: 1250px;
   margin: 0 auto;
