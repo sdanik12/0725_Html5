@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <script>
+      //헤드태그 안에 쓸 때는 자바스크립트의 순차독 특성상 적용되지 않으므로 ready를 사용해주어야함.
+      //$(document).ready(function () {
+      //또다른방법은 아래에.
+      //$(function () {
+      //바디태그(맨아래)안에선 이렇게만 써도 적용가능.
+      //$("p").text("변경되었습니다.");
+      //});
+      //});
+
+      /*for (let i = 0; i <= 5; i++) {
+        document.getElementsByTagName("p")[i].textContent = "변경되었습니다.";
+      }*/
+
+      //여러개의 p태그 중 첫번째 p태그를 선택하는 방법.
+      //$("p:first").text("변경되었습니다.");
+      //$("p:first-child").text("변경되었습니다.");
+      //$("p").eq(0).text("변경되었습니다.");
+      //$("p:eq(0)").text("변경되었습니다.");
+
+      //0보다 큰 greater then
+      //$("p:gt(0)").text("변경되었습니다.");
+      //2보다 작은 less then
+      //$("p:lt(2)").text("변경되었습니다.");
+
+      //짝수인 인덱스번호를 선택.
+      //$("p:even()").text("변경되었습니다.");
+      //홀수인 인덱스번호를 선택.
+      //$("p:odd()").text("변경되었습니다.");
+
+      //+는 바로 인접해있는 형제를 선택함.
+      //$("div + p").text("변경되었습니다.");
+      //div와 인접해있는 p를 전부 선택함.
+      //$("div ~ p").text("변경되었습니다.");
+
+      //비어있는 div를 h1로 변환.
+      $(":empty").html("<h1>제목태그</h1>");
+      //header는 h1~h6까지의 제목태그를 선택함.
+      $(":header").text("h1태그");
+      //선택한 태그 중에서 특정 문자가 포함된 개체의 서식을 변경.
+      $("h1:contains('태그')").css("color", "red");
+    </script>
+  </body>
+</html>

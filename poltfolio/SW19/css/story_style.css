@@ -264,6 +264,14 @@ header .top2 .join > ul > li a {
   font-size: 30px;
   font-weight: 400;
 }
+#story .story_list_wrap .story_list .story_content {
+  width: 100%;
+  height: 5000px;
+  background: url(../made/clock_hand.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 20px;
+}
 .wrap footer {
   max-width: 1250px;
   margin: 0 auto;
