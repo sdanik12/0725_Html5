@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //attr은 속성을 호출, 변경, 추가할 수 있음.
+        $("p").attr("class", "study").attr("id", "change");
+        //study라는 클래스는 없기 때문에 새로 생성되지만, page라는 id속성은 이미 있기 때문에 change로 변경함.
+        let get = $("p").attr("class");
+        console.log(get); //클래스명인 study 출력.
+        $("img").css("width", "300px");
+        let i = 1;
+        let img_src = $("img").attr("src");
+        $("button").click(function () {
+          i++;
+          if (i == 7) i = 1; //실행문이 한 줄일 경우 중괄호 생략 가능.
+          //$("img").attr("src", "../images/photo" + i + ".jpg");
+          //$("img").attr("src", img_src.replace(img_src.slice(-5, -4), i));
+          $("img")
+            .attr("src", img_src.replace(img_src.substr(-5, 1), i))
+            .attr("alt", "photo" + i);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="page">오늘은..수요일..</p>
+    <img src="../images/photo1.jpg" alt="photo1.jpg" />
+    <button>이미지 변경</button>
+  </body>
+</html>

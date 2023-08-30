@@ -18,82 +18,8 @@
       src="https://kit.fontawesome.com/648f6ca319.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
     <title>SW19</title>
   </head>
   <body>
@@ -176,21 +102,17 @@
           <h2>
             <span>new arrivals</span>
           </h2>
-          <div class="new_arrival">
-            <ul class="new pd1">
-              <i
-                class="new_arrow fa-solid fa-chevron-left"
-                style="color: #000000"
-              ></i>
-              <li>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <a href="#"
                   ><img
                     src="product_images/SW19_6AM_DIFFUSER_SET.jpg"
                     alt="SW19_6AM_DIFFUSER_SET.jpg"
                   /><span>SW19 6AM DIFFUSER SET</span><span>120,000원</span></a
                 >
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_NOON_DIFFUSER_SET.jpg"
@@ -198,8 +120,8 @@
                   /><span>SW19 NOON DIFFUSER SET</span>
                   <span>120,000원</span>
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_9PM_DIFFUSER_SET.jpg"
@@ -207,8 +129,8 @@
                   /><span>SW19 9PM DIFFUSER SET</span>
                   <span>120,000원</span>
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_6AM_FRAGRANCE_MINI_KIT.jpg"
@@ -217,14 +139,8 @@
                   <span>SW19 6AM FRAGRANCE MINI KIT</span>
                   <span>89,000원</span>
                 </a>
-              </li>
-              <i
-                class="new_arrow fa-solid fa-chevron-right"
-                style="color: #000000"
-              ></i>
-            </ul>
-            <ul class="new pd2">
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_NOON_FRAGRANCE_MINI KIT.jpg"
@@ -233,8 +149,9 @@
                   <span>SW19 NOON FRAGRANCE MINI KIT</span>
                   <span>89,000원</span>
                 </a>
-              </li>
-              <li>
+              </div>
+
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_9PM_FRAGRANCE_MINI_KIT.jpg"
@@ -243,8 +160,8 @@
                   <span>SW19 9PM FRAGRANCE MINI KIT</span>
                   <span>89,000원</span>
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_6AM_DIFFUSER_REFILL_(280ml).jpg"
@@ -253,8 +170,8 @@
                   <span>SW19 6AM DIFFUSER REFILL (280ml)</span>
                   <span>78,000원</span>
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#">
                   <img
                     src="product_images/SW19_NOON_DIFFUSER_REFILL_(280ml).jpg"
@@ -263,8 +180,17 @@
                   <span>SW19 NOON DIFFUSER REFILL (280ml)</span>
                   <span>78,000원</span>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <i
+              class="new_arrow fa-solid fa-chevron-left swiper-button-prev"
+              style="color: #000000"
+            ></i>
+            <i
+              class="new_arrow fa-solid fa-chevron-right swiper-button-next"
+              style="color: #000000"
+            ></i>
           </div>
         </div>
         <div class="bg">
@@ -286,7 +212,7 @@
                   <img src="images/6am.jpg" alt="6am.jpg" />
                 </a>
               </div>
-              <div class="pd_desc">
+              <div class="pd_desc" data-aos="slide-up">
                 <img
                   class="desc_logo"
                   src="images/noon_text.png"
@@ -317,7 +243,7 @@
                   <img src="images/3pm.jpg" alt="3pm.jpg" />
                 </a>
               </div>
-              <div class="pd_desc">
+              <div class="pd_desc" data-aos="slide-up">
                 <img
                   class="desc_logo"
                   src="images/9pm_text.png"
@@ -349,7 +275,7 @@
             </div>
 
             <div class="pd_right">
-              <div class="pd_desc">
+              <div class="pd_desc" data-aos="slide-up">
                 <img
                   class="desc_logo"
                   src="images/6am_text.png"
@@ -379,7 +305,7 @@
               <div class="pd_image">
                 <a href="#"><img src="images/noon.jpg" alt="noon.jpg" /></a>
               </div>
-              <div class="pd_desc">
+              <div class="pd_desc" data-aos="slide-up">
                 <img
                   class="desc_logo"
                   src="images/3pm_text.png"
@@ -411,7 +337,7 @@
               <div class="pd_image">
                 <a href="#"><img src="images/9pm.jpg" alt="9pm.jpg" /></a>
               </div>
-              <div class="pd_desc">
+              <div class="pd_desc" data-aos="slide-up">
                 <img
                   class="desc_logo"
                   src="images/midnight_text.png"
@@ -715,5 +641,35 @@
         <img src="images/totop.png" alt="totop.png" />
       </div>
     </div>
+    <script src="js/aos.js" src="js/swiper-bundle.js"></script>
+    <script>
+      AOS.init({
+        //꼭 있어야 구현이 가능함.
+        offset: 120, //트리거 포인트에서 오프셋(px) 기본값120, 스크롤탑으로 생각하면 편함.
+        duration: 1000, //기본값은 400, 0~3000까지 들어감
+        delay: 300, //지연시간
+        easing: "ease",
+        once: false, //한번재생은 true
+      });
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        //effect: "fade",
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        mousewheel: true,
+
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
