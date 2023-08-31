@@ -13,13 +13,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/0823_swiper-bundle.css" />
     <link rel="stylesheet" href="css/sw19_index_style.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <script
       src="https://kit.fontawesome.com/648f6ca319.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.css" />
+
     <title>SW19</title>
   </head>
   <body>
@@ -102,7 +103,7 @@
           <h2>
             <span>new arrivals</span>
           </h2>
-          <div class="swiper mySwiper">
+          <div class="swiper mySwiper" id="newpd">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#"
@@ -150,7 +151,6 @@
                   <span>89,000원</span>
                 </a>
               </div>
-
               <div class="swiper-slide">
                 <a href="#">
                   <img
@@ -182,7 +182,6 @@
                 </a>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
             <i
               class="new_arrow fa-solid fa-chevron-left swiper-button-prev"
               style="color: #000000"
@@ -641,23 +640,23 @@
         <img src="images/totop.png" alt="totop.png" />
       </div>
     </div>
-    <script src="js/aos.js" src="js/swiper-bundle.js"></script>
+    <script src="js/0823_swiper-bundle.js"></script>
+    <script src="js/aos.js"></script>
     <script>
       AOS.init({
-        //꼭 있어야 구현이 가능함.
-        offset: 120, //트리거 포인트에서 오프셋(px) 기본값120, 스크롤탑으로 생각하면 편함.
-        duration: 1000, //기본값은 400, 0~3000까지 들어감
-        delay: 300, //지연시간
+        offset: 120,
+        duration: 1000,
+        delay: 300,
         easing: "ease",
-        once: false, //한번재생은 true
+        once: false,
       });
       var swiper = new Swiper(".mySwiper", {
         direction: "horizontal",
         //effect: "fade",
         slidesPerView: 4,
         spaceBetween: 30,
-        loop: true,
-        mousewheel: true,
+        // loop: true,
+        // mousewheel: true,
 
         autoplay: {
           delay: 2000,

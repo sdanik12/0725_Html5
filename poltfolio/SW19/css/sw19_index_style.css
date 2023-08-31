@@ -150,44 +150,35 @@ header .top2 .join > ul > li a {
 .visual .bg_new {
   width: 100%;
   height: 1000px;
+  text-align: center;
   position: relative;
 }
+.visual .bg_new h2 {
+  padding: 100px 0 0;
+}
 .visual .bg_new h2 span {
-  padding: 50px 0;
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-size: 30px;
   font-weight: 500;
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .visual .bg_new .mySwiper {
   width: 100%;
   height: 900px;
-  padding: 50px 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
 }
 .visual .bg_new .mySwiper .swiper-wrapper {
   text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .visual .bg_new .swiper-slide {
-  width: 400px;
+  width: 25%;
   height: 700px;
 }
 .visual .bg_new .swiper-slide a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
 }
 .visual .bg_new .swiper-slide span {
   padding: 10px 0;
@@ -198,20 +189,22 @@ header .top2 .join > ul > li a {
   object-fit: cover;
   padding: 30px 0;
 }
-
-.visual .bg_new i:first-of-type {
-  position: absolute;
-  top: 480px;
-  right: 100%;
+#newpd .swiper-button-next,
+#newpd .swiper-button-prev {
   font-size: 25px;
-  cursor: pointer;
 }
-.visual .bg_new i:nth-of-type(2) {
-  position: absolute;
-  top: 480px;
-  left: 100%;
-  font-size: 25px;
-  cursor: pointer;
+#newpd .swiper-button-next:after,
+#newpd .swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+#newpd .swiper-button-prev:after,
+#newpd .swiper-rtl .swiper-button-next:after {
+  content: "";
+}
+#newpd .swiper-button-next,
+#newpd .swiper-rtl .swiper-button-prev {
+  right: 50px !important;
+  left: auto;
 }
 .visual .bg {
   width: 100%;
@@ -263,12 +256,18 @@ header .top2 .join > ul > li a {
 .container .container_product .product > div {
   width: 50%;
 }
-
+.container .container_product .product .pd_image {
+  overflow: hidden;
+}
 .container .container_product .product .pd_image img {
   width: 100%;
   height: 1000px;
   object-fit: cover;
   object-position: center;
+  transition: 0.4s;
+}
+.container .container_product .product .pd_image:hover img {
+  transform: scale(1.1);
 }
 .container .container_product .product .pd_left .pd_image:last-child img,
 .container .container_product .product .pd_right .pd_desc:last-child {

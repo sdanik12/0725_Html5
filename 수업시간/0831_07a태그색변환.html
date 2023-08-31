@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //a는 인덱스 번호가 전부 0임. 각 li의 처음이자 유일한 자식이기 때문.
+        $("ul li a").hover(
+          function () {
+            let num = $(this).parent().index(); //부모요소인 li의 인덱스 번호를 가져옴.
+            console.log("num : " + num);
+            $(this).css("color", "red");
+            $(this).parent().siblings().find("a").css("color", "green");
+            //this를 제외한 a를 선택해 green으로 바꿈. 형제선택자 siblings.
+          },
+          function () {
+            $("ul li a").css("color", "#000"); //this가 아닌 ul li a전체를 호출했기 때문에 호버하지 않은 a태그들도 전부 검은색으로 변함.
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+  </body>
+</html>
