@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <style>
+      p,
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      @keyframes hide {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .out {
+        animation: hide 1s forwards;
+      }
+      @keyframes show {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .in {
+        animation: show 1s forwards;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#fadeout").click(function () {
+          $("p").removeClass().addClass("out");
+        });
+        $("#fadein").click(function () {
+          $("p").removeClass().addClass("in"); //애드클래스 앞에 리무브클래스를 주어야 인과 아웃이 중첩되어 기능이 작동하지 않는 것을 방지할 수 있음.
+        });
+        let fade = true;
+        $("#fadetoggle").click(function () {
+          if (fade) {
+            //위에 트루값을 대입해두었기 때문에 연산자 없이도 조건식이 될 수 있음.
+            $("p").removeClass().addClass("in");
+          } else {
+            $("p").removeClass().addClass("out");
+          }
+          fade = !fade; //페이드에 대입되는 트루값과 펄스값을 부정하여 번갈아가며 실행문이 실행될 수 있도록 하는 식.
+        });
+        //speed:"slow","fast","1000"
+        //easing:"swing","linear"
+        //callback:fade()관련 메소드가 완료된 후 실행될 구문
+        $("#fadeIn").click(function () {
+          $("div").fadeIn("fast", "linear");
+        });
+        $("#fadeOut").click(function () {
+          $("div").fadeOut("slow", "swing");
+        });
+        $("#fadeToggle").click(function () {
+          $("div").fadeToggle(1000, function () {
+            $("div").text("fadeToggle");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <div></div>
+    <button id="fadeIn">fade In</button>
+    <button id="fadeOut">fade Out</button>
+    <button id="fadeToggle">fade Toggle</button>
+  </body>
+</html>

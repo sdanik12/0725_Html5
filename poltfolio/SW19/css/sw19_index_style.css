@@ -264,10 +264,10 @@ header .top2 .join > ul > li a {
   height: 1000px;
   object-fit: cover;
   object-position: center;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 .container .container_product .product .pd_image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .container .container_product .product .pd_left .pd_image:last-child img,
 .container .container_product .product .pd_right .pd_desc:last-child {

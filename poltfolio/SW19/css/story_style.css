@@ -199,6 +199,9 @@ header .top2 .join > ul > li a {
 .container #story .story_top_wrap .box .logo img {
   height: 300px;
 }
+.container #story .story_top_wrap .box p {
+  animation: show 1s;
+}
 .container #story .story_top_wrap .box p.story_title_eng span {
   font-family: "Playfair Display", "Noto Sans Korean", "Apple SD Gothic Neo",
     "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
@@ -328,6 +331,9 @@ header .top2 .join > ul > li a {
   justify-content: center;
   text-align: center;
   background: #fff;
+}
+.concept_txt p {
+  font-size: 15px;
 }
 .concept_txt:first-of-type {
   position: absolute;

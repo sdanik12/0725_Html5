@@ -13,9 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/story_style.css" />
-    <link rel="stylesheet" href="css/aos.css" />
+
     <script
       src="https://kit.fontawesome.com/648f6ca319.js"
       crossorigin="anonymous"
@@ -148,19 +149,44 @@
                 <h5>Fragrance story</h5>
               </div>
               <div class="story_content">
-                <div class="concept_image">
+                <div
+                  class="concept_image"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
                   <img src="images/story_list_01.jpg" alt="story_list_01.jpg" />
                 </div>
-                <div class="concept_image">
+                <div
+                  class="concept_image"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
                   <img src="images/story_list_02.jpg" alt="story_list_02.jpg" />
                 </div>
-                <div class="concept_image">
+                <div
+                  class="concept_image"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
                   <img src="images/story_list_03.jpg" alt="story_list_03.jpg" />
                 </div>
-                <div class="concept_image">
+                <div
+                  class="concept_image"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
                   <img src="images/story_list_04.jpg" alt="story_list_04.jpg" />
                 </div>
-                <div class="concept_image">
+                <div
+                  class="concept_image"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
                   <img src="images/story_list_05.jpg" alt="story_list_05.jpg" />
                 </div>
                 <div class="concept_text">
@@ -358,5 +384,14 @@
       </div>
     </div>
     <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 1000,
+        delay: 300,
+        easing: "ease",
+        once: false,
+      });
+    </script>
   </body>
 </html>
