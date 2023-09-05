@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="jquery/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#ease").change(function () {
+          let txt = $("select>option:selected").val();
+          let selectoption = $(this).find("option:selected");
+          selectoption.prop("selected", false); //속성의 값을 가져와 논리형으로 분리시켜줌 ???
+          //이미 선택된 값으로 처리되어 연속적으로 나오지 않았음
+          //->선택된 값을 거짓으로 처리하여 재선택될 수 있게 함.
+          if (txt != "") {
+            $("body").append(
+              " <div class='box'>" +
+                txt +
+                "<div class='ball' data-ease='" +
+                txt +
+                "'></div></div>"
+            );
+          }
+          $(".box").click(function () {
+            $(this).remove();
+          });
+        });
+        $("button").click(function () {
+          $(".box").each(function () {
+            let txt = $(this).find(".ball").data("ease");
+            $(this)
+              .find(".ball")
+              .animate({ left: "480px" }, 1000, txt)
+              .animate({ left: "10px" }, 1000, txt);
+          });
+        });
+      });
+    </script>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #000;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #f00;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="ui" id="ease">
+      <option value="">선택안함</option>
+      <option value="swing">swing</option>
+      <option value="linear">linear</option>
+      <option value="easeOutBounce">easeOutBounce</option>
+    </select>
+    <button>move</button>
+  </body>
+</html>

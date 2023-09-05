@@ -267,7 +267,7 @@ header .top2 .join > ul > li a {
   transition: 0.5s;
 }
 .container .container_product .product .pd_image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 .container .container_product .product .pd_left .pd_image:last-child img,
 .container .container_product .product .pd_right .pd_desc:last-child {
