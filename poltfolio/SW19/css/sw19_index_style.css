@@ -281,6 +281,17 @@ header .top2 .join > ul > li a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  transition: 1s;
+  position: relative;
+}
+.container .container_product .product .pd_desc.whitebox::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #fff;
+  opacity: 0.3;
+  z-index: -1;
 }
 .container .container_product .product .pd_desc .desc_logo {
   width: 65px;

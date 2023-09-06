@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <style>
+      ul {
+        list-style: none;
+      }
+      ul li {
+        float: left;
+        width: 100px;
+        text-align: center;
+      }
+    </style>
+    <script>
+      $(function () {
+        // $("ul li").eq(0).css("background", "#aaa");
+        // $("ul li").eq(1).css("background", "#bbb");
+        // $("ul li").eq(2).css("background", "#ccc");
+        // $("ul li").eq(3).css("background", "#ddd");
+
+        // $("ul li").each(function () {
+        //   let bg = $(this).text();
+        //   $(this).css("backgroundColor", bg).css("cursor", "pointer");
+        // });
+        // $("ul li").click(function () {
+        //   let bg = $(this).text();
+        //   $("body").css("background", bg);
+        // });
+
+        $("ul li").each(function () {
+          let bg = $(this).data("bg");
+          $(this).css("backgroundColor", bg).css("cursor", "pointer");
+        });
+        $("ul li").click(function () {
+          let bg = $(this).data("bg");
+          $("body").css("background", bg);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <!-- <li>purple</li>
+      <li>pink</li>
+      <li>skyblue</li>
+      <li>yellow</li> -->
+      <li data-bg="skyblue">배경1</li>
+      <li data-bg="yellowgreen">배경2</li>
+      <li data-bg="pink">배경3</li>
+      <li data-bg="purple">배경4</li>
+    </ul>
+  </body>
+</html>

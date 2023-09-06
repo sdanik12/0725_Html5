@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/648f6ca319.js"
       crossorigin="anonymous"
     ></script>
-
+    <script src="js/jquery-3.7.1.min.js"></script>
     <title>SW19</title>
   </head>
   <body>
@@ -211,11 +211,15 @@
                   <img src="images/6am.jpg" alt="6am.jpg" />
                 </a>
               </div>
-              <div class="pd_desc" data-aos="slide-up">
+              <div
+                class="pd_desc"
+                data-aos="slide-up"
+                data-bg="url(made/noon.png)"
+              >
                 <img
                   class="desc_logo"
                   src="images/noon_text.png"
-                  alt="6am_text.png"
+                  alt="noon_text.png"
                 />
                 <p>
                   TOUCH OF SUNLIGHT<br />
@@ -242,7 +246,11 @@
                   <img src="images/3pm.jpg" alt="3pm.jpg" />
                 </a>
               </div>
-              <div class="pd_desc" data-aos="slide-up">
+              <div
+                class="pd_desc"
+                data-aos="slide-up"
+                data-bg="url(made/9pm.png)"
+              >
                 <img
                   class="desc_logo"
                   src="images/9pm_text.png"
@@ -274,7 +282,11 @@
             </div>
 
             <div class="pd_right">
-              <div class="pd_desc" data-aos="slide-up">
+              <div
+                class="pd_desc"
+                data-aos="slide-up"
+                data-bg="url(made/6am.png)"
+              >
                 <img
                   class="desc_logo"
                   src="images/6am_text.png"
@@ -304,7 +316,11 @@
               <div class="pd_image">
                 <a href="#"><img src="images/noon.jpg" alt="noon.jpg" /></a>
               </div>
-              <div class="pd_desc" data-aos="slide-up">
+              <div
+                class="pd_desc"
+                data-aos="slide-up"
+                data-bg="url(made/3pm.png)"
+              >
                 <img
                   class="desc_logo"
                   src="images/3pm_text.png"
@@ -336,11 +352,15 @@
               <div class="pd_image">
                 <a href="#"><img src="images/9pm.jpg" alt="9pm.jpg" /></a>
               </div>
-              <div class="pd_desc" data-aos="slide-up">
+              <div
+                class="pd_desc"
+                data-aos="slide-up"
+                data-bg="url(made/midnight.png)"
+              >
                 <img
                   class="desc_logo"
                   src="images/midnight_text.png"
-                  alt="midnight_textt.png"
+                  alt="midnight_text.png"
                 />
                 <p>
                   MIDNIGHT, A SMALL LAMP LIGHTS UP A
@@ -668,6 +688,26 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+      $(function () {
+        $("#totop").click(function () {
+          $("html, body").animate({ scrollTop: "0" }, 700);
+        });
+        $(".pd_desc").each(function () {
+          let bg = $(this).data("bg");
+          $(this).hover(
+            function () {
+              $(this).addClass("whitebox").css({
+                background: bg,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              });
+            },
+            function () {
+              $(this).removeClass("whitebox").css("background", "#fff");
+            }
+          );
+        });
       });
     </script>
   </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: #fdd33fdf;
+      }
+      section:nth-child(2) {
+        background: #f090ef;
+      }
+      section:nth-child(3) {
+        background: #fdeddd;
+      }
+    </style>
+    <script>
+      $(function () {
+        let el = $("section");
+        $(el).each(function (index) {
+          $(this).on("mousewheel", function () {
+            console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop();
+            let elselector = $(el).eq(index);
+            if (event.wheelDelta < 0) {
+              if ($(elselector).next() != undefined) {
+                try {
+                  moveTop = $(elselector).next().offset().top;
+                } catch (e) {}
+              }
+            } else {
+              if ($(elselector).prev() != undefined) {
+                try {
+                  moveTop = $(elselector).prev().offset().top;
+                } catch (e) {}
+              }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 700);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+  </body>
+</html>

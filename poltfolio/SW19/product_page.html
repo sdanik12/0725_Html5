@@ -18,6 +18,7 @@
       src="https://kit.fontawesome.com/648f6ca319.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <title>SW19</title>
   </head>
   <body>
@@ -998,5 +999,12 @@
         <img src="images/totop.png" alt="totop.png" />
       </div>
     </div>
+    <script>
+      $(function () {
+        $("#totop").click(function () {
+          $("html, body").animate({ scrollTop: "0" }, 700);
+        });
+      });
+    </script>
   </body>
 </html>
