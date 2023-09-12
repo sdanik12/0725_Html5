@@ -11,7 +11,7 @@
   padding: 0;
 }
 body {
-  background: #191e24;
+  background: #000;
 }
 ul {
   list-style: none;
@@ -22,8 +22,6 @@ a {
 }
 .top_layout {
   height: 90px;
-  border-bottom: 1px solid #e5e5e5;
-  box-sizing: border-box;
 }
 header {
   position: relative;
@@ -61,16 +59,19 @@ header .logo h1 a {
   margin: 0 40px;
   line-height: 90px;
 }
-.menu ul li a:hover,
+
 .menu ul li a.on {
-  text-decoration: underline 6px;
-  text-decoration-color: rgba(22, 69, 137, 0.2);
+  text-decoration: underline 4px;
+  text-decoration-color: rgba(0, 180, 219, 1);
 }
 .menu ul li a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
+}
+.menu ul li a:hover {
+  color: #009ecd;
 }
 .menu ul li a:hover::after,
 .menu ul li a.active::after {
@@ -80,24 +81,27 @@ header .logo h1 a {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #0f489a;
+  background: #ffffff;
   right: 45%;
   top: 95%;
-  z-index: 999;
+  z-index: 9999;
 }
-header #right {
+/* header #right .inner li {
+  float: left;
+} */
+/* header #right {
   display: flex;
   justify-content: flex-end;
   z-index: 999;
 }
-header #right .right {
-  display: flex;
-}
 header #right .inner {
   position: absolute;
   right: 100px;
+} */
+header #right .right {
+  display: flex;
 }
-header #right .inner .search::before {
+/* header #right .inner .search::before {
   display: block;
   position: absolute;
   left: -30px;
@@ -106,7 +110,7 @@ header #right .inner .search::before {
   width: 1px;
   height: 26px;
   background: #ccc;
-}
+} */
 header #right .inner .search a {
   display: block;
   height: 100%;
@@ -155,6 +159,8 @@ header #right .right li a {
   height: 0;
   overflow: hidden;
   text-align: left;
+  transition: 0.5s;
+  z-index: 999;
 }
 .submenu .lnb {
   width: 1280px;
@@ -198,12 +204,107 @@ header #right .right li a {
   content: "";
   width: 5px;
   height: 5px;
-  border: solid #555;
+  border: solid #fff;
   border-width: 0 1px 1px 0;
   transform: rotate(45deg);
 }
 .submenu .lnb > ul > li a:hover {
-  border: 1px solid #0f489a;
-  color: #0f489a;
-  box-shadow: 0 0 15px rgba(22, 69, 137, 0.2);
+  /* border: 1px solid #004a94; */
+  /* box-shadow: 0 0 15px rgba(22, 69, 137, 0.2); */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+.body_layout {
+  width: 100%;
+}
+.body_layout .cont1 {
+  width: 100%;
+  height: 100vh;
+  background: url(../download/aurora.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.body_layout .cont1 .bg_box {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rgba(0, 0, 0, 0.4); */
+}
+.body_layout .cont1 .main_visual {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  margin: 100px auto;
+  perspective: 800px;
+}
+.body_layout .cont1 .main_visual .dot {
+  position: absolute;
+  left: 900px;
+  top: 200px;
+}
+.body_layout .cont1 .main_visual .dot li a {
+  display: block;
+  width: 20px;
+  height: 6px;
+  border-radius: 3px;
+  background: #eee;
+  margin: 10px;
+}
+.body_layout .cont1 .main_visual .dot li a.on {
+  background-color: #000;
+}
+.body_layout .cont1 .main_visual #cubic {
+  width: 700px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transition-timing-function: linear;
+}
+#cubic .square {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.body_layout .cont1 .main_visual #cubic .square1 {
+  background-image: url(../images/article1.png);
+  background-size: cover;
+  transform: translateZ(200px);
+}
+.body_layout .cont1 .main_visual #cubic .square2 {
+  background-image: url(../images/article2.png);
+  background-size: cover;
+  transform: translateZ(100px) translateY(70px);
+}
+.body_layout .cont1 .main_visual #cubic .square3 {
+  background-image: url(../images/article3.png);
+  background-size: cover;
+  transform: translateZ(0px) translateY(140px);
+}
+.body_layout .cont1 .main_visual #cubic .square4 {
+  background-image: url(../images/article4.png);
+  background-size: cover;
+  transform: translateZ(-100px) translateY(210px);
+}
+.body_layout .cont1 #top {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  background: #ccc;
+  top: 10px;
+  left: 30%;
+  opacity: 0.5;
+}
+.body_layout .cont1 #bottom {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  background: #ccc;
+  bottom: 120px;
+  left: 30%;
+  opacity: 0.5;
 }
