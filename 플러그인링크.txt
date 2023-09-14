@@ -2,3 +2,4 @@ https://michalsnik.github.io/aos/
 https://swiperjs.com/demos
 https://jqueryui.com/demos/
 https://www.w3schools.com/
+https://owlcarousel2.github.io/OwlCarousel2/
