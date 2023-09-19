@@ -39,6 +39,11 @@ header {
   padding: 20px 0;
   box-sizing: border-box;
 }
+.on {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
 header .top2 {
   display: flex;
   width: 100%;
@@ -112,15 +117,14 @@ header .top2 i {
   display: none;
 }
 header .top2 .forcenter .logo img {
-  width: 61px;
-  height: 40px;
+  max-width: 61px;
 }
 header .top2 .forcenter {
   display: flex;
   width: calc(50% + (61px / 2));
   justify-content: space-between;
 }
-header .top2 .join > a,
+header .top2 .join #search,
 header .top2 .join #bag {
   display: none;
 }
@@ -264,10 +268,10 @@ header .top2 .join > ul > li a {
   height: 1000px;
   object-fit: cover;
   object-position: center;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .container .container_product .product .pd_image:hover img {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 .container .container_product .product .pd_left .pd_image:last-child img,
 .container .container_product .product .pd_right .pd_desc:last-child {
@@ -449,10 +453,6 @@ header .top2 .join > ul > li a {
   font-size: 16px;
   padding: 8px 0 0;
 }
-/* #totop.show {
-  opacity: 1;
-  visibility: visible;
-} */
 .wrap #totop {
   display: inline-block;
   position: fixed;
@@ -462,15 +462,19 @@ header .top2 .join > ul > li a {
   height: 30px;
   padding: 10px;
   z-index: 999;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  /* opacity: 0; */
+  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
   text-align: center;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 #totop img {
   width: 100%;
   height: auto;
   display: block;
+}
+#totop.show {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width: 1023px) {
   .wrap header .nav {
@@ -478,17 +482,113 @@ header .top2 .join > ul > li a {
   }
   header .top2 #nav_bars {
     display: block;
-    line-height: 2.4;
+    line-height: 2;
     font-size: 16px;
   }
   header .top2 .forcenter .join ul {
     display: none;
   }
-  header .top2 .forcenter .join > a,
+  header .top2 .forcenter .join #search,
   header .top2 .forcenter .join #bag {
     display: inline-block;
     font-size: 17px;
     margin-left: 20px;
-    line-height: 2.4;
+    line-height: 2;
+  }
+  .container .container_product .product .pd_image img {
+    height: 600px;
+  }
+  .container .container_product .product .pd_left .pd_image:last-child img,
+  .container .container_product .product .pd_right .pd_desc:last-child {
+    height: 600px;
+  }
+  .container .maininstagram {
+    width: 100%;
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top a {
+    color: #fff;
+    font-size: 10px;
+  }
+  header {
+    height: 70px;
+    padding: 19px 0 16px;
+  }
+  header .top2 .forcenter .logo img {
+    max-width: 47px;
+  }
+  header .top2 .forcenter .join #search,
+  header .top2 .forcenter .join #bag {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 2;
+  }
+  .visual .main {
+    height: 570px;
+  }
+  .visual .bg_new {
+    height: 900px;
+  }
+  .visual .bg_new h2 {
+    padding: 80px 0 0;
+  }
+  .visual .bg_new .mySwiper {
+    height: 800px;
+  }
+  .visual .bg_new .swiper-slide img {
+    width: 50%;
+  }
+  .visual .bg {
+    height: 700px;
+  }
+  .visual .bg .blend {
+    background: none;
+  }
+  .visual .bg h2 {
+    font-size: 28px;
+    line-height: 50px;
+    padding: 0 0 20px;
+  }
+  .visual .bg p {
+    font-size: 16px;
+  }
+  .container .container_product .product .pd_desc .desc_logo {
+    width: 55px;
+  }
+  .container .container_product .product .pd_desc p {
+    line-height: 25px;
+    font-size: 12px;
+  }
+  .container .maininstagram {
+    width: 100%;
+    height: 750px;
+  }
+  .container .mapbox {
+    padding: 0 0 128px;
+    background-attachment: initial;
+  }
+  .container .mapbox .bg_index h2 {
+    padding: 140px 0 60px;
+  }
+  .container .mapbox .bg_index img {
+    height: 200px;
+  }
+  .container .mapbox .bg_index ul li a {
+    padding: 12px;
+    font-size: 12px;
+  }
+  .wrap footer .footer_inner .footer_flex_spacebetween {
+    display: block;
+  }
+  .wrap footer .footer_inner .info_address {
+    text-align: center;
+  }
+  .wrap footer .footer_inner .info_customer {
+    text-align: center;
+  }
+  .wrap footer .footer_inner .info_customer ul {
+    justify-content: center;
   }
 }

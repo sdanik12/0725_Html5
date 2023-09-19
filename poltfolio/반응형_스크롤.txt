@@ -1,0 +1,21 @@
+반응형 구문 : 
+if (matchMedia("screen and (max-width: 767px)").matches) {
+          console.log("mobile");
+        } else if (matchMedia("screen and (max-width: 1023px)").matches) {
+          console.log("tablet");
+        } else if (matchMedia("screen and (min-width: 1024px)").matches) {
+          console.log("desktop");
+        }
+
+        window.onresize = function () {
+          document.location.reload();
+        };
+
+반응형 제작 과정 블로그 : 
+https://velog.io/@devjade/%EB%B0%98%EC%9D%91%ED%98%95-%EC%97%AC%ED%96%89-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%A6%AC%EB%B7%B0JS%ED%8E%B8
+
+스크롤 이벤트 플러그인 : 
+https://scrollrevealjs.org/
+
+scrollreveal 사용법 : 
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=sol9501&logNo=220192704165

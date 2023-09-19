@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/0823_swiper-bundle.css" />
     <link rel="stylesheet" href="css/sw19_index_style.css" />
     <link rel="stylesheet" href="css/aos.css" />
@@ -77,9 +76,11 @@
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Cart</a></li>
               </ul>
-              <a href="#"
-                ><img src="images/icon_search_.svg" alt="icon_search_.svg"
-              /></a>
+              <i
+                id="search"
+                class="fa-solid fa-magnifying-glass"
+                style="color: #000000"
+              ></i>
               <i
                 id="bag"
                 class="fa-solid fa-bag-shopping"
@@ -656,7 +657,7 @@
           </div>
         </div>
       </footer>
-      <div id="totop" class="show">
+      <div id="totop">
         <img src="images/totop.png" alt="totop.png" />
       </div>
     </div>
@@ -673,7 +674,7 @@
       var swiper = new Swiper(".mySwiper", {
         direction: "horizontal",
         //effect: "fade",
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         // loop: true,
         // mousewheel: true,
@@ -688,25 +689,65 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+
+        breakpoints: {
+          // 640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        },
       });
+      // window.onscroll = function () {
+      //   let ht = document.documentElement.scrollTop;
+      //   if (ht > 50) {
+      //     document.getElementsByClassName("nav").classList.add("on");
+      //     document.getElementById("totop").classList.add("show");
+      //   } else {
+      //     document.getElementsByClassName("nav").classList.remove("on");
+      //     document.getElementById("totop").classList.remove("show");
+      //   }
+      // };
+      // document.getElementById("totop").onclick = function () {
+      //   document.documentElement.scrollTop = 0;
+      // };
+
       $(function () {
+        $(window).scroll(function () {
+          let ht = $(window).scrollTop();
+          console.log(ht);
+          if (ht > 50) {
+            $("header").addClass("on");
+            $("#totop").addClass("show");
+          } else {
+            $("header").removeClass("on");
+            $("#totop").removeClass("show");
+          }
+        });
         $("#totop").click(function () {
           $("html, body").animate({ scrollTop: "0" }, 700);
         });
-        $(".pd_desc").each(function () {
-          let bg = $(this).data("bg");
-          $(this).hover(
-            function () {
-              $(this).addClass("whitebox").css({
-                background: bg,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              });
-            },
-            function () {
-              $(this).removeClass("whitebox").css("background", "#fff");
-            }
-          );
+        $(window).resize(function () {
+          if ($(window).width() > 1024) {
+            // $(".pd_desc").each(function () {
+            //   let bg = $(this).data("bg");
+            //   $(this).hover(
+            //     function () {
+            //       $(this).addClass("whitebox").css({
+            //         background: bg,
+            //         backgroundPosition: "center",
+            //         backgroundSize: "cover",
+            //       });
+            //     },
+            //     function () {
+            //       $(this).removeClass("whitebox").css("background", "#fff");
+            //     }
+            //   );
+            // });
+          } else if ($(window).width() < 768) {
+            // $(".visual .bg").css(
+            //   "background",
+            //   "url(images/mobile_bg.jpg) 50% 100%"
+            // );
+          }
         });
       });
     </script>
