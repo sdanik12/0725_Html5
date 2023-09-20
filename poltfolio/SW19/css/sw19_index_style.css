@@ -143,6 +143,100 @@ header .top2 .join > ul > li:last-child {
 header .top2 .join > ul > li a {
   font-size: 14px;
 }
+/* --------------------사이드메뉴----------------------- */
+
+i.box_close {
+  font-size: 0px;
+  position: absolute;
+  top: 65px;
+  margin: 0 10px;
+  z-index: 1000;
+}
+.side_box {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  top: 0;
+  background: #fff;
+  transition: left 0.5s ease-in-out;
+  z-index: 1000;
+}
+.box {
+  left: 0;
+}
+.move {
+  position: relative;
+  left: 250px;
+}
+div.dimmed {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: #000;
+}
+.side_box #side_nav .member {
+  padding: 21px 0;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+.side_box #side_nav .member span {
+  font-size: 14px;
+  line-height: 26px;
+  opacity: 0.6;
+}
+.side_box #side_nav .member button {
+  position: absolute;
+  top: 21px;
+  right: 0px;
+  padding: 6px 12px;
+  border: 1px solid #adadad;
+  border-color: rgba(33, 33, 33, 0.2);
+  font-size: 12px;
+  line-height: 1;
+  color: #212121;
+  font-family: inherit;
+  background: #fff;
+  margin: 0 20px;
+}
+.side_box #side_nav {
+  width: 250px;
+  margin: 0 auto;
+  text-indent: 20px;
+}
+.side_box #side_nav .title {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  border-bottom: 1px solid #e6e6e6;
+}
+.side_box #side_nav .title.active {
+  background: #e6e6e6;
+}
+.side_box #side_nav .sub li {
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  text-indent: 35px;
+}
+.side_box #side_nav .sub li a {
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sub li a:hover {
+  font-weight: bold;
+}
+/* --------------------사이드메뉴끝----------------------- */
 .visual .main {
   height: 800px;
 }

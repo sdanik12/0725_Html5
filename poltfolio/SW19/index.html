@@ -34,9 +34,9 @@
           <div class="nav">
             <ul>
               <li>
-                <a href="#">home(kr)</a>
+                <a href="index.html">home(kr)</a>
                 <ul>
-                  <li><a href="#">korean</a></li>
+                  <li><a href="index.html">korean</a></li>
                   <li><a href="#">english</a></li>
                 </ul>
               </li>
@@ -59,6 +59,7 @@
             </ul>
           </div>
           <i id="nav_bars" class="fa-solid fa-bars" style="color: #000000"></i>
+
           <div class="forcenter">
             <div class="logo">
               <a href="index.html"
@@ -90,6 +91,51 @@
           </div>
         </div>
       </header>
+      <!---------------------------------------사이드메뉴---------------->
+      <i class="box_close fa-solid fa-x" style="color: #fff"></i>
+      <div class="side_box">
+        <ul id="side_nav">
+          <li>
+            <div class="member">
+              <a href="#">
+                <span>회원가입 시 3,000포인트 증정</span
+                ><button type="button">로그인</button>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a class="title" href="index.html">HOME</a>
+            <ul class="sub">
+              <li><a href="index.html">Korean</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="title">SHOP</div>
+            <ul class="sub">
+              <li><a href="product_page.html">All Products</a></li>
+              <li><a href="#">Perfume</a></li>
+              <li><a href="#">Home Fragrance</a></li>
+              <li><a href="#">Body Care</a></li>
+              <li><a href="#">Hand Care</a></li>
+              <li><a href="#">Accessory</a></li>
+              <li><a href="#">Sample Kit</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="title" href="story_page.html">STORY</a>
+          </li>
+          <li>
+            <a class="title" href="stores_page.html">STORES</a>
+          </li>
+          <li>
+            <a class="title" href="membership_page.html">MEMBERSHIP</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dimmed"></div>
+      <!---------------------------------------사이드메뉴끝---------------->
+
       <div class="visual">
         <div class="main">
           <video
@@ -749,6 +795,48 @@
             // );
           }
         });
+        // -----------------------사이드메뉴-------------------------//
+        document
+          .getElementById("nav_bars")
+          .addEventListener("click", function () {
+            this.style.opacity = "0";
+            document.getElementsByClassName("box_close")[0].style.fontSize =
+              "15px";
+            document
+              .getElementsByClassName("box_close")[0]
+              .classList.toggle("move");
+            document
+              .getElementsByClassName("side_box")[0]
+              .classList.toggle("box");
+            document.getElementsByClassName("dimmed")[0].style.display =
+              "block";
+          });
+        document
+          .getElementsByClassName("box_close")[0]
+          .addEventListener("click", function () {
+            this.classList.toggle("move");
+            this.style.fontSize = "0px";
+            document.getElementById("nav_bars").style.opacity = "1";
+            document.getElementById("nav_bars").classList.toggle("move");
+            document
+              .getElementsByClassName("side_box")[0]
+              .classList.toggle("box");
+            document.getElementById("nav_bars").classList.toggle("move");
+            document.getElementsByClassName("dimmed")[0].style.display = "none";
+          });
+        $(".sub").hide();
+        $("#side_nav .title").click(function () {
+          if ($(this).hasClass("active") == false) {
+            $(".sub").slideUp();
+            $(this).next().slideDown();
+            $(".title").removeClass("active");
+            $(this).addClass("active");
+          } else {
+            $(this).next().slideUp();
+            $(this).removeClass("active");
+          }
+        });
+        // -----------------------사이드메뉴끝-------------------------//
       });
     </script>
   </body>
